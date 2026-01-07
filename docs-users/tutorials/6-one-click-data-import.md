@@ -43,7 +43,7 @@ As of September 20, 2024, the following imports are available:
 
 Here is a brief review of the various imports proposed and to finish the import of the location of the libraries of Clermont-Ferrand:
 
-![Animated gif showing the use of the import assistant](../../static/tutoriels/importer.gif)
+![Animated gif showing the use of the import assistant](../static/tutoriels/importer.gif)
 
 ## 1. Importing the outline of a municipality
 
@@ -58,7 +58,7 @@ Click on "Communes France" and select the desired municipality from a drop-down 
     The code displayed is not the postal code but the INSEE code of the municipality.
 
 Here is the result with the municipality of Arles (the largest in metropolitan France, a certain gain if we save money to draw its outline!)
-![A map with the drawing of the imported commune of Arles](../../static/tutoriels/importer-arles.png)
+![A map with the drawing of the imported commune of Arles](../static/tutoriels/importer-arles.png)
 
 Once this import has been made, everything is adjustable: contour color, background, display yes no of a label.
 
@@ -68,7 +68,7 @@ Click the import tool at the bottom of the right bar, and then click on the “I
 
 Click on “National contours” then either departments or regions and finally the type of layer (see above the explanation). All departments are imported:
 
-![A map with the drawing of each department imported](../../static/tutoriels/importer-departements.png)
+![A map with the drawing of each department imported](../static/tutoriels/importer-departements.png)
 
 ##3. Importing a point of interest from GeoDataMine
 
@@ -77,7 +77,7 @@ Click the import tool at the bottom of the right bar, and then click on the “I
 Click on “GeoDataMine (OSM themes)” and select the desired information, roads, buildings, shops, utilities, ...
 For example, by selecting the drinking water points of the CA du Grand Avignon, then “Copy in a layer”
 
-![A map with drinking water points from OpenStreetMap](../../static/tutoriels/importer-geodatamine.png)
+![A map with drinking water points from OpenStreetMap](../static/tutoriels/importer-geodatamine.png)
 
 Here is a real saving of time rather than placing pointer after pointer all the water points.
 
@@ -87,7 +87,7 @@ Of course, we can quite combine the different layers of information and present 
 
 ### Drinking water points of the Grand Avignon
 
-![A map combining several imports](../../static/tutoriels/importer-multi.png)
+![A map combining several imports](../static/tutoriels/importer-multi.png)
 
 [View full screen map](https://umap.openstreetmap.fr/fr/map/points-deau-potable-grand-avignon_1116739?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#11/43.9889/4.7962){ .md-button }
 

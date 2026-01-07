@@ -119,7 +119,7 @@ To geocode the addresses of a table, the steps to follow are:
     (encoding) **UTF-8**. Include column headers if option
     You are offered. Here is for example the CSV export panel of
     LibreOffice Calc :
-    ![export_csv_libreoffice_calc.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/export_csv_libreoffice_calc.png)
+    ![export_csv_libreoffice_calc.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/export_csv_libreoffice_calc.png)
 2.  import the CSV file into the geocoding site of your choice,
     This usually asks you to select the names of
     columns corresponding to the address, the postal code and the municipality
@@ -158,7 +158,7 @@ Select the previously geocoded file.
     >Data import button.</shot-scraper>
 
 
-![importer_des_donnees.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/importer_des_donnees.png)
+![importer_des_donnees.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/importer_des_donnees.png)
 
 Verify that uMap has recognized **CSV** for the data format, and
 choose to import them into a **new layer**.
@@ -188,7 +188,7 @@ Updated. Then select the same layer and check the box
 
 ### 4. I insert the contents of the board into the tooltips
 
-![infobulle_nom_du_calque.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_nom_du_calque.png)
+![infobulle_nom_du_calque.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_nom_du_calque.png)
 
 Now click on an imported marker in the previous step:
 the tooltip displays the name of the layer (in this case the name of the file
@@ -199,14 +199,14 @@ There are many possibilities to remedy this.
 
 #### Change the field used
 
-![cle_du_libelle.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/cle_du_libelle.png)
+![cle_du_libelle.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/cle_du_libelle.png)
 
 Edit the layer and
 Change, in the Advanced Properties tab, the **Key for label**.
 Enter the column name of the imported file. Every tooltip
 now display the contents of this column.
 
-![infobulle_nom_correct.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_nom_correct.png)
+![infobulle_nom_correct.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_nom_correct.png)
 
 !!! note
     Respect the breakage, that is to say the capitals and
@@ -215,7 +215,7 @@ now display the contents of this column.
 
 #### Show a table
 
-![popup_tableau.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/popup_tableau.png)
+![popup_tableau.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/popup_tableau.png)
 
 The content of the painting can
 be displayed in the tooltips, in the form of a table with two
@@ -224,9 +224,9 @@ columns : the title and the corresponding value.
 In the **Interaction Options** tab of the layer, change the **Style of
 the popup** in **Table**. Here is an example of a result:
 
-![infobulle_tableau.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_tableau.png)
+![infobulle_tableau.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_tableau.png)
 
-![modifier_tableau.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/modifier_tableau.png)
+![modifier_tableau.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/modifier_tableau.png)
 
 Note that you
 can edit the content of the table by clicking **Edit in a
@@ -235,7 +235,7 @@ Rename columns, or even modify the cells of the table.
 
 #### Define the template of the tooltips
 
-![gabarit_popup.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/gabarit_popup.png)
+![gabarit_popup.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/gabarit_popup.png)
 
 The above picture is not
 not particularly nice with its capital labels.
@@ -251,7 +251,7 @@ bold character, etc.) as seen above. To *inject* the content
 from a cell in the tooltip, simply add the column name
 placed between braces, for example **{NOM}**.
 
-![infobulle_avec_gabarit.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_avec_gabarit.png)
+![infobulle_avec_gabarit.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/infobulle_avec_gabarit.png)
 
 You can use all the fields in the table in the template. Here is to
 right an example of a template and the result for a tooltip.
@@ -265,7 +265,7 @@ yet `{{{URL_IMAGE}}}`.
 
 ### 5. I configure the sorting and filters
 
-![config_filtres.png](../../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/config_filtres.png)
+![config_filtres.png](../static/tutoriels/9-je-cree-une-carte-a-partir-dun-tableur/config_filtres.png)
 
 We saw in the tutorial
 [I consult a map uMap](1-browsing-a-map.md) that he

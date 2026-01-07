@@ -64,7 +64,7 @@ The main difficulty: to know which dataset would meet the need. In this case, it
 
 ### Views of cities in the 16th and 17th centuries
 
-![Screenshot of the map](../../static/tutoriels/find-data-villes.png)
+![Screenshot of the map](../static/tutoriels/find-data-villes.png)
 
 [Link to online map](https://umap.openstreetmap.fr/fr/map/vues-de-villes-aux-xvie-et-xviie-siecles_635544#7/46.241/-1.329){ .md-button }
 
@@ -73,13 +73,13 @@ Two examples using an old plan as background, in addition to the old images that
 ### Photographs of Marseille 1862 to 1866 by A. Terris
 
 
-![ Screenshot of the map](../../static/tutoriels/find-data-photos-marseille.png)
+![ Screenshot of the map](../static/tutoriels/find-data-photos-marseille.png)
 
 [Link to online map](https://umap.openstreetmap.fr/nl/map/photographies-de-marseille-1862-a-1866-par-a-terri_277962#14/43.2909/5.3815){ .md-button }
 
 ### Metz 1872
 
-![Screenshot of the map](../../static/tutoriels/find-data-metz-1872.png)
+![Screenshot of the map](../static/tutoriels/find-data-metz-1872.png)
 
 [Link to online map](https://umap.incubateur.anct.gouv.fr/fr/map/metz-1872_50#13/49.1201/6.1419){ .md-button }
 
@@ -127,7 +127,7 @@ Click on the left on “Share and download”
 
 then once the side screen is displayed:
 
-![Screenshot of the card download panel](../../static/tutoriels/find-data-download.png)
+![Screenshot of the card download panel](../static/tutoriels/find-data-download.png)
 
 Click on “Full Backup” at the bottom.
 
@@ -135,7 +135,7 @@ Click on “Full Backup” at the bottom.
 
 Leave this screen, create a new map and then right-click on “Import data” and then once the side screen is displayed:
 
-![Screenshot of the import module](../../static/tutoriels/find-data-import-umap.jpg)
+![Screenshot of the import module](../static/tutoriels/find-data-import-umap.jpg)
 
 
 The import format recognizes uMap and specifies it.
@@ -160,7 +160,7 @@ or
 
 * use the link to the data: in this case, the map will automatically update (deletion of cut trees for example, addition of new ones). Disadvantage: the card is a T-time card, we do not keep the history in this case.
 
-![Screenshot of the datagouv site](../../static/tutoriels/find-data-datagouv.jpg)
+![Screenshot of the datagouv site](../static/tutoriels/find-data-datagouv.jpg)
 
 You have a choice. Once the file has been downloaded or the link is copied, click in the map on uMap the "Import data" button in the right bar and then in the frame of your choice:
 
@@ -170,8 +170,8 @@ or
 
 * Paste the stable URL into the intended line
 
-![Screenshot of the import panel (1)](../../static/tutoriels/find-data-import-panel-1.png)
-![Screenshot of the import panel (2)](../../static/tutoriels/find-data-import-panel-2.png)
+![Screenshot of the import panel (1)](../static/tutoriels/find-data-import-panel-1.png)
+![Screenshot of the import panel (2)](../static/tutoriels/find-data-import-panel-2.png)
 
 In “Choose data format”: select `Geojson`. In case you choose the stable URL, you can choose `Associate with the layer as remote data` and in this case the card automatically updates if the file is changed.
 
@@ -179,7 +179,7 @@ Choose `Copy in layer` to keep the card as it is on a date T.
 
 The map is automatically centered on Metz and all the remarkable trees are placed:
 
-![Screenshot of the map](../../static/tutoriels/find-data-screenshot-trees.png)
+![Screenshot of the map](../static/tutoriels/find-data-screenshot-trees.png)
 
 The information in the file is passed down and accessed in a table or by clicking on each tree.
 
@@ -187,11 +187,11 @@ The information in the file is passed down and accessed in a table or by clickin
 
 Select the layer in the right bar and change its settings by clicking on the small pen:
 
-![Screenshot of the view panel](../../static/tutoriels/find-data-visualize-data.png)
+![Screenshot of the view panel](../static/tutoriels/find-data-visualize-data.png)
 
 Name : Remarkable trees (or for example Hardwoods or Trees over 50 years old...), as many possibilities as layers and colors. Then click on the properties of the shape to choose the color and shape of the pointer, but also the interaction options: display a label on the fly for example.
 
-![Screenshot of the card and customization panel](../../static/tutoriels/find-data-trees-customisation.png)
+![Screenshot of the card and customization panel](../static/tutoriels/find-data-trees-customisation.png)
 
 ### Display the names of the trees on the flyby
 
@@ -209,7 +209,7 @@ All data that can be displayed in the label is presented in the columns of the t
 
 In the case of the Metz remarkable tree file, the name of the trees is filled in as `common_name` and `name_latin`. However, in uMap, by default, the labels that appear use `name`. For the common name to appear, replace `name` with `common_name` on the right in the "Advanced Properties" (Information panel of this layer):
 
-![Screenshot of the card and customization panel](../../static/tutoriels/find-data-trees-customisation-advanced.png)
+![Screenshot of the card and customization panel](../static/tutoriels/find-data-trees-customisation-advanced.png)
 
 To make the label only display on the flyby, choose `Hiden` a little further down in "Show a label".
 

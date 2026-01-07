@@ -143,7 +143,7 @@ buttons on the left of the map, to control their visibility:
 The bottom part of the dashboard does not concern these buttons but
 other elements coming *dress* the card :
 
-![umap_properties_bottom.jpg](../../static/tutoriels/4-je-modifie-et-personnalise-ma-carte/umap_properties_bottom.jpg)
+![umap_properties_bottom.jpg](../static/tutoriels/4-je-modifie-et-personnalise-ma-carte/umap_properties_bottom.jpg)
 
 Some remarks :
 

@@ -14,7 +14,7 @@ main elements of the map, and the operations available for the
 manipulate. The uMap map shown below is available
 [here](http://umap.openstreetmap.fr/fr/map/festival-des-3-continents_26381).
 
-![Description of the different elements of a map](../../static/tutoriels/1-je-consulte-une-carte-umap/anatomie_carte_umap_2021.jpg)
+![Description of the different elements of a map](../static/tutoriels/1-je-consulte-une-carte-umap/anatomie_carte_umap_2021.jpg)
 
 
 To the right of the map and according to the choice of its author can be displayed
@@ -68,7 +68,7 @@ When you position the mouse over this button, the list of layers
 appears, you can then display or hide each layer, or
 center the map on the contents of a layer.
 
-![A description of the different parts of a layer selector](../../static/tutoriels/1-je-consulte-une-carte-umap/umap_sélecteur_calques.png)
+![A description of the different parts of a layer selector](../static/tutoriels/1-je-consulte-une-carte-umap/umap_sélecteur_calques.png)
 
 In this example, the “Bicloo Stations” layer is hidden:
 Click on the eye of this layer allows you to display it.
@@ -203,7 +203,7 @@ depends on how you want to share the card:
 
 ### 4. Visualize the data
 
-![umap_donnees.jpg](../../static/tutoriels/1-je-consulte-une-carte-umap/umap_donnees.jpg)
+![umap_donnees.jpg](../static/tutoriels/1-je-consulte-une-carte-umap/umap_donnees.jpg)
 
 The list of items in the map can be displayed with a click on
 **View data**, accessible from the layer selector,

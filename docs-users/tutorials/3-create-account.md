@@ -40,7 +40,7 @@ time to register on the website www.openstreetmap.org : click
 instructions - an email address will be requested ([more
 d’infos](https://openstreetmap.fr/inscription-openstreetmap)).
 
-![umap_header.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_header.png)
+![umap_header.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_header.png)
 
 Click on **Connection /
 Create an account** then on the pictogram corresponding to the account that
@@ -51,7 +51,7 @@ that access. You will then find the home page of uMap, on which
 the connection link has given way to a **My cards** link
 allowing access to all the cards created with this account.
 
-![umap_connect.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_connect.png)
+![umap_connect.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_connect.png)
 
 Write down the URL of the address bar when you view your catalog
 of cards : this one contains the name of your account - for example
@@ -82,11 +82,11 @@ You create and the teams you participate in.
 Once connected to the uMap instance,
 click on “My space”, then “My teams”:
 
-![Link to the Teams tab](../../static/tutoriels/my-teams.png)
+![Link to the Teams tab](../static/tutoriels/my-teams.png)
 
 Then on “New team” and fill in the information
 
-![Team Editing Form](../../static/tutoriels/my-teams-form.png)
+![Team Editing Form](../static/tutoriels/my-teams-form.png)
 
 When a new user is associated with a team,
 He sees the team display themselves on their dashboard,
@@ -104,4 +104,4 @@ of a card to its members. To do this : open the card,
 Then click on “Edit” and click at the top of the page
 to the right of the title on “Visibility: Define who can see and modify the map”.
 
-![Permissions panel for team selection](../../static/tutoriels/my-teams-permissions.png)
+![Permissions panel for team selection](../static/tutoriels/my-teams-permissions.png)

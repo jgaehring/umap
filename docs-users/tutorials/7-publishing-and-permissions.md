@@ -30,7 +30,7 @@ Web. It’s actually very simple and we’ve already used this mechanism
 to embed a video in the tutorial
 [Infobulles multimedia](5-multimedia-tooltips.md).
 
-![export-iframe.png](../../static/tutoriels/7-je-publie-ma-carte-et-en-controle-lacces/export-iframe.png)
+![export-iframe.png](../static/tutoriels/7-je-publie-ma-carte-et-en-controle-lacces/export-iframe.png)
 
 Here are the steps to follow:
 
@@ -82,7 +82,7 @@ above, by copying the *HTML code of the iframe* in the editor
 WordPress. It is necessary to **use the text editor**
 (Text tab) and not the visual editor.
 
-![import-iframe-wordpress.png](../../static/tutoriels/7-je-publie-ma-carte-et-en-controle-lacces/import-iframe-wordpress.png)
+![import-iframe-wordpress.png](../static/tutoriels/7-je-publie-ma-carte-et-en-controle-lacces/import-iframe-wordpress.png)
 
 Publish the page and it’s done!
 
@@ -107,7 +107,7 @@ enable these options so that the *iframe import code* is
 modified. Once the options are chosen, copy this code and then embed it
 in the one your web page.
 
-![options-export-iframe.png](../../static/tutoriels/7-je-publie-ma-carte-et-en-controle-lacces/options-export-iframe.png)
+![options-export-iframe.png](../static/tutoriels/7-je-publie-ma-carte-et-en-controle-lacces/options-export-iframe.png)
 
 The first options are specific to export by iframe and deserve
 to be commented :

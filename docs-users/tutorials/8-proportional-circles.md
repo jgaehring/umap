@@ -36,7 +36,7 @@ Click on the import tool in the right bar:
 
 Then choose the file, for example here the municipal population of Cher, the format is `.csv` and click on "import":
 
-![](../../static/tutoriels/circles-markers.png)
+![](../static/tutoriels/circles-markers.png)
 
 All municipalities are represented by a pointer. It remains to be specified that the data of this layer must be displayed in proportional circles. To do this, click on the tool "Manage the layers" in the right bar:
 
@@ -52,7 +52,7 @@ All municipalities are represented by a pointer. It remains to be specified that
 
 Then in the drop-down menu, select “Proportional Circles” and the data of your table that you want to represent in proportional circles:
 
-![](../../static/tutoriels/circles-proportional.jpg)
+![](../static/tutoriels/circles-proportional.jpg)
 
 It is quite possible to adjust the proportionality on the bars of minimum and maximum radius to modify the rendering: the gap is then amplified or rather crushed.
 

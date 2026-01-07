@@ -58,7 +58,7 @@ file :
 
     https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-emplacement-des-stations/exports/geojson?lang=fr&timezone=Europe%2FBerlin
 
-![umap-donnees-distantes.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-donnees-distantes.png)
+![umap-donnees-distantes.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-donnees-distantes.png)
 
 #### Configure remote data
 
@@ -107,7 +107,7 @@ Producer is “Autolib Velib Métropole”. It should therefore be cited
 in the **Credits** of the map, a tab of the *Properties menu of the
 map*.
 
-![umap-geojson-properties.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-geojson-properties.png)
+![umap-geojson-properties.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-geojson-properties.png)
 
 #### Show the name and capacity of the stations
 
@@ -144,7 +144,7 @@ The Paris Ladder. At this scale it would be more interesting to have
 an overview of the distribution of the Vélib’ offer on the capital
 and the neighbouring municipalities.
 
-![umap-heatmap.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-heatmap.png)
+![umap-heatmap.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-heatmap.png)
 
 #### Produce a heat map or “Heatmap”
 
@@ -232,7 +232,7 @@ this data will not be automatically updated by uMap to a
 Regular time interval: it is up to the user to refresh the
 web page or move the map.
 
-![umap-api-properties.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-properties.png)
+![umap-api-properties.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-properties.png)
 
 He's still at
 change our popup template to display availability in
@@ -246,7 +246,7 @@ possible popup template :
     {capacity} locations including {numdocksavailable} free
     {numbikesavailable} available bicycles including {ebike} VAE
 
-![umap-api-parameters.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-parameters.png)
+![umap-api-parameters.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-parameters.png)
 
 ### Filter data at the source
 
@@ -329,7 +329,7 @@ volume of data transferred, and display it faster.
 The API tab of the dataset allows you to access the **API console
 complete**. In the Dataset section, we choose the *endpoint*
 **Export a dataset**.
-![umap-api-console.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console.png)
+![umap-api-console.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console.png)
 
 Then appears a form where we can fill in the different
 parameters :
@@ -340,7 +340,7 @@ parameters :
 -   we can filter the stations in service again with the
     **refine** parameter : `is_installed:OUI`
 
-![umap-api-console-dataset.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-dataset.png)
+![umap-api-console-dataset.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-dataset.png)
 
 Set the **where** parameter with the `in_bbox()` function (see the
 [documentation
@@ -348,7 +348,7 @@ OpenDataSoft](https://help.opendatasoft.com/apis/ods-explore-v2/#section/ODSQL-p
 and – for the moment – fixed latitudes and longitudes (somewhere to
 Paris) :
 
-![umap-api-console-bbox.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-bbox.png)
+![umap-api-console-bbox.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-bbox.png)
 
 **coordinates_geo** is the name of the field containing the geometry in the
 original data, which can be found by exporting them in a format
@@ -358,7 +358,7 @@ Let's test now that the query works by clicking **Execute**
 : the response code 200 indicates that the request worked, and it is
 possible to download the resulting file.
 
-![umap-api-console-execute.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-execute.png)
+![umap-api-console-execute.png](../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-execute.png)
 
 ### I boost the request
 

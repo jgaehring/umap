@@ -17,7 +17,7 @@ data of this card are organized in several layers:
 -   public transport lines
 -   Bicloo bike-sharing stations
 
-![umap_calques_gauche_droite.jpg](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_calques_gauche_droite.jpg)
+![umap_calques_gauche_droite.jpg](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_calques_gauche_droite.jpg)
 
 The layer selector allows the user to zoom in on the set
 elements of a layer, to hide it or display it at leisure. Every
@@ -40,14 +40,14 @@ existing and allows to create a new layer. Then click on
 **Add a layer**, then appears the panel **Layer Properties**
 of the new layer.
 
-![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_props_top.png)
+![](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_props_top.png)
 
 Enter the layer name and a description of the item category
 to which you intend this layer: they will be displayed in the panel
 **About**. Below is the result corresponding to the properties
 seized on the right.
 
-![umap_layer_description.png](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_description.png)
+![umap_layer_description.png](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_description.png)
 
 !!! note
     Skip a line at the beginning of the description
@@ -62,7 +62,7 @@ add an item to the map, at the top of the properties panel of
 the element is a **drop-down menu** that allows you to choose the
 layer where to place the element.
 
-![umap_layer_select.png](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_select.png)
+![umap_layer_select.png](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_select.png)
 
 It is of course possible to change the layer of an element already created.
 So do not hesitate, when your card is enriched, to *restructure* sound
@@ -111,7 +111,7 @@ must be displayed also in yellow but in red, you will not do the
 modification only once for the whole layer and not for
 Each of the elements.
 
-![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_edit.png)
+![](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_edit.png)
 
 In the
 Layer management panel click on the pencil to edit the
@@ -120,7 +120,7 @@ properties of the layer. Tabs **Properties of the form** and
 of the layer. You find the same properties used in
 the tutorial [Create an account](3-create-account.md).
 
-![umap_legende.png](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_legende.png)
+![umap_legende.png](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_legende.png)
 
 All properties, which
 apply to markers, lines and polygons, are here
@@ -140,7 +140,7 @@ About**, as in the example below.
 Let's go back to **layer management panel**. We have seen how
 Create a new layer and define its properties.
 
-![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_gestion_calques.png)
+![](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_gestion_calques.png)
 
 The square on the right allows to modify the **order of the layers** by a
 Drag and drop. The order thus defined is that which is found in
@@ -153,7 +153,7 @@ the usefulness of **Edit in a table** the content of the layer. **Delete
 the layer** will ask you to confirm the operation, this operation
 removing the content of the layer.
 
-![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_advanced.png)
+![](../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_advanced.png)
 
 Finally, the **Advanced Actions** tab allows you to empty a layer: this
 deletes its data but retains the layer. You can also

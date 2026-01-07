@@ -16,7 +16,7 @@ right-of-way and add a marker at [the location of the
 camping](http://www.openstreetmap.org/?mlat=48.2387&mlon=-4.5434#map=16/48.2387/-4.5434).
 We saw in [the previous tutorial](2-first-map.md) how to perform these operations.
 
-![umap_marqueur_props.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_marqueur_props.png)
+![umap_marqueur_props.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_marqueur_props.png)
 
 This big blue marker is not very explicit to feature a campsite.
 Let's remedy that. In the visible side panel when a marker is
@@ -36,11 +36,11 @@ The appearance of the marker:
 
 Here is the marker obtained with the properties opposite:
 
-![umap_camping.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_camping.png)
+![umap_camping.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_camping.png)
 
 ### Edit a marker
 
-![umap_modifier_marqueur.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_modifier_marqueur.png)
+![umap_modifier_marqueur.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_modifier_marqueur.png)
 
 To modify a marker of the card, several possibilities are available to you:
 
@@ -88,11 +88,11 @@ or modify his layout on the map:
 -   **cut the line** in two : Right click on a point then choose
     the `Scinder the line` option
 
-![umap_ligne.jpg](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne.jpg)
+![umap_ligne.jpg](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne.jpg)
 
 #### Properties of a line
 
-![umap_ligne_props.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne_props.png)
+![umap_ligne_props.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne_props.png)
 
 The properties of a
 line allows you to define your color and other parameters
@@ -117,11 +117,11 @@ defining his *style* :
 
 Here is the style of line obtained with the properties opposite:
 
-![umap_ligne_tirets.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne_tirets.png)
+![umap_ligne_tirets.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne_tirets.png)
 
 ### 3. Add labels
 
-![etiquettes.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/etiquettes.png)
+![etiquettes.png](../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/etiquettes.png)
 
 To help identify the
 different elements of our map, we can associate them with a

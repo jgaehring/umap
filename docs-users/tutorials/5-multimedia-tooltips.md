@@ -50,13 +50,13 @@ There are other options available [in the FAQ](../support/faq.md#text-formatting
 
 ### 1. Format the text of a tooltip
 
-![miseenforme-resultat.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-resultat.png)
+![miseenforme-resultat.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-resultat.png)
 
 An example
 Better than long explanations: the description below
 produce the tooltip on the right.
 
-![miseenforme-syntaxe.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-syntaxe.png)
+![miseenforme-syntaxe.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-syntaxe.png)
 
 Note the following points :
 
@@ -89,7 +89,7 @@ right corresponds to the description below :
     Wikipedia article :
     [[https://fr.wikipedia.org/wiki/Morgat]]
 
-![miseenforme-liensimple.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-liensimple.png)
+![miseenforme-liensimple.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-liensimple.png)
 
 We can also **hide the link address** and replace it with a
 text. Just follow the address of a bar
@@ -99,7 +99,7 @@ vertical (AltGr + 6 on a French keyboard) and text:
 
     [[https://fr.wikipedia.org/wiki/Morgat|Pedilexpa]]
 
-![miseenforme-lienavectexte.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-lienavectexte.png)
+![miseenforme-lienavectexte.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-lienavectexte.png)
 
 This form is especially useful for long addresses.
 
@@ -109,7 +109,7 @@ This form is especially useful for long addresses.
 Umap does not allow you to store images, but can display photos
 published on a web server.
 
-![miseenforme-photo.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-photo.png)
+![miseenforme-photo.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-photo.png)
 
 The article
 Wikipedia shows a beautiful photo of the Anse de Morgat. The photos
@@ -142,7 +142,7 @@ You need to use a larger tooltip. To do this open the tab
 `Interaction options`, click on `Define` in front of
 `Popup style` then choose **Name and description (large)**.
 
-![styledepopup.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/styledepopup.png)
+![styledepopup.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/styledepopup.png)
 
 Conversely you can **reduce the size of an image**, by doing
 follow the link to the photo of a vertical bar and a number that
@@ -175,7 +175,7 @@ boat. To integrate this video with a tooltip, follow the steps:
 1.  open the **Integrate** tab visible *under* the video
 2.  Copy the address after `src=` (without the quotation marks), note that it
     has the term *embed* which means *integrate*
-    ![partageyoutube.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/partageyoutube.png)
+    ![partageyoutube.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/partageyoutube.png)
 3.  paste this address between **triple accolades** in the tooltip:
 
         {{{https://www.youtube.com/embed/sKvjd8bGsZM}}}
@@ -189,7 +189,7 @@ boat. To integrate this video with a tooltip, follow the steps:
 Here is the result, the video can be directly viewed in our
 tooltip :
 
-![miseenforme-video.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-video.png)
+![miseenforme-video.png](../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-video.png)
 
 ## Let's take stock
 

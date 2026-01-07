@@ -33,7 +33,7 @@ places (home, holiday, work, etc.). Proceedings in stages.
 
 Then appears on your browser a card that appears as follows:
 
-![A blank card annotated with the main editing actions](../../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_edition.png)
+![A blank card annotated with the main editing actions](../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_edition.png)
 
 We find on the left the buttons available during the
 [map viewing](1-browsing-a-map.md).
@@ -116,7 +116,7 @@ necessary to keep a secret link.
 
 If they did not log in before creating their map, the message is different:
 
-![The link to the MyAccountPro](../../static/tutoriels/proconnect-connexion.png)
+![The link to the MyAccountPro](../static/tutoriels/proconnect-connexion.png)
 
 It is not possible to save changes to an anonymous map on this instance.
 
@@ -142,7 +142,7 @@ The cursor takes the form of a sign
 the left mouse button: a *blue* and square marker is created at
 This place and a sign appears on the right.
 
-![A marker uMap.](../../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_marqueur.jpg)
+![A marker uMap.](../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_marqueur.jpg)
 
 This panel allows you
 to associate a name and a description with the marker:

@@ -40,7 +40,7 @@ third point the inside of the polygon is colored.
 
 ### Properties of a Polygon
 
-![proprietes_polygones.png](../../static/tutoriels/8-le-cas-des-polygones/proprietes_polygones.png)
+![proprietes_polygones.png](../static/tutoriels/8-le-cas-des-polygones/proprietes_polygones.png)
 
 The list of
 properties of a polygon is quite long. Properties of half
@@ -62,7 +62,7 @@ It is sometimes useful to create one or more holes in a polygon,
 for example to draw a clearing in a forest or an island in
 middle of a pond.
 
-![polygone_trou.jpg](../../static/tutoriels/8-le-cas-des-polygones/polygone_trou.jpg)
+![polygone_trou.jpg](../static/tutoriels/8-le-cas-des-polygones/polygone_trou.jpg)
 
 You can create a
 polygon with one or more holes by clicking on the option **Add
@@ -80,7 +80,7 @@ perimeters - exterior and interior.
 The **Interaction Options** tab offers two options specific to
 polygons.
 
-![interaction-desactivee.png](../../static/tutoriels/8-le-cas-des-polygones/interaction-desactivee.png)
+![interaction-desactivee.png](../static/tutoriels/8-le-cas-des-polygones/interaction-desactivee.png)
 
 Any interaction can be disabled by selecting **OFF** for
 the **Allow interactions** option. No tooltip is then
@@ -88,7 +88,7 @@ displayed when you click on the polygon. This option is interesting
 to give importance to an area of the map without
 The user cannot interact with.
 
-![ile-de-nantes.jpg](../../static/tutoriels/8-le-cas-des-polygones/ile-de-nantes.jpg)
+![ile-de-nantes.jpg](../static/tutoriels/8-le-cas-des-polygones/ile-de-nantes.jpg)
 
 Here is an example showing
 The Island of Nantes surrounded by a wide red line and without filling. He
@@ -103,7 +103,7 @@ polygon.
     propos** bottom right of the map).
 
 
-![interaction-url.png](../../static/tutoriels/8-le-cas-des-polygones/interaction-url.png)
+![interaction-url.png](../static/tutoriels/8-le-cas-des-polygones/interaction-url.png)
 
 Conversely, it is
 possible to associate a URL with a polygon: a click on the polygon
@@ -142,7 +142,7 @@ The site [OSM Boundaries](https://osm-boundaries.com/) allows
 select the administrative boundaries one by one, and then export them
 in different formats.
 
-![osm-boundaries.png](../../static/tutoriels/8-le-cas-des-polygones/osm-boundaries.png)
+![osm-boundaries.png](../static/tutoriels/8-le-cas-des-polygones/osm-boundaries.png)
 
 Follow these steps :
 
@@ -158,7 +158,7 @@ Follow these steps :
 You retrieve a file from the downloads folder, including
 The extension is `.geojson`.
 
-![import-contours.png](../../static/tutoriels/8-le-cas-des-polygones/import-contours.png)
+![import-contours.png](../static/tutoriels/8-le-cas-des-polygones/import-contours.png)
 
 ### b. Import neighborhood contours into a map
 
@@ -190,7 +190,7 @@ the URL to the corresponding web page, as we saw above.
 Finally you can, in the **Settings of the map**, set the
 **Geographic limits** of the map. This prevents
 the user to move the card beyond these limits.
-![limites-geographiques.png](../../static/tutoriels/8-le-cas-des-polygones/limites-geographiques.png)
+![limites-geographiques.png](../static/tutoriels/8-le-cas-des-polygones/limites-geographiques.png)
 
 ### d. Integrate the map into an iframe
 

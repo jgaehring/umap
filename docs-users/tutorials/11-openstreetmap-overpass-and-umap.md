@@ -42,7 +42,7 @@ Click on **Build and execute the query** : the query is created
 in the editor on the left of the map, and then the result is displayed on the
 map.
 
-![Screenshot of the Overpass Turbo site using the assistant](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_assistant.png)
+![Screenshot of the Overpass Turbo site using the assistant](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_assistant.png)
 
 #### Adapt the query for uMap
 
@@ -58,7 +58,7 @@ modify in the query editor the clause **`[out:json]`** by
 the format difference in the **Data** tab that shows the result
 of the request.
 
-![Screenshot of the Overpass Turbo site with XML enabled and data made visible](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_format_xml.png)
+![Screenshot of the Overpass Turbo site with XML enabled and data made visible](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_format_xml.png)
 
 #### Export Overpass query
 
@@ -67,11 +67,11 @@ Go to the **Request** part and right click on **compact** to the right of
 **Overpass QL** and choose **Copy link address** (with Mozilla Firefox):
 The URL of the request is copied to the clipboard.
 
-![Screenshot of the Overpass Turbo site with the progress of the operations to be carried out](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_exporter.png)
+![Screenshot of the Overpass Turbo site with the progress of the operations to be carried out](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_exporter.png)
 
 #### Use the query in uMap
 
-![Screenshot from Umap](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_requete_overpass_url.png)
+![Screenshot from Umap](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_requete_overpass_url.png)
 
 In a new uMap card, create a layer and open the tab
 **Distant data**. Paste the contents of the
@@ -85,7 +85,7 @@ Don't change!
 You can configure the layer as described in the
 Previous tutorials.
 
-![Screenshot of the uMap site with the markers displayed](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_overpass_infobulle.jpg)
+![Screenshot of the uMap site with the markers displayed](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_overpass_infobulle.jpg)
 
 In the same way that the values of a spreadsheet can be displayed in the
 tooltips (see [this section](9-map-from-spreadsheet.md)
@@ -115,7 +115,7 @@ data and import them into uMap.
 
 #### Import static data
 
-![Screenshot of the Overpass Turbo site with the place to click](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_export_geojson.png)
+![Screenshot of the Overpass Turbo site with the place to click](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_export_geojson.png)
 
 In Overpass Turbo, click **Export**, in the section
 **Data** there is a category **GeoJSON**, click on **download**. This
@@ -134,7 +134,7 @@ move. This is due to the high number of markers displayed on the map
 
 #### Show a density map
 
-![UMap settings to display a density map](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_heatmap.png)
+![UMap settings to display a density map](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_heatmap.png)
 
 A possibility for
 Bypassing this problem is to display markers as
@@ -169,7 +169,7 @@ that file.
 
 #### Using a file stored on a server
 
-![umap_donnees_distantes_wordpress.png](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_donnees_distantes_wordpress.png)
+![umap_donnees_distantes_wordpress.png](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_donnees_distantes_wordpress.png)
 
 If you have FTP access to a server, this does not
 difficulty. If you have access to the *back office* of a CMS such as
@@ -220,7 +220,7 @@ Let's proceed in stages again.
 4.  in the **Remote data** tab, enter the value **16** in
     the field **From zoom**
 
-![umap_heatmap_et_infobulle.jpg](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_heatmap_et_infobulle.jpg)
+![umap_heatmap_et_infobulle.jpg](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_heatmap_et_infobulle.jpg)
 
 Finally you can rename the new layer, configure the type of
 marker, and define the popup template, for example:
@@ -267,7 +267,7 @@ simplify the Overpass request. The important points are:
 
 We then obtain this result on the map:
 
-![Capture the Overpass Turbo site with the new query](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique.png)
+![Capture the Overpass Turbo site with the new query](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique.png)
 
 
 #### Adapt and export the query
@@ -280,7 +280,7 @@ The operation is delicate, and requires cold blood and concentration:
     request, by the values defining the control of the card.
 2. **export** the request using the option **standalone request → download** :
     A text file is produced and downloaded.
-    ![Capture the Overpass Turbo site with the new modified request](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique_2.png)
+    ![Capture the Overpass Turbo site with the new modified request](../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique_2.png)
 
 3.  open the file in a text editor and add at the beginning of
     line the base of the URL to execute an Overpass request:
