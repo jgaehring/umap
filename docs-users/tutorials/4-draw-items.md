@@ -1,158 +1,158 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Changer la forme, la couleur et le pictogramme d’un marqueur
-    - Créer et modifier une ligne
-    - Contrôler l’affichage des étiquettes
+    - Change the shape, color and pictogram of a marker
+    - Create and modify a line
+    - Control the display of labels
 
-Voici comment réaliser une carte contenant de jolis marqueurs et des lignes
-avec pour exemple la carte de nos vacances au
-[Camping de la plage Goulien](https://www.openstreetmap.org/way/119055693)
-sur la Presqu’île de Crozon en Bretagne.
+Here's how to make a card with nice markers and lines
+with for example the map of our holiday at the
+[Goulien Beach Camp](https://www.openstreetmap.org/way/119055693)
+on the peninsula of Crozon in Brittany.
 
-### 1. Créer un joli marqueur
+### 1. Create a nice marker
 
-Commençons par créer une carte : donnons-lui un nom, définissons une
-emprise et ajoutons un marqueur à [l’emplacement du
+Let’s start by creating a map: let’s give it a name, let’s define a
+right-of-way and add a marker at [the location of the
 camping](http://www.openstreetmap.org/?mlat=48.2387&mlon=-4.5434#map=16/48.2387/-4.5434).
-Nous avons vu dans [le tutoriel précédent](2-first-map.md) comment effectuer ces opérations.
+We saw in [the previous tutorial](2-first-map.md) how to perform these operations.
 
 ![umap_marqueur_props.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_marqueur_props.png)
 
-Ce gros marqueur bleu n’est pas très explicite pour figurer un camping.
-Remédions à cela. Dans le panneau latéral visible lorsqu’un marqueur est
-sélectionné, le menu **Propriétés de la forme** permet de modifier
-l’apparence du marqueur :
+This big blue marker is not very explicit to feature a campsite.
+Let's remedy that. In the visible side panel when a marker is
+selected, the **Properties menu of the shape** allows to modify
+The appearance of the marker:
 
--   **Couleur** : cliquer sur `définir` permet de choisir une couleur.
-    Notez que vous pouvez définir une couleur par [son nom
-    CSS](http://www.w3schools.com/cssref/css_colors.asp) ou par son code
-    héxadécimal, que vous pouvez choisir par exemple avec ce [sélecteur
-    de couleurs](http://htmlcolorcodes.com/fr/selecteur-de-couleur/).
--   **Forme de l’icône** : le choix `Par défaut` correspond au marqueur
-    actuel, les autres choix sont Cercle, Goutte et Épingle.
--   **Image de l’icône** : cliquer sur `définir` pour choisir parmi une
-    centaine de pictogrammes. Notez que le picto n’est affiché que pour
-    les formes d’icônes `Par défaut` et `Goutte`.
+-   **Color** : click on `set` allows you to choose a color.
+    Note that you can set a color by [its name
+    CSS](http://www.w3schools.com/cssref/css_colors.asp) or by its code
+    hexadecimal, which you can choose for example with this [selector
+    colors](http://htmlcolorcodes.com/fr/selecteur-de-coleur/).
+-   **Icon shape** : the choice `By default` corresponds to the marker
+    Currently, the other choices are Circle, Drop and Pin.
+-   **Image of icon** : click on `set` to choose from one
+    Hundreds of pictograms. Note that the picto is only displayed for
+    the `By default` and `Drop` icon shapes.
 
-Voici le marqueur obtenu avec les propriétés ci-contre :
+Here is the marker obtained with the properties opposite:
 
 ![umap_camping.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_camping.png)
 
-#### Modifier un marqueur
+### Edit a marker
 
 ![umap_modifier_marqueur.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_modifier_marqueur.png)
 
-Pour modifier un marqueur de la carte, plusieurs possibilités s’offrent à vous :
+To modify a marker of the card, several possibilities are available to you:
 
--   un **clic-droit** sur le marqueur vous permet d’afficher les options
-    d’édition possibles avec vos droits et d’autres actions relatives à ce point
--   **shift-clic** est un raccourci qui affiche directement le panneau
-    d’édition
--   un glisser-déposer vous permet de déplacer le marqueur sur la carte
+-   a **right click** on the marker allows you to view the options
+    possible editing with your rights and other actions relating to this point
+-   **shift-click** is a shortcut that directly displays the panel
+    of edition
+-   a drag and drop allows you to move the marker on the map
 
-### 2. Créer une ligne
+### 2. Creating a line
 
-Le premier jour de vacances nous allons en kayak de mer jusqu’à la
-Pointe de Dinan à l’ouest de la plage de Goulien. Traçons l’itinéraire
-suivi.
+On the first day of vacation we go by sea kayak to the
+Pointe de Dinan to the west of the Goulien beach. Trace the route
+followed.
 
 <shot-scraper
     data-output="static/tutoriels/draw-polyline.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton de dessin d’une ligne."
+    data-alt="A line drawing button."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.umap-draw-polyline"
     data-padding="5"
-    >Bouton de dessin d’une ligne.</shot-scraper>
+    > Drawing button of a line.</shot-scraper>
 
-Le bouton **Dessiner une ligne** permet de tracer, point par point,
-une ligne constiutée de plusieurs segments.
-Cliquez à nouveau sur le dernier point tracé pour
-terminer la ligne : apparaît alors à droite un panneau permettant de
-donner un nom et une description à la ligne, comme pour les marqueurs.
+The button **Draw a line** allows to trace, point by point,
+a line consisting of several segments.
+Click again on the last plot point to
+finish the line : then appears on the right a panel allowing to
+give a name and description to the line, as for the markers.
 
-#### Modifier une ligne
+#### Edit a line
 
-A tout moment vous pouvez sélectionner une ligne en double-cliquant
-dessus. Vous pouvez alors éditer ses propriétés dans le panneau latéral,
-ou modifier son tracé sur la carte :
+At any time you can select a line by double-clicking
+on it. You can then edit its properties in the side panel,
+or modify his layout on the map:
 
--   **supprimer un point** de la ligne, matérialisé par un carré blanc,
-    en cliquant dessus
--   **déplacer un point** par un glisser-déposer
--   **insérer un point** en cliquant sur un carré gris se trouvant au
-    milieu de chaque segment
--   **allonger la ligne** avec un Ctrl-Clic lorsque le curseur est placé
-    sur le premier ou dernier point
--   **couper la ligne** en deux : Clic droit sur un point puis choisir
-    l’option `Scinder la ligne`
+-   **remove a point** of the line, materialized by a white square,
+    by clicking on it
+-   **move a dot** by a drag and drop
+-   **insert a dot** by clicking on a grey square located at
+    middle of each segment
+-   ** extend the line** with a Ctrl-Clic when the cursor is placed
+    On the first or last point
+-   **cut the line** in two : Right click on a point then choose
+    the `Scinder the line` option
 
 ![umap_ligne.jpg](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne.jpg)
 
-#### Propriétés d’une ligne
+#### Properties of a line
 
 ![umap_ligne_props.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne_props.png)
 
-Les propriétés d’une
-ligne permettent de définir sa couleur et d’autres paramètres
-définissant son *style* :
+The properties of a
+line allows you to define your color and other parameters
+defining his *style* :
 
--   l’**opacité** va de transparent à gauche à totalement opaque à
-    droite. Plus le trait est épais plus il peut être transparent.
--   l’**épaisseur** est définie en pixels, sa valeur par défaut est 3 :
-    glisser le curseur vers la droite pour un trait plus épais (qui sera
-    plus facile à sélectionner).
+-   the **opacity** ranges from transparent to left to totally opaque to
+    right. The thicker the stroke, the more transparent it can be.
+-   the **thickness** is defined in pixels, its default value is 3:
+    slide the cursor to the right for a thicker line (which will be
+    easier to select).
 
-Les **propriétés avancées** permettent de :
+**Advanced properties** allow to:
 
--   **simplifier** le tracé permet de réduire le nombre de points pour
-    l’adapter au niveau de zoom. Il est en général inutile de simplifier
-    un tracé réalisé *à la main*.
--   définir un **traitillé**, par une série de chiffres séparés par des
-    virgules : longueur (en pixels) visible, longueur invisible,
-    longueur visible, etc. L’épaisseur du trait doit être prise en
-    compte : plus les traits sont épais plus les intervalles doivent
-    être grands.
+-   **simplify** the plot can reduce the number of points to
+    Adapt it to the zoom level. There is generally no need to simplify
+    a path made *by hand*.
+-   define a **traited**, by a series of digits separated by
+    commas : visible length (in pixels), invisible length,
+    visible length, etc. The thickness of the line should be taken in
+    account : the thicker the strokes the more the intervals must
+    be great.
 
-Voici le style de trait obtenu avec les propriétés ci-contre :
+Here is the style of line obtained with the properties opposite:
 
 ![umap_ligne_tirets.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_ligne_tirets.png)
 
-### 3. Ajouter des étiquettes
+### 3. Add labels
 
 ![etiquettes.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/etiquettes.png)
 
-Pour aider l’identification des
-différents éléments de notre carte, nous pouvons leur associer une
-étiquette. L’onglet **Options d’interaction** permet de contrôler
-l’affichage d’une étiquette associée à chaque élément :
+To help identify the
+different elements of our map, we can associate them with a
+Label. The **Interaction Options** tab allows you to control
+the display of a label associated with each element:
 
--   **Afficher une étiquette** active son affichage, elle est alors
-    placée automatiquement
--   **Direction de l’étiquette** vous permet de fixer la position, à
-    droite ou à gauche de l’élément, ou encore au-dessus ou en-dessous
--   **Afficher seulement au survol** de la souris est une option
-    intéressante si la carte est dense : afficher toutes les étiquettes
-    surchagerait la carte
--   **Étiquette cliquable** permet d’afficher l’infobulle correspondante
-    si l’utilisateur clique sur l’étiquette, et non seulement en cas de
-    clic sur la *géométrie* de l’élément.
+-   **Show a label** activates its display, it is then
+    automatically placed
+-   **Direction of the label** allows you to fix the position, to
+    right or left of the element, or above or below
+-   **Show only overflight** of the mouse is an option
+    interesting if the map is dense: display all the labels
+    over-lick the map
+-   **Clickable label** allows you to display the corresponding tooltip
+    if the user clicks on the label, and not only in the event of
+    Click on the *geometry* of the element.
 
 
-## Faisons le point
+## Let's take stock
 
-Notre deuxième carte est déjà plus intéressante que la première, et nous
-savons la retrouver facilement. Nous avons vu comment créer, *styliser*
-et modifier points et lignes. Nous n’avons pas traité ici des polygones,
-qui représentent des surfaces. Certaines fonctionnalités propres aux
-polygones méritent d’être détaillées, ce que nous ferons dans le
-tutoriel [Le cas des polygones](8-polygons.md).
+Our second card is already more interesting than the first, and we
+Know how to find it easily. We have seen how to create, *styl*
+and modify points and lines. We did not treat polygons here,
+which represent surfaces. Some features specific to
+polygons deserve to be detailed, what we will do in the
+tutorial [The case of polygons](8-polygons.md).
 
-Pour le moment voyons comment nous pouvons davantage
-[personnaliser notre carte](4-customize-map.md).
+For now, let’s see how we can more
+[customize our map](4-customize-map.md).
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:3_-_j_utilise_un_compte_et_cree_une_belle_carte) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 

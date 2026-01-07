@@ -1,33 +1,33 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Créer une carte à partir d’un fichier GPX
-    - Lui ajouter une courbe d’altitude en popup
-
-
-## 1. Créer une carte à partir d’un fichier GPX
-
-Il suffit de glisser/déposer un fichier GPX sur la carte pour qu’un calque soit automagiquement créé à partir de ces données.
-
-![Capture de la fenêtre d’un navigateur sur laquelle on glisse un fichier GPX](../../static/tutoriels/gpx-import-drag-and-drop.png)
-
-Une ligne devrait alors apparaître sur la carte et potentiellement des points pré-définis selon le fichier source :
-
-![Capture de la fenêtre d’un navigateur avec la carte comportant un tracé](../../static/tutoriels/gpx-import-result.png)
+    - Create a map from a GPX file
+    - Add an altitude curve in popup
 
 
-## 2. Ajouter une courbe d’altitude
+## 1. Create a map from a GPX file
 
-Faire un clic-droit **sur la ligne** et choisir le crayon d’édition.
+Simply drag and drop a GPX file to the map for a layer to be automatically created from that data.
 
-Ouvrir les `Options d’interaction` et passer la `Forme de popup` à `Grande` pour avoir la place d’afficher le graphique.
-Changer ensuite le `Gabarit prédéfini de popup` de `Par défaut` à `Route`.
+![Capture the window of a browser on which a GPX](../../static/tutoriels/gpx-import-drag-and-drop.png)
 
-Vous devriez voir la popup en arrière plan s’enrichir d’un graphique d’altitude :
+A line should then appear on the map and potentially pre-defined points according to the source file:
 
-![Capture de la fenêtre d’un navigateur avec la carte, le panneau de configuration et la popup](../../static/tutoriels/gpx-configuration-popup.png)
+![Capture the browser window with the map with a plot](../../static/tutoriels/gpx-import-result.png)
 
-Vous remarquerez qu’en balayant le graphique, la position en cours est rendue visible sur la carte (point orange sur la ligne) et son altitude est mise à jour dynamiquement dans la popup :
 
-![Capture de la fenêtre d’un navigateur avec la carte et la courbe d'altitude](../../static/tutoriels/gpx-elevation-graph.png)
+## 2. Add an altitude curve
 
-*Bonne promenade !*
+Right-click **on the line** and choose the editing pencil.
+
+Open the `Interaction Options` and move the `Popup Shape` to `Great` to have the place to view the graph.
+Then change the `Present popup Template` from `By default` to `Route`.
+
+You should see the popup in the background get rich from an altitude graph:
+
+![Capture a browser window with the map, control panel and popup](../../static/tutoriels/gpx-configuration-popup.png)
+
+You will notice that by scanning the graph, the current position is made visible on the map (orange point on the line) and its altitude is dynamically updated in the popup:
+
+![Capture a browser window with the map and altitude curve](../../static/tutoriels/gpx-elevation-graph.png)
+
+*Good walk!*

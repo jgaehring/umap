@@ -1,99 +1,99 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Importer le contour d’une commune
-    - Importer les contours des départements ou des régions
-    - Importer un point d’intérêt (bibliothèques, parkings, …) qui est enregistré sur OpenStreetMap
+    - Import the outline of a municipality
+    - Import contours of departments or regions
+    - Import a point of interest (libraries, car parks, ...) which is registered on OpenStreetMap
 
-## Procédons par étapes
+## Step-by-step procedures
 
-Il est conseillé de vérifier si les données n’existent pas avant de se lancer dans leur dessin. On peut gagner un temps précieux avec l’assistant d’importation intégré dans uMap et conserver une carte qui n’est pas trop lourde au chargement.
+It is advisable to check if the data does not exist before embarking on their drawing. You can save valuable time with the imported assistant built into uMap and keep a card that is not too heavy on loading.
 
-Voilà les deux actions à effectuer une fois une carte préexistante, ou une nouvelle carte vierge ouverte :
+Here are the two actions to perform once a pre-existing card, or a new blank card open:
 
-- Cliquez sur l’outil d’import de données dans la barre de droite puis sélectionnez les données déjà prêtes à l’emploi
-- Cliquez sur « Importer » et le cas échéant enjolivez la carte, car des figurés par défaut sont utilisés
+- Click on the data import tool in the right bar and select the already ready-made data
+- Click on "Import" and if necessary wrap the map, because default figures are used
 
-uMap permet d’utiliser des données produites par de nombreux services et placées en open data sous différents formats. Nous verrons ultérieurement (niveau intermédiaire) où rechercher ces sources. D’ores et déjà, vous pouvez utiliser l’assistant d’importation pour récupérer en un clic des contours administratifs et des points d’intérêt.
+uMap allows you to use data produced by many services and placed in open data in different formats. We will see later (intermediate level) where to search for these sources. Already, you can use the import wizard to recover administrative contours and points of interest with one click.
 
-### Ressources disponibles (20/09/2024)
+### Resources available (20/09/2024)
 
-Au 20 septembre 2024, les imports suivants sont disponibles :
+As of September 20, 2024, the following imports are available:
 
-- contour d’une commune
-- contours des départements et des régions
-- données issues d’OpenStreetMap placées dans [GeoDataMine](https://geodatamine.fr/). Comme son nom l’indique, GeoDataMine est une véritable mine de données très utiles pour les services publics :
-    - Aire de jeux
-    - Aménagements cyclables
-    - Banques et DAB
-    - Base Adresse
-    - Bibliothèques
-    - Cimetière
-    - Cinémas
-    - Commerces
-    - Covoiturage
-    - Déchets et recyclage… jusqu’à Toilettes
-- overpass : pour se familiariser avec les types de requêtes à renseigner dans l’assistant, consulter les tutos plus avancés et la [page wiki](https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard)
+- contour of a commune
+- contours of departments and regions
+- data from OpenStreetMap placed in [GeoDataMine](https://geodatamine.fr/). As the name suggests, GeoDataMine is a real wealth of data very useful for public services:
+    - Playground
+    - Bicycle-can-drive
+    - Banks and DAB
+    - Base Address
+    - Libraries
+    - Cemetery
+    - Cinemas
+    - Shops
+    - Carpooling
+    - Waste and recycling... until Toilets
+- overpass : to familiarize yourself with the types of queries to fill in in the wizard, consult the more advanced tutorials and the [ wiki page](https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard)
 
 
 !!! note
-    Il manque des données ? N’hésitez pas à contribuer pour les ajouter et vous en serez les premiers bénéficiaires !
+    Is there a lack of data? Do not hesitate to contribute to add them and you will be the first beneficiaries!
 
 
-### Cliquez sur l’outil d’import des données
+### Click on the data import tool
 
-Voici un bref passage en revu des différents imports proposés et pour finir l’import de la localisation des bibliothèques de Clermont- Ferrand :
+Here is a brief review of the various imports proposed and to finish the import of the location of the libraries of Clermont-Ferrand:
 
-![Gif animé montrant l’usage de l’assistant d’import](../../static/tutoriels/importer.gif)
+![Animated gif showing the use of the import assistant](../../static/tutoriels/importer.gif)
 
-## 1. Importer le contour d’une commune
+## 1. Importing the outline of a municipality
 
-Cliquez sur l’outil d’importation en bas de la barre de droite, puis cliquez sur le lien « Assistants d’import ».
+Click the import tool at the bottom of the right bar, and then click on the “Import Wizards” link.
 
-Cliquez sur « Communes France » et sélectionnez la commune souhaitée dans une liste déroulante. Une fois la commune sélectionnée, le format est reconnu automatiquement (geojson) puis le type de calque (cliquer sur « ? » pour savoir quel choix opérer)
+Click on "Communes France" and select the desired municipality from a drop-down list. Once the municipality is selected, the format is recognized automatically (geojson) and then the type of layer (click on "? » to know what choice to operate)
 
-1. Pour que les données soient simplement copiées, choisir « Copier dans le calque ».
-2. Pour que la carte évolue si le contour change, choisir « Associer au calque comme donnée distante ».
+1. To simply copy the data, choose “Copy to layer”.
+2. To change the card if the outline changes, choose “Associate with the layer as remote data”.
 
 !!! note
-    Le code affiché n’est pas le code postal mais le code INSEE de la commune.
+    The code displayed is not the postal code but the INSEE code of the municipality.
 
-Voici le résultat avec la commune d’Arles (la plus vaste de France métropolitaine, un gain certain si on fait l’économie de dessiner son contour !)
-![Une carte avec le dessin de la commune d’Arles importée](../../static/tutoriels/importer-arles.png)
+Here is the result with the municipality of Arles (the largest in metropolitan France, a certain gain if we save money to draw its outline!)
+![A map with the drawing of the imported commune of Arles](../../static/tutoriels/importer-arles.png)
 
-Une fois cet import réalisé, tout est réglable : couleur de contour, de fond, affichage oui non d’une étiquette.
+Once this import has been made, everything is adjustable: contour color, background, display yes no of a label.
 
-## 2. Importer les contours des départements ou des régions
+## 2. Import contours of departments or regions
 
-Cliquez sur l’outil d’importation en bas de la barre de droite, puis cliquez sur le lien « Assistants d’import ».
+Click the import tool at the bottom of the right bar, and then click on the “Import Wizards” link.
 
-Cliquez sur « Contours nationaux » puis soit départements, soit régions et enfin le type de calque (voir supra l’explication). Tous les départements sont importés :
+Click on “National contours” then either departments or regions and finally the type of layer (see above the explanation). All departments are imported:
 
-![Une carte avec le dessin de chaque département importé](../../static/tutoriels/importer-departements.png)
+![A map with the drawing of each department imported](../../static/tutoriels/importer-departements.png)
 
-## 3. Importer un point d’intérêt issu de GeoDataMine
+##3. Importing a point of interest from GeoDataMine
 
-Cliquez sur l’outil d’importation en bas de la barre de droite, puis cliquez sur le lien « Assistants d’import ».
+Click the import tool at the bottom of the right bar, and then click on the “Import Wizards” link.
 
-Cliquez sur « GeoDataMine (thèmes OSM) » et sélectionnez les informations souhaitées, routes, bâtiments, commerces, services publics, …
-Par exemple, en sélectionnant les points d’eau potable de la CA du Grand Avignon, puis « Copier dans un calque »
+Click on “GeoDataMine (OSM themes)” and select the desired information, roads, buildings, shops, utilities, ...
+For example, by selecting the drinking water points of the CA du Grand Avignon, then “Copy in a layer”
 
-![Une carte avec les points d’eau potable issus d’OpenStreetMap](../../static/tutoriels/importer-geodatamine.png)
+![A map with drinking water points from OpenStreetMap](../../static/tutoriels/importer-geodatamine.png)
 
-Voici une réelle économie de temps plutôt que de placer pointeur après pointeur tous les points d’eau.
+Here is a real saving of time rather than placing pointer after pointer all the water points.
 
-## 4. La carte combinée
+## 4. The combined map
 
-Bien entendu, on peut tout à fait combiner les différentes couches d’information et présenter par exemple la carte des Points d’eau potable dans la CA du Grand Avignon, avec les contours des communes qui composent l’EPCI, du département et de la région :
+Of course, we can quite combine the different layers of information and present for example the map of the Drinking Water Points in the CA of the Grand Avignon, with the contours of the municipalities that make up the EPCI, the department and the region:
 
-### Points d’eau potable du Grand Avignon
+### Drinking water points of the Grand Avignon
 
-![Une carte combinant plusieurs imports](../../static/tutoriels/importer-multi.png)
+![A map combining several imports](../../static/tutoriels/importer-multi.png)
 
-[Voir la carte en plein écran](https://umap.openstreetmap.fr/fr/map/points-deau-potable-grand-avignon_1116739?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#11/43.9889/4.7962){ .md-button }
+[View full screen map](https://umap.openstreetmap.fr/fr/map/points-deau-potable-grand-avignon_1116739?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true#11/43.9889/4.7962){ .md-button }
 
-Il faudra dans ce cas supprimer toutes les informations inutiles dans le tableau de données qui est accessible dans la barre de gauche pour chaque calque.
+In this case, it will be necessary to delete all unnecessary information in the data table that is accessible in the left bar for each layer.
 
-Pour gagner du temps : sélectionner tous les départements et désélectionner seulement le Vaucluse, puis cliquer sur « Supprimer les lignes sélectionnées ».
+To save time: select all departments and deselect only the Vaucluse, then click on “Delete selected rows”.
 
 
 

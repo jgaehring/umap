@@ -1,107 +1,107 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - utiliser un compte pour retrouver ses cartes
-    - créer une équipe
-    - partager une carte avec une équipe
+    - use an account to find your cards
+    - create a team
+    - share a map with a team
 
-## Procédons par étapes
+## Step-by-step procedures
 
-Nous avons appris dans [le tutoriel précédent](2-first-map.md) comment créer une
-carte anonyme contenant un marqueur. Nous allons à présent créer un compte et une équipe.
+We learned in [the previous tutorial](2-first-map.md) how to create a
+anonymous card containing a marker. We will now create an account and a team.
 
-Nota : il n’y a pas de carte anonyme sur
-[l’instance uMap pour les agents publics](https://umap.incubateur.anct.gouv.fr/fr/).
+Note: there is no anonymous card on
+[the uMap instance for public officials](https://umap.incubateur.anct.gouv.fr/fr/).
 
-Au lieu de créer une carte anonyme, nous allons utiliser un compte pour
-créer cette carte.
+Instead of creating an anonymous map, we will use an account for
+Create this map.
 
-### 1. Utiliser un compte
+### 1. Using an account
 
-**uMap** permet d’associer ses cartes à un compte. Cela présente plusieurs
-avantages importants par rapport à la création de cartes anonymes :
+**uMap** allows you to associate your cards with an account. This presents several
+significant advantages over the creation of anonymous maps:
 
--   les cartes créées avec un compte constituent un catalogue permettant
-    d’accéder facilement à ses cartes
--   on peut modifier chaque carte du catalogue sans avoir besoin de
-    conserver un lien d’édition
--   on peut gérer ses cartes en équipe et afficher le nom de l’équipe comme auteur
--   pour les agents publics sur uMap ANCT : une fois connecté avec MonComptePro, on peut utiliser d’autres outils en association avec uMap, comme Grist.
+-   cards created with an account are a catalog allowing
+    to easily access his cards
+-   you can edit each card in the catalog without the need for
+    Keep a publishing link
+-   you can manage your cards as a team and display the name of the team as an author
+-   for public officials on uMap ANCT: once connected with MonCountPro, other tools can be used in combination with uMap, such as Grist.
 
-Le logiciel umap ne gère pas directement de comptes utilisateurs : la
-gestion des comptes dépend de la configuration du logiciel.
+The umap software does not directly manage user accounts: the
+Account management depends on the configuration of the software.
 
-#### Pour le grand public, les associations…
+#### For the general public, the associations...
 
-Sur <https://umap.openstreetmap.fr>, vous pouvez utiliser un compte que vous
-avez ouvert sur un site Web au choix : OpenStreetMap, Github,
-ou Bitbucket. Si vous n’avez aucun compte sur ces outils, c’est le
-moment de vous inscrire sur le site www.openstreetmap.org : cliquez
-**Créer un compte** dans le coin supérieur droit et suivez les
-instructions - une adresse mail vous sera demandée ([plus
+On <https://umap.openstreetmap.fr>, you can use an account that you
+have opened on a website of your choice: OpenStreetMap, Github,
+or Bitbucket. If you have no account on these tools, it is the
+time to register on the website www.openstreetmap.org : click
+**Create an account** in the upper right corner and follow the
+instructions - an email address will be requested ([more
 d’infos](https://openstreetmap.fr/inscription-openstreetmap)).
 
 ![umap_header.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_header.png)
 
-Cliquez sur **Connexion /
-Créer un compte** puis sur le pictogramme correspondant au compte que
-vous souhaitez utiliser. Apparaît alors la page de connexion du site :
-saisissez le nom d’utilisateur et le mot de passe. La page suivante vous
-demande d’autoriser l’application uMap à utiliser ce compte : accordez
-cet accès. Vous retrouvez alors la page d’accueil de uMap, sur laquelle
-le lien de connexion a laissé la place à un lien **Mes cartes** vous
-permettant d’accéder à l’ensemble des cartes créées avec ce compte.
+Click on **Connection /
+Create an account** then on the pictogram corresponding to the account that
+You want to use. Then appears the login page of the site:
+Enter the username and password. The next page you
+Request to authorize the uMap application to use this account: grant
+that access. You will then find the home page of uMap, on which
+the connection link has given way to a **My cards** link
+allowing access to all the cards created with this account.
 
 ![umap_connect.png](../../static/tutoriels/3-jutilise-un-compte-et-cree-une-belle-carte/umap_connect.png)
 
-Notez l’URL de la barre d’adresse quand vous consultez votre catalogue
-de cartes : celle-ci contient le nom de votre compte - par exemple
-<https://umap.openstreetmap.fr/fr/user/cartocite/>. Vous pouvez
-l’utiliser pour accéder à votre catalogue de cartes, même sans être
-connecté à votre compte : vous pouvez diffuser cette URL, les
-récipiendaires ne pourront pas modifier vos cartes.
+Write down the URL of the address bar when you view your catalog
+of cards : this one contains the name of your account - for example
+<https://umap.openstreetmap.fr/fr/user/cartocite/>. You can
+use it to access your card catalog, even without being
+connected to your account: you can distribute this URL, the
+Recipients will not be able to change your cards.
 
-#### :fontawesome-solid-landmark-flag: Pour les agents publics
+#### :fontawesome-solid-landmark-flag: For public officials
 
-1. Se connectez à ProConnect : <https://moncomptepro.beta.gouv.fr/> <br>
-   Toute personne qui travaille pour un service public y a accès.
-2. Créez un compte, l’opération peut prendre quelques minutes.
-3. Sur [le site uMap pour les agents publics](https://umap.incubateur.anct.gouv.fr/fr/),
-   cliquez sur `Me Connecter`.
+1. Log in to ProConnect : <https://moncomptepro.beta.gouv.fr/> <br>
+   Anyone who works for a public service has access to it.
+2. Create an account, the operation can take a few minutes.
+3. On [the uMap website for public officials](https://umap.incubateur.anct.gouv.fr/fr/),
+   Click on `Me Connect`.
 
-On peut accéder à la page de création de compte ProConnect directement
-depuis [uMap pour les agents publics](https://umap.incubateur.anct.gouv.fr/fr/).
+You can access the ProConnect account creation page directly
+from [uMap for public officials](https://umap.incubateur.anct.gouv.fr/fr/).
 
-Le tableau de bord s’ouvre, il affiche l’ensemble des cartes que
-vous créez ainsi que les équipes auxquelles vous participez.
+The dashboard opens, it displays all the cards that
+You create and the teams you participate in.
 
-!!! french-instance "Pour les agents publics"
-    Associer une carte à une équipe vous permet d’afficher le nom de cette équipe au lieu du vôtre sur une carte (noms de votre commune, de votre service,…). Une équipe peut se composer d’une seule personne.
+!!! french-instance "For public officials"
+    Combining a card with a team allows you to display the name of this team instead of yours on a map (names of your municipality, your service,...). A team can consist of one person.
 
-### 2. Créer une équipe
+### 2. Create a team
 
-Une fois connecté sur l’instance uMap,
-cliquer sur « Mon espace », puis « Mes équipes » :
+Once connected to the uMap instance,
+click on “My space”, then “My teams”:
 
-![Lien vers l’onglet des équipes](../../static/tutoriels/my-teams.png)
+![Link to the Teams tab](../../static/tutoriels/my-teams.png)
 
-Puis sur « Nouvelle équipe » et renseigner les informations
+Then on “New team” and fill in the information
 
-![Formulaire d’édition des équipes](../../static/tutoriels/my-teams-form.png)
+![Team Editing Form](../../static/tutoriels/my-teams-form.png)
 
-Lorsqu’un nouvel utilisateur est associé à une équipe,
-il voit l’équipe s’afficher sur son tableau de bord,
-il accède à toutes les cartes qui sont partagées et il peut les modifier.
+When a new user is associated with a team,
+He sees the team display themselves on their dashboard,
+it accesses all the cards that are shared and it can modify them.
 
 !!! note
-    Tous les membres d’une équipe partagent les mêmes droits d’édition sur une carte
-    qui est associée à une équipe. Une équipe peut être supprimée,
-    ou son nom modifié en un simple clic.
+    All team members share the same editing rights on a map
+    which is associated with a team. A team can be deleted,
+    or its name modified with a single click.
 
-### 3. Partager une carte avec une équipe
+### 3. Share a card with a team
 
-Une fois l’équipe créée, il reste encore à donner les droits de modification
-d’une carte à ses membres. Pour ce faire : ouvrez la carte,
-puis sur cliquez sur « Editer » et cliquez en haut de page
-à droite du titre sur « Visibilité : Définir qui peut voir et modifier la carte ».
+Once the team is created, it remains to give the modification rights
+of a card to its members. To do this : open the card,
+Then click on “Edit” and click at the top of the page
+to the right of the title on “Visibility: Define who can see and modify the map”.
 
-![Panneau de permissions pour la sélection des équipes](../../static/tutoriels/my-teams-permissions.png)
+![Permissions panel for team selection](../../static/tutoriels/my-teams-permissions.png)

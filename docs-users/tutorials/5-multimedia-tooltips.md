@@ -1,34 +1,34 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Formater le texte des infobulles
-    - Ajouter un lien vers une page Web
-    - Insérer une photo et définir sa taille
-    - Intégrer une vidéo
+    - Format the text of the tooltips
+    - Add a link to a web page
+    - Insert a photo and define its size
+    - Integrate a video
 
-## Procédons par étapes
+## Step-by-step procedures
 
-Nous avons vu dans
-le tutoriel [Naviguer dans une carte](1-browsing-a-map.md)
-comment associer un nom et
-une description à un élément de la carte. Ce nom et cette description
-sont affichés dans une infobulle (*popup* en anglais) qui apparaît
-lorsqu’on clique sur l’élément.
+We saw in
+the tutorial [Sail in a map](1-browsing-a-map.md)
+How to associate a name and
+a description to an element of the map. This name and this description
+are displayed in a tooltip (*popup*) that appears
+Clicking on the element.
 
-Le contenu de cette infobulle peut être enrichi de plusieurs manières :
+The content of this tooltip can be enriched in several ways:
 
--   en formatant le texte : titres, caractères gras et italiques
--   en insérant un ou plusieurs liens vers une page Web
--   en insérant une image ou une vidéo
+-   by formatting the text : titles, bold and italic characters
+-   by inserting one or more links to a web page
+-   by inserting an image or a video
 
-Mettre en forme une infobulle nécessite d’utiliser une syntaxe décrite
-en cliquant sur le point d’interrogation visible à droite de l’intitulé
-**description**, reprise ci-contre.
+Formatting a tooltip requires using a described syntax
+by clicking on the question mark visible to the right of the title
+**description**, resumed opposite.
 
 <shot-scraper
     data-output="static/tutoriels/help-box.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Panneau d’aide au formatage."
-    data-caption="Panneau d’aide au formatage."
+    data-alt="Formatting help panel."
+    data-caption="Formatting help panel."
     data-selector=".umap-dialog"
     data-width="510"
     data-height="326"
@@ -44,169 +44,169 @@ en cliquant sur le point d’interrogation visible à droite de l’intitulé
             }, 1000);
         });
     "
-    >Panneau d’aide au formatage.</shot-scraper>
+    >Formatting help panel.</shot-scraper>
 
-Il y a d’autres options disponibles [dans la FAQ](../support/faq.md#text-formatting).
+There are other options available [in the FAQ](../support/faq.md#text-formatting).
 
-### 1. Mettre en forme le texte d’une infobulle
+### 1. Format the text of a tooltip
 
 ![miseenforme-resultat.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-resultat.png)
 
-Un exemple
-vaut mieux que de longues explications : la description ci-dessous
-produit l’infobulle à droite.
+An example
+Better than long explanations: the description below
+produce the tooltip on the right.
 
 ![miseenforme-syntaxe.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-syntaxe.png)
 
-Notez les points suivants :
+Note the following points :
 
--   une ligne commençant par `#` définit une ligne titre, un **caractère
-    espace** doit être placé entre le caractère `#` et le texte du titre
--   une **zone vide** est ajoutée automatiquement en-dessous de chaque
-    titre
--   il est possible de combiner caractères gras et italiques en
-    utilisant `***`
--   le triangle en bas à gauche du champ de saisie permet de l’agrandir
+-   a line starting with `#` defines a title line, a **character
+    space** must be placed between the character `#` and the text of the title
+-   an **vaid area** is automatically added below each
+    Title
+-   it is possible to combine bold and italic characters in
+    using `***`
+-   the triangle at the bottom left of the input field allows to enlarge it
 
-### 2. Ajouter un lien vers une page Web
+### 2. Add a link to a web page
 
-Reprenons [la carte de nos vacances à
-Crozon](http://u.osmfr.org/m/64936/). Au 3ème jour de vacances un fort
-vent d’Ouest nous amène à aller dans l’Anse de Morgat, bien abritée du
-vent. Nous décidons de documenter cette visite sur la carte. Nous
-ajoutons un marqueur sur la carte, puis découvrons avec intérêt
-l’article Wikipédia sur Morgat : <https://fr.wikipedia.org/wiki/Morgat>.
+Let's go back [the map of our holiday to
+Crozon](http://u.osmfr.org/m/64936/). On the 3rd day of vacation a strong
+west wind leads us to go to the Anse de Morgat, well sheltered from the
+wind. We decide to document this visit on the map. We
+Let's add a marker on the map, and then discover with interest
+the Wikipedia article on Morgat : <https://fr.wikipedia.org/wiki/Morgat>.
 
 
-Pour
-ajouter à notre infobulle **un lien vers l’article**, il suffit de
-copier l’adresse de la page Web, affichée dans la barre d’adresse du
-navigateur, et de la placer entre **double-crochets**. L’infobulle à
-droite correspond à la description ci-dessous :
+For
+add to our tooltip **a link to the article**, just
+copy the address of the web page, displayed in the address bar of the
+browser, and place it between **double-hooks**. The tooltip to
+right corresponds to the description below :
 
-    Morgat est un ancien village de pêcheurs.
+    Morgat is an old fishing village.
 
-    Article Wikipédia :
+    Wikipedia article :
     [[https://fr.wikipedia.org/wiki/Morgat]]
 
 ![miseenforme-liensimple.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-liensimple.png)
 
-Nous pouvons aussi **cacher l’adresse du lien** et la remplacer par un
-texte. Pour cela il suffit de faire suivre l’adresse d’une barre
-verticale (AltGr + 6 sur un clavier français) et du texte :
+We can also **hide the link address** and replace it with a
+text. Just follow the address of a bar
+vertical (AltGr + 6 on a French keyboard) and text:
 
-    Morgat est un ancien village de pêcheurs.
+    Morgat is an old fishing village.
 
-    [[https://fr.wikipedia.org/wiki/Morgat|Article Wikipédia]]
+    [[https://fr.wikipedia.org/wiki/Morgat|Pedilexpa]]
 
 ![miseenforme-lienavectexte.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-lienavectexte.png)
 
-Cette forme est particulièrement utile pour les adresses longues.
+This form is especially useful for long addresses.
 
 
-### 3. Insérer une image
+### 3. Insert an image
 
-Umap ne permet pas de stocker des images, mais sait afficher des photos
-publiées sur un serveur Web.
+Umap does not allow you to store images, but can display photos
+published on a web server.
 
 ![miseenforme-photo.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-photo.png)
 
-L’article
-Wikipédia montre une belle photo de l’Anse de Morgat. Les photos
-visibles dans Wikipédia sont sous licence libre *[Creative
-Commons](http://creativecommons.fr/)*. Cela signifie que l’auteur·rice
-de la photo renonce à ses droits d’auteur : nous pouvons donc utiliser
-cette photo. Pour cela nous devons :
+The article
+Wikipedia shows a beautiful photo of the Anse de Morgat. The photos
+visible in Wikipedia are under free *[Creative license
+Commons](http://creativecommons.fr/)*. This means that the author
+of the photo waives its copyright: we can therefore use
+that photo. For this we must:
 
-1.  copier l’**adressse de l’image** (cette opération est accessible
-    dans le menu affiché par un clic droit sur la photo)
-2.  placer cette adresse entre double accolades :
+1.  copy the **dresses of the image** (this operation is accessible
+    in the menu displayed by a right click on the photo)
+2.  place this address between double hugs :
 
 
-        Morgat est un ancien village de pêcheurs.
+        Morgat is an old fishing village.
 
         {{https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Morgat_8006.jpg/330px-Morgat_8006.jpg}}
 
-        [[https://fr.wikipedia.org/wiki/Morgat|Article Wikipédia]]
+        [[https://fr.wikipedia.org/wiki/Morgat|Pedilexpa]]
 
-#### Afficher vos photos
+### Show your photos
 
-Si vous disposez d’un serveur vous pouvez l’utiliser stocker vos photos.
+If you have a server you can use it store your photos.
 
-#### Modifier la taille d’une image
+### Change the size of an image
 
 
-La taille de la photo est
-restreinte par la taille de l’infobulle. Pour **agrandir une image**
-vous devez utiliser une infobulle plus grande. Pour cela ouvrez l’onglet
-`Options d’interaction`, cliquez sur `Définir` en face de
-`Style de popup` puis choisissez **Nom et description (large)**.
+The size of the photo is
+restricted by the size of the tooltip. To ** enlarge an image**
+You need to use a larger tooltip. To do this open the tab
+`Interaction options`, click on `Define` in front of
+`Popup style` then choose **Name and description (large)**.
 
 ![styledepopup.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/styledepopup.png)
 
-A l’inverse vous pouvez **réduire la taille d’une image**, en faisant
-suivre le lien vers la photo d’une barre verticale et d’un nombre qui
-définit la **largeur en pixels** de l’image, par exemple :
+Conversely you can **reduce the size of an image**, by doing
+follow the link to the photo of a vertical bar and a number that
+defines the **width in pixels** of the image, for example:
 
-    {{https://framapic.org/xxx/yyy.jpg|400}}
+    {{https://framapic.org/xxx/yyyy.jpg|400}}}
 
-#### Associer une image à un lien vers une page Web
+### Associate an image with a link to a web page
 
-Il est possible d’intégrer une image qui ouvre une page Web lorsque
-l’utilisateur clique dessus. Cela consiste en fait à créer un lien vers
-une page Web (syntaxe `[[lien|texte]]`), en utilisant en guise de texte
-le lien vers une image (syntaxe `{{image}}`). Exemple avec le site et le
-logo Framasoft :
+It is possible to embed an image that opens a web page when
+The user clicks on it. It is actually about creating a link to
+a web page (syntax `[[link|text]]`), using as text
+the link to an image (syntax `{{image}}`). Example with the site and the
+Framasoft logo :
 
-    [[https://framasoft.org/|{{https://framasoft.org/nav/img/logo.png}}]]
+    [[https://framasoft.org/|{https://framasoft.org/nav/img/logo.png}}]]]
 
-### 4. Insérer une vidéo
+### 4. Insert a video
 
-Insérer une vidéo est plus complexe. En effet le navigateur Web a besoin
-d’un lecteur pour afficher une vidéo. Les sites de partage de vidéos
-comme Youtube, DailyMotion ou encore [Framatube](https://framatube.org/)
-de Framasoft, proposent pour chaque vidéo un lien qui permet de
-l’intégrer dans une autre page Web en utilisant une *iframe*.
+Inserting a video is more complex. The web browser needs
+from a player to display a video. Video sharing sites
+like Youtube, DailyMotion or [Framatube](https://framatube.org/)
+de Framasoft, offer for each video a link that allows
+integrate it into another web page using an *iframe*.
 
-Nous trouvons sur YouTube une [vidéo des Grottes marines de
-Morgat](https://www.youtube.com/watch?v=sKvjd8bGsZM), qui se visitent en
-bateau. Pour intégrer cette vidéo à une infobulle, suivez les étapes :
+We find on YouTube a [video of the Sea Caves of
+Morgat](https://www.youtube.com/watch?v=sKvjd8bGsZM), who visit in
+boat. To integrate this video with a tooltip, follow the steps:
 
-1.  ouvrez l’onglet **Intégrer** visible *sous* la vidéo
-2.  copiez l’adresse après `src=` (sans les guillemets), notez qu’elle
-    comporte le terme *embed* qui signifie *intégrer*
+1.  open the **Integrate** tab visible *under* the video
+2.  Copy the address after `src=` (without the quotation marks), note that it
+    has the term *embed* which means *integrate*
     ![partageyoutube.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/partageyoutube.png)
-3.  coller cette adresse entre **triple accolades** dans l’infobulle :
+3.  paste this address between **triple accolades** in the tooltip:
 
         {{{https://www.youtube.com/embed/sKvjd8bGsZM}}}
 
-4.  pour un meilleur résultat utilisez un style de popup large, notez la
-    hauteur et la largeur et définissez la taille de l’*iframe* avec les
-    mêmes valeurs :
+4.  for a better result use a wide popup style, note the
+    height and width and set the size of the *iframe* with the
+    same values :
 
         {{{https://www.youtube.com/embed/sKvjd8bGsZM|315*560}}}
 
-Voici le résultat, la vidéo peut être directement visionnée dans notre
-infobulle :
+Here is the result, the video can be directly viewed in our
+tooltip :
 
 ![miseenforme-video.png](../../static/tutoriels/5-je-cree-des-infobulles-multimedia/miseenforme-video.png)
 
-## Faisons le point
+## Let's take stock
 
-Nous avons à présent tous les éléments pour produire une belle carte,
-avec des éléments stylisés et les infobulles qui les décrivent avec un
-contenu mis en forme et multimédia : liens, photos et vidéos.
+We now have all the elements to produce a nice map,
+with stylized elements and the tooltips that describe them with a
+Formatted content and multimedia: links, photos and videos.
 
-La syntaxe permettant de mettre en forme une infobulle est certes un peu
-complexe, mais la bonne nouvelle est que cette même syntaxe peut être
-utilisée sur uMap en deux autres endroits :
+The syntax to format a tooltip is certainly a little
+complex, but the good news is that this same syntax can be
+used on uMap in two other places:
 
--   la description de la carte, définie dans le menu **Éditer les
-    paramètres**
--   le descriptif des **calques**, que nous découvrons dans le
-    [prochain tutoriel](6-handling-datalayers.md).
+-   the description of the map, defined in the menu **Edit
+    parameters**
+-   the description of **calques**, which we discover in the
+    [next tutorial](6-handling-datalayers.md).
 
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:5_-_je_cree_des_infobulles_multimedia) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).

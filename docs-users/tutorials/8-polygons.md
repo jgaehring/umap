@@ -1,227 +1,227 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Créer un polygone et le modifier
-    - Styliser un polygone : remplissage et contour(s)
-    - Associer une URL à un polygone
-    - Extraire des limites administratives d’OpenStreetMap
-    - Importer des données dans une carte
+    - Create a polygon and modify it
+    - Stylize a polygon : filling and contour(s)
+    - Associate a URL with a polygon
+    - Extract from the administrative boundaries of OpenStreetMap
+    Import data into a map
 
 !!! question
 
-    Pourquoi traiter les polygones à part, il ne s’agit que d’une ligne
-    fermée ? Un polygone est en réalité bien plus qu’un ligne fermée. Cette
-    ligne sépare l’**intérieur du polygone** de son extérieur, ceci est
-    important car uMap peut réagir à un clic à l’intérieur du polygone. De
-    plus un polygone être troué, il est alors défini par plusieurs lignes.
+    Why treat polygons separately, it’s just a line
+    Closed? A polygon is actually much more than a closed line. This
+    line separates the **inside of the polygon** from its exterior, this is
+    important because uMap can react to a click inside the polygon. of
+    plus a polygon being holed, it is then defined by several lines.
 
-## Procédons par étapes
+## Step-by-step procedures
 
-### 1. Créer un polygone
+### 1. Creating a Polygon
 
-Revenons à la carte de nos vacances à Crozon. Un jour de beau temps nous
-louons un dériveur et naviguons dans la zone définie par le club
-nautique. Ajoutons cette zone à la carte.
+Let's go back to the map of our holiday in Crozon. A day of good weather we
+Let's rent a dinghy and naviguons in the area defined by the club
+nautical. Let's add this area to the map.
 
 <shot-scraper
     data-output="static/tutoriels/draw-polygon.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton de dessin de polygones."
+    data-alt="Polygon drawing button."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.umap-draw-polygon"
     data-padding="5"
-    >Bouton de dessin de polygones.</shot-scraper>
+    > Polygon drawing button.</shot-scraper>
 
-Le bouton
-**Dessiner un polygone** permet de tracer le périmètre d’un polygone
-point par point, et de le terminer en cliquant à nouveau sur le dernier
-point comme pour le tracé d’une ligne. Une différence toutefois : dès le
-troisième point l’intérieur du polygone est coloré.
+The button
+**Drawing a polygon** allows you to trace the perimeter of a polygon
+point by point, and to finish it by clicking again on the last
+point as for the drawing of a line. A difference however : from the
+third point the inside of the polygon is colored.
 
-#### Propriétés d’un polygone
+### Properties of a Polygon
 
 ![proprietes_polygones.png](../../static/tutoriels/8-le-cas-des-polygones/proprietes_polygones.png)
 
-La liste des
-propriétés d’un polygone est assez longue. Les propriétés de la moitié
-supérieure du menu s’appliquent au périmètre du polygone, et sont
-identiques aux propriétés s’appliquant aux lignes. Le moitié inférieure
-concerne le remplissage du polygone. Noter :
+The list of
+properties of a polygon is quite long. Properties of half
+upper menu apply to the perimeter of the polygon, and are
+identical to the properties applicable to the lines. The lower half
+concerning the filling of the polygon. Note :
 
--   les options **trait** et **remplissage** permettent de ne pas
-    afficher le périmètre ou l’intérieur du polygone : si aucun de ces
-    deux éléments est affiché le polygone est invisible.
--   la **couleur du remplissage** est par défaut celle du trait, mais
-    peut être modifiée.
--   une faible **opacité du remplissage** permet de voir le fond de
-    carte *sous* le polygone.
+-   options **trait** and **filling** allow you not to
+    display the perimeter or interior of the polygon: if none of these
+    Two elements is displayed the polygon is invisible.
+-   the **color of the filling** is by default that of the line, but
+    can be modified.
+-   a low **opacity of the filling** allows to see the bottom of
+    card *under* the polygon.
 
-#### Trouer un polygone
+### Find a polygon
 
-Il est parfois utile de créer un ou plusieurs trous dans un polygone,
-par exemple pour dessiner une clairière dans une forêt ou un île au
-milieu d’un étang.
+It is sometimes useful to create one or more holes in a polygon,
+for example to draw a clearing in a forest or an island in
+middle of a pond.
 
 ![polygone_trou.jpg](../../static/tutoriels/8-le-cas-des-polygones/polygone_trou.jpg)
 
-Vous pouvez créer un
-polygone avec un ou plusieurs trous en cliquant sur l’option **Ajouter
-un tracé intérieur** lorsque vous sélectionnez un polygone en mode
-édition.
+You can create a
+polygon with one or more holes by clicking on the option **Add
+an inner path** when you select a polygon in mode
+Edition.
 
-Le premier point du *périmètre intérieur* est créé directement là où
-vous avez cliqué avant de choisir **Ajouter un tracé intérieur**.
+The first point of the *inner perimeter* is created directly where
+you clicked before choosing **Add an inner track**.
 
-Notez que les propriétés de périmètre d’un polygone s’appliquent à tous
-les périmètres - extérieurs et intérieurs.
+Note that the perimeter properties of a polygon apply to everyone
+perimeters - exterior and interior.
 
-### 2. Définir les interactions avec un polygone
+### 2. Define interactions with a polygon
 
-L’onglet **Options d’interaction** propose deux options spécifiques aux
-polygones.
+The **Interaction Options** tab offers two options specific to
+polygons.
 
 ![interaction-desactivee.png](../../static/tutoriels/8-le-cas-des-polygones/interaction-desactivee.png)
 
-Toute interaction peut être désactivée en sélectionnant **OFF** pour
-l’option **Autoriser les interactions**. Aucune infobulle n’est alors
-affichée lors d’un clic sur le polygone. Cette option est intéressante
-pour donner de l’importance à une zone de la carte sans que
-l’utilisateur ne puisse interagir avec.
+Any interaction can be disabled by selecting **OFF** for
+the **Allow interactions** option. No tooltip is then
+displayed when you click on the polygon. This option is interesting
+to give importance to an area of the map without
+The user cannot interact with.
 
 ![ile-de-nantes.jpg](../../static/tutoriels/8-le-cas-des-polygones/ile-de-nantes.jpg)
 
-Voici un exemple montrant
-l’Ile de Nantes entourée d’un large trait rouge et sans remplissage. Il
-n’est possible de cliquer ni sur le contour ni à l’intérieur du
-polygone.
+Here is an example showing
+The Island of Nantes surrounded by a wide red line and without filling. He
+is not possible to click on the outline or inside the
+polygon.
 
 !!! note
-    L’interaction avec le polygone reste désactivée en mode
-    édition. Pour pouvoir éditer le polygone il est alors nécessaire de
-    passer par le panneau **Visualiser les données** (toujours accessible
-    par le panneau de Légende lui-même accessible depuis le lien **A
-    propos** en bas à droite de la carte).
+    Interaction with the polygon remains disabled in mode
+    Edition. To be able to edit the polygon it is then necessary to
+    go through the panel **View data** (always accessible
+    by the Legend panel itself accessible from the link **A
+    propos** bottom right of the map).
 
 
 ![interaction-url.png](../../static/tutoriels/8-le-cas-des-polygones/interaction-url.png)
 
-À l’inverse, il est
-possible d’associer à un polygone une URL : un clic sur le polygone
-ouvre alors la page Web correspondante directement, sans passer par une
-infobulle. Il suffit pour cela de définir le **Lien vers…** puis de
-saisir l’URL. il existe trois options permettant de définir ***où***
-sera ouverte la page Web :
+Conversely, it is
+possible to associate a URL with a polygon: a click on the polygon
+then open the corresponding web page directly, without going through a
+Toothboil. Just define the **Link to...** then
+enter the URL. there are three options to define ***where***
+will be open the web page :
 
--   **nouvelle fenêtre** : la page s’ouvre dans un nouvel onglet du
-    navigateur
--   **fenêtre parente** : la page s’ouvre dans le même onglet que celui
-    de la carte
--   **iframe** : si la carte est intégrée dans une iframe, la page Web
-    est alors ouverte à l’intérieur de l’iframe
+-   **new window** : the page opens in a new tab of the
+    Navigator
+-   **parent window** : the page opens in the same tab as the one
+    of the map
+-   **iframe** : if the map is integrated in an iframe, the web page
+    is then open inside the iframe
 
 
-### 3. Réaliser un menu cartographique
+### 3. Create a map menu
 
-Associer un URL à un polygone permet de créer un *menu cartographique*,
-c’est-à-dire une carte permettant d’accéder à plusieurs pages Web selon
-la zone sur laquelle clique l’utilisateur. Voici un exemple montrant les
-différents quartiers de Nantes : un clic sur un quartier ouvre la page
-correspondante du site <http://www.nantes.fr>.
+Combining a URL with a polygon allows you to create a *map menu*,
+that is to say, a card allowing access to several web pages according to
+the area on which the user clicks. Here is an example showing the
+different neighborhoods of Nantes: a click on a neighborhood opens the page
+corresponding to the website <http://www.nantes.fr>.
 
 <iframe width="500px" height="550px" frameBorder="0" src="https://umap.openstreetmap.fr/fr/map/quartiers-de-nantes_126581?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=false&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&fullscreenControl=false&datalayers=311326#12/47.24/-1.5"></iframe>
 
 
-Voici les étapes pour réaliser cette carte.
+Here are the steps to make this card.
 
-#### a. Récupérer les contours des quartiers
+### a. Recovering the contours of the neighborhoods
 
-Le contour des quartiers de Nantes provient les limites administratives
-d’OpenStreetMap (pour en savoir plus, consultez cette [page du
-Wiki](http://wiki.openstreetmap.org/wiki/WikiProject_France/Liste_limites_administratives)).
-Le site [OSM Boundaries](https://osm-boundaries.com/) permet de
-sélectionner les limites administratives une à une, puis de les exporter
-dans différents formats.
+The outline of the districts of Nantes comes the administrative boundaries
+from OpenStreetMap (for more information, see this [page of
+Wiki](http://wiki.openstreetmap.org/wiki/WikiProject_France/List_limites_administratives)).
+The site [OSM Boundaries](https://osm-boundaries.com/) allows
+select the administrative boundaries one by one, and then export them
+in different formats.
 
 ![osm-boundaries.png](../../static/tutoriels/8-le-cas-des-polygones/osm-boundaries.png)
 
-Suivez ces étapes :
+Follow these steps :
 
-1.  connectez-vous à votre compte OpenStreetMap (celui-ci est exigé pour
-    pouvoir exporter les limites administratives)
-2.  sélectionnez les limites administratives une par une, en ouvrant
-    successivement les différents niveaux : pays - région - département
+1.  Log in to your OpenStreetMap account (this one is required to
+    being able to export the administrative limits)
+2.  select the administrative limits one by one, opening
+    successively the different levels : country - region - department
     etc.
-3.  sélectionez le format d’export JSON : le format
-    [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON) est alors utilisé
-4.  cliquez sur Export
+3.  select the JSON export format: the format
+    [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON) was then used
+4.  click Export
 
-Vous récupérez dans le dossier des téléchargements un fichier dont
-l’extension est `.geojson`.
+You retrieve a file from the downloads folder, including
+The extension is `.geojson`.
 
 ![import-contours.png](../../static/tutoriels/8-le-cas-des-polygones/import-contours.png)
 
-#### b. Importer les contours de quartier dans une carte
+### b. Import neighborhood contours into a map
 
 <shot-scraper
     data-output="static/tutoriels/upload-data.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton d’import de données."
+    data-alt="Data import button."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.upload-data"
     data-padding="5"
-    >Bouton d’import de données.</shot-scraper>
+    >Data import button.</shot-scraper>
 
-Dans une nouvelle
-carte, cliquez sur **Importer des données**. Dans le panneau qui appraît
-alors, sélectionnez le fichier produit à l’étape précédente.
+In a new
+map, click **Import data**. In the panel that appears
+Then select the file produced in the previous step.
 
-Le sélecteur de format se positionne automatiquement sur **geojson**,
-sélectionnez-le si ce n’est pas le cas, par exemple parce que
-l’extension du fichier n’est pas `.geojson`. Cliquez sur **Importer** :
-les contours apparaissent sur la carte.
+The format selector is automatically positioned on **geojson**,
+Select it if it is not, for example because
+the file extension is not `.geojson`. Click on **Import** :
+The outlines appear on the map.
 
-#### c. Configurer la carte uMap
+### c. Configure the uMap card
 
-Configurez le calque afin d’afficher une étiquette - au survol ou pas
-selon votre choix. Ensuite éditez chaque polygone pour lui associer
-l’URL vers la page Web correspondante, comme nous l’avons vu plus haut.
+Configure the layer to display a label - on the flyover or not
+according to your choice. Then edit each polygon to associate it
+the URL to the corresponding web page, as we saw above.
 
-Enfin vous pouvez, dans les **Paramètres de la carte**, définir les
-**Limites géographiques** de la carte. Cela permet d’empêcher
-l’utilisateur de déplacer la carte au-delà de ces limites.
+Finally you can, in the **Settings of the map**, set the
+**Geographic limits** of the map. This prevents
+the user to move the card beyond these limits.
 ![limites-geographiques.png](../../static/tutoriels/8-le-cas-des-polygones/limites-geographiques.png)
 
-#### d. Intégrer la carte dans une iframe
+### d. Integrate the map into an iframe
 
-Récupérez le code de l’iframe, comme nous l’avons vu dans le
-[tutoriel précédent](7-publishing-and-permissions.md),
-en prenant soin de désactiver toutes les options d’interaction :
-boutons de zoom, zoom avec la molette, bouton « Plus », etc.
+Recover the code from the iframe, as we saw in the
+[previous tutorial](7-publishing-and-permissions.md),
+Taking care to disable all interaction options:
+zoom buttons, zoom with the knob, “More” button, etc.
 
-Copiez ce **code iframe** dans votre page Web, et le tour est joué !
+Copy this **code iframe** to your web page, and you're done!
 
 !!! note
-    Lorsque vous modifiez la carte, vous devez recharger
-    entièrement la page contenant l’iframe pour vider le cache du
-    navigateur, par exemple en utilisant <kbd>Ctrl</kbd>+<kbd>F5</kbd>
-    sur Firefox.
+    When you modify the card, you must reload
+    the entire page containing the iframe to clear the cache of the
+    browser, for example using <kbd>Ctrl</kbd>+<kbd>F5</kbd>
+    on Firefox.
 
 
-## Faisons le point
+## Let's take stock
 
-Ce tutoriel marque la fin du niveau intermédiaire. Vous savez structurer
-le contenu d’une carte avec des calques et utiliser des styles par
-défaut. Vous savez formater les infobulles et y intégrer du multimédia.
-Vous savez intégrer votre carte dans une page Web et contrôler qui peut
-la voir et la modifier.
+This tutorial marks the end of the intermediate level. You know how to structure
+the content of a card with layers and use styles by
+Defect. You know how to format the tooltips and integrate multimedia.
+You know how to embed your map into a web page and control who can
+See and modify it.
 
-Nous venons de voir comment importer des données dans une carte, le
-niveau avancé va nous permettre d’aller bien plus loin dans cette
-démarche.
+We have just seen how to import data into a map, the
+advanced level will allow us to go much further in this
+approach.
 
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:8_-_le_cas_des_polygones) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 

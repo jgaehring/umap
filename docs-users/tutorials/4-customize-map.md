@@ -1,188 +1,188 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Gérer son catalogue de cartes
-    - Choisir un fond de carte
-    - Sélectionner les options d’interface
+    - Manage your catalog of cards
+    - Choose a background card
+    - Select the interface options
 
-## Procédons par étapes
+## Step-by-step procedures
 
-### 1. Retrouver une carte
+### 1. Find a map
 
-Vous souhaitez modifier une carte pour l’améliorer ou la mettre à jour.
-Si vous avez redémarré votre navigateur et à fortiori votre ordinateur,
-la première chose à faire est de retrouver la carte ! Si vous avez créé
-cette carte avec votre compte, comme nous l’avons vu dans le tutoriel
-[Créer un compte](3-create-account.md), afficher
-une de vos cartes se fait en trois opérations simples :
+You want to change a map to improve or update it.
+If you have restarted your browser and fortiori your computer,
+The first thing you need to do is find the map! If you have created
+this card with your account, as we saw in the tutorial
+[Create an account](3-create-account.md), view
+One of your cards is done in three simple operations:
 
-1.  connectez-vous à votre compte umap
-2.  affichez votre catalogue de cartes
-3.  cliquez sur le nom de la carte
+1.  Sign in to your umap account
+2.  display your card catalog
+3.  click on the card name
 
 <figure>
-    <img alt="Bouton d’édition de la carte."
+    <img alt="Card editing button."
          src="../../../static/tutoriels/edit-map.png"
          width="110"
          height="44">
-    <figcaption>Bouton d’édition de la carte.</figcaption>
+    <figcaption>Edit button of the map.</figcaption>
 </figure>
 
-La carte s’affiche alors en mode consultation.
-Cliquez sur le bouton avec le crayon en haut à droite de la carte pour
-passer en mode édition : vous pouvez dès lors modifier la carte.
-N’oubliez pas de sauvegarder la carte une fois les modifications
-terminées.
+The map is displayed in consultation mode.
+Click the button with the pencil at the top right of the card for
+Switch to editing mode: you can then modify the map.
+Don’t forget to save the card once the changes are
+finished.
 
 !!! note
 
-    Il peut être fastidieux de passer du mode édition au
-    mode consultation et vice-versa de façon répétée. Une astuce consiste à
-    utiliser pour la même carte deux onglets ou deux navigateurs, l’un en
-    mode édition l’autre en mode consultation. Vous devez tout de même
-    **enregistrer** la carte dans l’onglet en mode édition avant de
-    l’**actualiser** (par exemple avec la touche F5) dans l’onglet en mode
-    consultation.
+    It can be tedious to switch from editing to
+    mode consultation and vice versa repeatedly. A trick is to
+    use for the same card two tabs or two browsers, one by
+    mode editing the other in consultation mode. You must still
+    **record** the card in the tab in editing mode before
+    the **update** (e.g. with the F5 key) in the tab in mode
+    Consultation.
 
-Vous pouvez retourner à votre catalogue de cartes à tout moment en
-cliquant sur **Accueil** tout en bas à droite de la carte.
+You can return to your card catalog at any time in
+click on **Home** at the bottom right of the map.
 
-### 2. Changer le fond de carte
+### 2. Change the background of the card
 
-Nous avons vu dans le tutoriel [Naviguer dans une carte](1-browsing-a-map.md)
-que plusieurs fonds de carte sont disponibles dans uMap.
-Lorsque vous éditez une carte vous pouvez
-choisir le fond de carte qui sera utilisé à l’affichage de la carte.
+We saw in the tutorial [Sail in a map](1-browsing-a-map.md)
+that several card funds are available in uMap.
+When you edit a card you can
+choose the background that will be used when the card is displayed.
 
 <shot-scraper
     data-output="static/tutoriels/map-tilelayers.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton de choix de fond de carte."
+    data-alt="Card background choice button."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.update-map-tilelayers"
     data-padding="5"
-    >Bouton de choix de fond de carte.</shot-scraper>
+    >Bottom button of background card.</shot-scraper>
 
-Cliquez sur le pictogramme `Changer le fond de carte` : un panneau à droite montre
-une vingtaine de fonds de cartes. Il vous suffit de cliquer sur l’un
-d’eux : faites votre choix et n’oubliez pas d’enregistrer la
-modification.
+Click on the pictogram `Change background map` : a panel on the right watch
+Twenty funds of cards. You just have to click on one
+of them: make your choice and do not forget to record the
+Modification.
 
-Le choix du fond de carte est une affaire de goût. Le contexte de la
-carte peut vous aider à en choisir un plutôt qu’un autre, par exemple :
+The choice of background card is a matter of taste. The context of the
+card can help you choose one over another, for example:
 
--   les fonds **Outdoors**, **Landscape** ou **OpenTopoMap** montrent le
-    relief : judicieux pour une carte de randonnée
--   **OpenCycleMap** montre les grands itinéraires cyclistes, comme les
-    EuroVélo (Côte Atlantique, Loire à Vélo…)
--   **Positron**, **Toner** et **OSM-Monochrome** sont en noir et blanc
-    : vos marqueurs, lignes et polygones seront plus visibles
--   le style **HOTOSM**, créé par le [groupe
-    humanitaire](http://wiki.openstreetmap.org/wiki/FR:Humanitarian_OSM_Team)
-    d’OpenStreetMap, permet d’aller jusqu’à un niveau de zoom élevé
-    (niveau 20) : intéressant si l’étendue de votre carte couvre un
-    quartier ou votre jardin
+-   funds **Outdoors**, **Landscape** or **OpenTopoMap** show the
+    relief : wise for a hiking map
+-   **OpenCycleMap** shows the major cycling routes, such as the
+    EuroVélo (Atlantique Coast, Loire by Bicycle...)
+-   **Positron**, **Toner** and **OSM-Monochrome** are in black and white
+    : your markers, lines and polygons will be more visible
+-   the **HOTOSM** style, created by the [group
+    humanitarian](http://wiki.openstreetmap.org/wiki/EN:Humanitarian_OSM_Team)
+    OpenStreetMap, allows you to go up to a high zoom level
+    (level 20) : interesting if the extent of your card covers a
+    neighborhood or your garden
 
 !!! note
 
-    Tous les fonds de carte utilisés par uMap, à
-    l’exception des images aériennes de l’IGN, sont réalisés à partir des
-    données OpenStreetMap. Ils sont produits par des associations, des
-    entreprises ou des bénévoles qui les mettent gracieusement à
+    All funds of card used by uMap, to
+    the exception of the aerial images of the IGN, are made from the
+    OpenStreetMap data. They are produced by associations,
+    companies or volunteers who graciously put them to
     disposition.
 
-    Remarquez le texte affiché en bas à droite de la carte : il crédite les
-    auteurs du fond de carte, par exemple
-    `Map tiles by Stamen Design - Map Data © OpenStreetMap contributors`.
+    Notice the text displayed at the bottom right of the card: it credits the
+    authors of the background card, for example
+    `Map tiles by Stamen Design - Map Data © OpenStreetMaps contributors`.
 
 
-### 3. Choisir les options d’interface
+### 3. Choose the interface options
 
-Vous pouvez configurer les éléments de la carte mis à disposition des
-utilisateurs qui consulteront votre carte. Vous pouvez par exemple
-ajouter une mini-carte de situation ou une barre de légende, ou encore
-décider quels boutons seront affichés.
+You can configure the elements of the map made available to the
+users who will view your card. For example, you can
+add a mini-location card or a legend bar, or
+decide which buttons will be displayed.
 
 <shot-scraper
     data-output="static/tutoriels/map-settings.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton des options de la carte."
+    data-alt="Button of the map options."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.update-map-settings"
     data-padding="5"
-    >Bouton des options de la carte.</shot-scraper>
+    >Button of the options of the map.</shot-scraper>
 
-Pour cela, ouvrez dans
-le menu **Propriétés avancées de la carte** l’onglet **Options d’interfaces**.
-Vous pouvez activer ou désactiver une dizaine d’options dont voici la
-signification.
+For this, open in
+the menu **Advanced properties of the map** the **Interface options** tab.
+You can activate or disable a dozen options of which here the
+meaning.
 
-Apparaît alors un long tableau de bord qui vous permet, pour chacun des
-boutons sur la gauche de la carte, de contrôler leur visibilité :
+Then appears a long dashboard that allows you, for each of the
+buttons on the left of the map, to control their visibility:
 
--   **toujours** indique que le bouton est toujours visible pour
-    l’utilisateur
--   **jamais** signifie que le bouton ne sera pas disponible
--   **caché** signifie que le bouton n’est accessible qu’après un clic
-    sur le bouton « Plus ».
-    Les boutons cachés ne seront bien sûr accessibles que si l’option
-    `Voulez-vous afficher le bouton « Plus » ?`
-    (plus bas sur le tableau de bord) est activée.
+-   **always** indicates that the button is always visible for
+    the user
+-   **never** means the button will not be available
+-   **hidden** means that the button is only accessible after a click
+    on the “More” button.
+    Hidden buttons will of course only be accessible if the option
+    `Do you want to display the "More" button? `
+    (below on the dashboard) is activated.
 
 <shot-scraper
     data-output="static/tutoriels/control-more.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône pour afficher plus d’options."
+    data-alt="Icon for displaying more options."
     data-width="46"
     data-height="33"
     data-selector=".umap-control-more"
     data-padding="5"
-    >Exemple de bouton « Plus ».</shot-scraper>
+    >Example of "More" button.</shot-scraper>
 
-La partie basse du tableau de bord ne concerne pas ces boutons mais
-d’autres éléments venant *habiller* la carte :
+The bottom part of the dashboard does not concern these buttons but
+other elements coming *dress* the card :
 
 ![umap_properties_bottom.jpg](../../static/tutoriels/4-je-modifie-et-personnalise-ma-carte/umap_properties_bottom.jpg)
 
-Quelques remarques :
+Some remarks :
 
--   si vous cachez les boutons de zoom **et** désactivez le zoom avec la
-    molette de la souris, les utilisateurs ne pourront ni zoomer ni
-    dézoomer … sauf à découvrir le menu accessible avec un clic droit
-    sur la carte.
--   les boutons de navigation en bas des popups permettent de faire
-    défiler les éléments de la carte
+-   if you hide the **and** zoom buttons, disable the zoom with the
+    mouse wheel, users will not be able to zoom or
+    zoom out ... except to discover the menu accessible with a right click
+    on the map.
+-   the navigation buttons at the bottom of the popups make it possible to make
+    Scroll the elements of the map
 
 
-### 4. Copier ou supprimer une carte
+### 4. Copy or delete a card
 
-Tout en bas des **Propriétés de la cartes**, l’onglet **Options
-avancées** propose deux opérations peu utilisées mais qu’il est bon de
-connaître :
+At the very bottom of the **Properties of the card**, the **Options tab
+advanced** offers two little-used operations but that it is good to
+know :
 
--   **Supprimer** supprime la carte du serveur umap, ainsi que les
-    données qui y sont associées !
--   **Cloner cette carte** effectue une copie de la carte et de ses
-    données. La nouvelle carte est ajoutée à votre catalogue.
+-   **Delete** deletes the map from the umap server, as well as the
+    data associated with it!
+-   **Clone this card** makes a copy of the card and its
+    data. The new card is added to your catalog.
 
-Dans les deux cas un message vous demande de confirmer l’opération.
+In both cases a message asks you to confirm the operation.
 
-## Faisons le point
+## Let's take stock
 
-Vous savez créer, modifier et personnaliser une carte.
-Vous savez styliser vos marqueurs, lignes et polygones.
-Enfin vous savez gérer votre catalogue de cartes.
-Vous allez découvrir comment importer des données en « un clic »
-issues de l’open data et gagner du temps par rapport au dessin de toutes les formes.
+You know how to create, edit and customize a card.
+You know how to stylize your markers, lines and polygons.
+Finally, you know how to manage your catalog of cards.
+You will discover how to import data in “one click”
+from open data and save time compared to drawing all shapes.
 
-Une fois ces opérations maîtrisées, les tutoriels de niveau
-intermédiaire vous apprendront à structurer vos cartes avec des calques
-et enrichir le contenu de vos popups. Vous découvrirez également comment
-publier une carte sur un site Web, et définir qui peut la voir et la
-modifier.
+Once these operations are mastered, the level tutorials
+Intermediate will teach you how to structure your cards with layers
+Enrich the content of your popups. You will also learn how
+publish a map on a website, and define who can see and
+modify.
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:4_-_je_modifie_et_personnalise_ma_carte) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 

@@ -1,236 +1,236 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    -   distinguer le mode édition du mode consultation
-    -   identifier les étapes nécessaires pour créer une carte
-    -   produire une première carte et la diffuser !
+    - distinguish the editing mode of the consultation mode
+    - identify the steps needed to create a map
+    - produce a first card and broadcast it!
 
-## Procédons par étapes
+## Step-by-step procedures
 
-L’objet de notre première carte est simple : positionner un ou plusieurs
-lieux (domicile, vacances, travail, etc.). Procédons par étapes.
+The object of our first card is simple: position one or more
+places (home, holiday, work, etc.). Proceedings in stages.
 
-### 1. Le mode édition
+### 1. The editing mode
 
-!!! osm-instance "Pour le grand public, les associations…"
+!!! osm-instance "For the general public, associations..."
 
-    Rendez-vous sur l’instance uMap d’OSM <https://umap.openstreetmap.fr/>
+    Go to the uMap instance of OSM <https://umap.openstreetmap.fr/>
 
-!!! french-instance "Pour les agents publics"
+!!! french-instance "For public officials"
 
-    Rendez-vous sur le site uMap agents publics <https://umap.incubateur.anct.gouv.fr/>
-    et connectez-vous en haut à gauche. La connexion utilise ProConnect.
+    Visit the uMap public officials website <https://umap.incubateur.anct.gouv.fr/>
+    and connect to the top left. The connection uses ProConnect.
 
 <shot-scraper
     data-output="static/tutoriels/create-map.png"
     data-url="https://umap.openstreetmap.fr/fr/"
-    data-alt="Bouton de création d’une carte depuis l’accueil."
+    data-alt="Card creation button from the reception."
     data-width="176"
     data-height="119"
     data-selector=".button.button-primary"
     data-padding="5"
-    >Bouton de création d’une carte depuis l’accueil.</shot-scraper>
+    >Card creation button from the reception.</shot-scraper>
 
 
-Apparaît alors sur votre navigateur une carte qui se présente ainsi :
+Then appears on your browser a card that appears as follows:
 
-![Une carte vierge annotée avec les principales actions d’édition](../../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_edition.png)
+![A blank card annotated with the main editing actions](../../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_edition.png)
 
-Nous retrouvons à gauche les boutons disponibles lors de la
-[consultation d’une carte](1-browsing-a-map.md).
+We find on the left the buttons available during the
+[map viewing](1-browsing-a-map.md).
 
-Plusieurs éléments visibles au-dessus et à droite de la carte sont
-visibles uniquement lorsque l’on crée ou modifie une carte, c’est-à-dire
-dans le *mode édition* :
+Several elements visible above and to the right of the map are
+visible only when creating or modifying a card, that is,
+in the *edit mode* :
 
--   le **nom de la carte** en haut à gauche ainsi que les droits d’accès
--   la possibilité d’**⃔annuler** / **reproduire⃕** des actions avec les flèches
--   les boutons **Aperçu** et **Enregistrer** en haut à droite
--   à droite une série de 4 boutons permettant d’ajouter des éléments à
-    la carte : marqueurs, lignes, polygones et routes
--   en-dessous une série de boutons permettant de configurer la carte
+-   the **name of the card** at the top left as well as the access rights
+-   the possibility of **⃔ cancel** / **reproduce⃕** actions with arrows
+-   the **Preview** and **Save** buttons at the top right
+-   on the right a series of 4 buttons to add elements to
+    the map : markers, lines, polygons and roads
+-   below a series of buttons to configure the card
 
-### 2. Nommer la carte
+### 2. Name the map
 
-Une carte doit porter un nom qui renseigne sur ce que représente la carte.
-Pour définir le nom de la carte, cliquez sur le bouton
-**Modifier le nom ou la légende** ou plus simplement sur `Carte sans nom` dans
-le bandeau d’entête :
+A card must have a name that provides information on what the card represents.
+To set the card name, click the button
+**Edit name or caption** or more simply on `No name card` in
+the headband :
 
 <shot-scraper
     data-output="static/tutoriels/modify-name.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton d’édition du nom de la carte."
+    data-alt="Edit button of the card name."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.umap-control-caption"
     data-padding="5"
-    >Bouton d’édition du nom de la carte.</shot-scraper>
+    >Edit button of the card name.</shot-scraper>
 
-Un panneau apparaît sur la droite de la carte, il contient en haut un
-champ de saisie pour le **nom** de la carte, qui contient le texte
-`Carte sans nom` : placez le curseur dans ce champ, supprimez le texte
-existant et saisissez le nom de votre carte, par exemple `Mon domicile`.
+A panel appears on the right of the map, it contains at the top one
+input field for the **name** of the card, which contains the text
+`No name card` : place the cursor in this field, delete the text
+existing and enter the name of your card, for example `My home`.
 
 <shot-scraper
     data-output="static/tutoriels/modify-name-panel.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Panneau d’édition du nom de la carte."
+    data-alt="Panel of the card name editing panel."
     data-width="410"
     data-height="382"
     data-selector=".panel.right"
     data-padding="5"
     data-javascript="document.querySelector('button.map-name').click()"
-    >Panneau d’édition du nom de la carte.</shot-scraper>
+    >Card name editing panel.</shot-scraper>
 
-Notez que le nom en haut à gauche de la carte est immédiatement modifié.
-Vous pouvez également saisir un texte plus long dans le champ
-**description**, qui apparaîtra dans le panneau de légende - nous y
-reviendrons.
+Note that the name at the top left of the card is immediately changed.
+You can also enter longer text in the field
+**description**, which will appear in the legend panel - we y
+Let's come back.
 
-Maintenant, sauvegardez la carte avec le bouton **Enregistrer** : un
-texte est affiché en haut de la carte, comme celui ci-dessous :
+Now save the card with the **Save** button: a
+text is displayed at the top of the map, like the one below:
 
-#### Pour le grand public sur l'instance OSM
+#### For the general public on the OSM instance
 
 <shot-scraper
     data-output="static/tutoriels/create-map-alert.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Message d’alerte contenant le lien d’édition."
+    data-alt="Alert message containing the edit link."
     data-width="790"
     data-height="226"
     data-selector='umap-alert-creation [role="dialog"]'
-    >Message d’alerte contenant le lien d’édition.</shot-scraper>
+    >Alert message containing the edit link.</shot-scraper>
 
-Ce texte explique que vous venez de créer une carte **anonyme** et vous
-donne un lien (une URL) pour pouvoir modifier la carte. En effet la
-carte que vous avez créée n’est associée à aucun compte, et **uMap**
-considère que seules les personnes ayant ce *lien secret* peuvent la
-modifier. Vous devez donc conserver ce lien si vous souhaitez pouvoir
-modifier la carte ou saisir votre adresse de courriel pour le recevoir.
+This text explains that you have just created a **anonymous** card and you
+gives a link (a URL) to be able to modify the card. Indeed the
+card you created is not associated with any account, and **uMap**
+Considers that only people with this *secret link* can
+modify. You must keep this link if you wish to be able
+change the card or enter your email address to receive it.
 
-Nous verrons dans [le prochain tutoriel](3-create-account.md)
-comment créer son catalogue de cartes en utilisant un compte, il n’est alors pas
-nécessaire de conserver de lien secret.
+We will see in [the next tutorial](3-create-account.md)
+how to create your catalog of cards using an account, it is not
+necessary to keep a secret link.
 
-#### Pour les agents publics sur l’instance qui leur est dédiée
+### For public officials on the instance dedicated to them
 
-S’ils ne se sont pas connectés avant de créer leur carte, le message est différent :
+If they did not log in before creating their map, the message is different:
 
-![Le lien vers la connexion MonComptePro](../../static/tutoriels/proconnect-connexion.png)
+![The link to the MyAccountPro](../../static/tutoriels/proconnect-connexion.png)
 
-Il n’est pas possible d’enregistrer les modifications apportées à une carte anonyme sur cette instance.
+It is not possible to save changes to an anonymous map on this instance.
 
-### 3. Ajouter un marqueur
+### 3. Add a marker
 
-Commencez par déplacer et zoomer la carte pour visualiser l’endroit
-précis de votre domicile, lieu de vacances ou de travail.
+Start by moving and zooming the map to view the place
+specific of your home, place of vacation or work.
 
-Cliquez ensuite sur le bouton **Ajouter un marqueur**.
+Then click the **Add Marker** button.
 
 <shot-scraper
     data-output="static/tutoriels/draw-marker.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton d’ajout de marqueur."
+    data-alt="Add marker button."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.umap-draw-marker"
     data-padding="5"
-    >Bouton d’ajout de marqueur.</shot-scraper>
+    >Add marker button.</shot-scraper>
 
-Le curseur prend la forme d’un signe
-`+` : déplacez le sur le lieu que vous voulez *marquer* et cliquez avec
-le bouton gauche de la souris : un *marqueur bleu* et carré est créé à
-cet endroit et un panneau apparaît à droite.
+The cursor takes the form of a sign
+`+` : move the place you want to *mark* and click with
+the left mouse button: a *blue* and square marker is created at
+This place and a sign appears on the right.
 
-![Un marqueur uMap.](../../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_marqueur.jpg)
+![A marker uMap.](../../static/tutoriels/2-je-cree-ma-premiere-carte-umap/umap_marqueur.jpg)
 
-Ce panneau vous permet
-d’associer un nom et une description au marqueur :
+This panel allows you
+to associate a name and a description with the marker:
 
--   le nom sera affiché au survol du marqueur par la souris
--   le nom et la description seront visibles dans une fenêtre dite
-    *popup* qui apparaîtra lors d’un clic sur le marqueur.
+-   the name will be displayed on the flyby of the marker by the mouse
+-   the name and description will be visible in a so-called window
+    *popup* that will appear when clicking on the marker.
 
-Nous verrons plus loin l’utilité des calques, et comment modifier les
-propriétés du marqueur : forme, couleur, pictogramme, etc.
+We will see later the usefulness of the layers, and how to modify the
+Marker properties: shape, color, pictogram, etc.
 
-Répétez l’opération pour ajouter les marqueurs que vous jugez utiles à
-votre carte.
+Repeat the operation to add the markers you deem useful to
+your card.
 
-### 4. Définir l’emprise de la carte
+### 4. Define the right-of-way of the map
 
-Il est important de définir l’emprise initiale de la carte, c’est-à-dire
-la partie du planisphère qui sera affichée lors de la consultation de la
-carte.
+It is important to define the initial right-of-way of the map, that is,
+the part of the planisphere that will be posted during the consultation of the
+map.
 
-Cette emprise doit inclure votre marqueur et permettre de situer la
-carte. Il convient de trouver un compromis entre un zoom trop éloigné et
-un zoom trop rapproché. Le bon compromis dépend essentiellement du
-contenu de la carte : la majorité des marqueurs, lignes et polygones
-doivent être visibles et utiliser au mieux l’étendue de la carte.
+This right-of-way must include your marker and allow you to locate the
+map. It is necessary to find a compromise between a zoom too far and
+A zoom too close. The good compromise depends essentially on
+content of the map : the majority of markers, lines and polygons
+must be visible and make the best use of the scope of the card.
 
-Vous pouvez aussi considérer le public de la carte : une carte expédiée
-à votre voisin peut être très zoomée, une carte envoyée un correspondant
-étranger doit permettre de reconnaître le pays où se trouve votre carte.
+You can also consider the public of the card: a card shipped
+to your neighbor can be very zoomed in, a map sent a correspondent
+Foreigner must allow to recognize the country where your card is located.
 
 
-Pour définir
-l’emprise, déplacez et zoomez la carte afin d’afficher l’emprise
-souhaitée puis cliquez sur le bouton **Enregistrer le zoom et le centre
-actuels**.
+To define
+the right-of-way, move and zoom the map to display the right-of-way
+want and click the **Save Zoom and Center button
+current**.
 
 <shot-scraper
     data-output="static/tutoriels/register-zoom.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton d’enregistrement du zoom et du centre actuels."
+    data-alt="Button recording the current zoom and center."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.update-map-extent"
     data-padding="5"
-    >Bouton d’enregistrement du zoom et du centre actuels.</shot-scraper>
+    >Togure recording button and current center.</shot-scraper>
 
 !!! note
-    uMap enregistre en réalité le centre et le niveau de
-    zoom. Selon la taille de la fenêtre où est affichée la carte, la partie
-    visible pourra varier. Il est utile de prévoir une marge autour du
-    contenu de la carte.
+    uMap actually records the center and level of
+    Zoom. Depending on the size of the window where the map is displayed, the part
+    visible may vary. It is useful to provide a margin around the
+    content of the map.
 
-### 5. Enregistrer la carte
+### 5. Register the card
 
-Toute modification de la carte doit être sauvegardée
-en cliquant sur le bouton **Enregistrer** en haut à droite. Cette
-opération enregistre toutes les modifications depuis la dernière
-sauvegarde : vous pouvez donc réaliser plusieurs modifications à la
-suite puis les enregistrer. A l’inverse le bouton **Annuler** permet de
-supprimer toutes les modifications depuis la dernière sauvegarde.
+Any changes to the card must be saved
+by clicking on the **Save** button at the top right. This
+operation records all changes since the last
+backup : so you can make several changes to the
+Then record them. Conversely, the **Cancel** button allows you to
+Remove all changes since the last backup.
 
 !!! note
-    L’enregistrement se fait sur les serveurs d’OpenStreetMap dans le cas
-    d’une utilisation d’uMap OSM ou ceux de l’ANCT si uMap pour
-    les agents publics est utilisé.
+    Registration is done on the servers of OpenStreetMap in the case
+    use of uMap OSM or those of the ANCT if uMap for
+    Public officials are used.
 
 
-Après avoir enregistré les modifications, le bouton Annuler est remplacé
-par **Désactiver l’édition**. Cela vous permet de quitter le mode
-édition pour voir la carte en mode consultation. Vous pouvez alors
-*tester* votre carte : cliquez sur le marqueur pour afficher la popup et
-vérifier son nom et sa description.
+After saving the changes, the Cancel button is replaced
+**Deactivate the edition**. This allows you to leave the mode
+editing to see the map in consultation mode. Then you can
+*test* your card : click on the marker to view popup and
+Check his name and description.
 
-**Félicitations !** Vous avez créé votre première carte uMap. Vous
-pouvez la diffuser à votre entourage en copiant son URL dans la barre
-d’adresse du navigateur, ou en copiant son **URL courte** disponible
-dans le menu **Partager** vu dans le tutoriel
-[Naviguer dans une carte](1-browsing-a-map.md).
+**Congratulations! ** You created your first uMap card. You
+can distribute it to your entourage by copying their URL in the bar
+of the browser address, or by copying its **URL short** available
+in the **Share** menu seen in the tutorial
+[Sail in a map](1-browsing-a-map.md).
 
-## Faisons le point
+## Let's take stock
 
-Votre première carte est créée, en quelques étapes. L’opération est
-assez simple, mais le résultat est somme toute assez sommaire. Le
-[prochain tutoriel](3-create-account.md) va nous
-permettre de créer une jolie carte.
+Your first card is created in a few steps. The operation is
+Quite simple, but the result is quite sketchy. The
+[next tutorial](3-create-account.md) goes to us
+Allow to create a nice map.
 
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:2_-_je_cree_ma_premiere_carte_umap) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 

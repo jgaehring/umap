@@ -1,262 +1,262 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Créer un calque utilisant des *données distantes* c’est-à-dire non
-      stockées par uMap
-    - Utiliser une **requête Overpass** comme source de données distantes
-    - Utiliser une *requête dynamique* prenant en compte l’étendue visible
-      de la carte
-    - Contrôler l’affichage des calques en fonction du niveau de zoom
+    - Create a layer using *remote data* i.e. no
+      stored by uMap
+    - Use an **Overpass** request as a source of remote data
+    - Use a *dynamic request* taking into account the visible extent
+      of the map
+    - Control the display of layers according to the zoom level
 
-## Procédons par étapes
+## Step-by-step procedures
 
-L’objectif de ce tutoriel est d’explorer les différentes manières
-d’afficher sur une carte uMap des données externes, ou distantes,
-c’est-à-dire des données qui ne sont pas stockées sur le serveur uMap.
-Nous allons pour cela utiliser des données **OpenStreetMap**, que nous
-allons extraire avec l’[API
+The aim of this tutorial is to explore the different ways
+display external or remote data on an uMap map,
+that is, data that is not stored on the uMap server.
+For this we will use data **OpenStreetMap**, which we
+Let's extract with the [API
 Overpass](https://wiki.openstreetmap.org/wiki/FR:Overpass_API/Overpass_QL).
 
-Nous allons en quelques étapes créer une carte du vélo à Nantes,
-montrant les stationnements ainsi que les locations en libre-service.
+We will in a few steps create a map of the bike in Nantes,
+showing parking and self-service rentals.
 
-### 1. Je crée un calque affichant le résultat d’une requête Overpass
+### 1. I create a layer displaying the result of an Overpass query
 
-Commençons par afficher les stations *Bicloo*, les locations de vélos en
-libre-service à Nantes. Allons-y étape par étape :
+Let's start by showing the stations *Bicloo*, the bike rentals in
+Self-service in Nantes. Let’s go step by step:
 
-1.  produire et tester la requête Overpass avec Overpass Turbo
-2.  adapter la requête pour produire des données acceptées par uMap
-3.  exporter la requête
-4.  créer un calque uMap utilisant cette requête
+1.  produce and test the Overpass query with Overpass Turbo
+2.  adapt the request to produce data accepted by uMap
+3.  export the request
+4.  create a uMap layer using this query
 
-#### Créer la requête Overpass
+#### Create the Overpass query
 
-Le site [Overpass Turbo](http://overpass-turbo.eu/) propose un assistant
-qui facilite la rédaction d’une requête. Activez l’assistant et
-saisissez le texte suivant, qui permet d’extraire les locations de vélo
-situées sur la commune de Nantes :
+The site [Overpass Turbo](http://overpass-turbo.eu/) offers an assistant
+which facilitates the drafting of a request. Activate the assistant and
+enter the following text, which allows you to extract bicycle rentals
+located in the municipality of Nantes :
 
     amenity=bicycle_rental in Nantes
 
-Cliquez sur **Construire et exécuter la requête** : la requête est créée
-dans l’éditeur à gauche de la carte, puis le résultat est affiché sur la
-carte.
+Click on **Build and execute the query** : the query is created
+in the editor on the left of the map, and then the result is displayed on the
+map.
 
-![Capture d’écran du site d'Overpass Turbo en utilisant l'assistant](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_assistant.png)
+![Screenshot of the Overpass Turbo site using the assistant](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_assistant.png)
 
-#### Adapter la requête pour uMap
+#### Adapt the query for uMap
 
-Avant d’exporter la requête nous devons l’adapter. L’assistant Overpass
-Turbo produit des requêtes dont le résultat est au format JSON. uMap
-sait lire des données dans plusieurs formats, dont le format GeoJSON,
-mais pas le format JSON produit par Overpass. Par contre uMap comprend
-très bien le format XML selon la syntaxe OSM (OpenStreetMap).
+Before exporting the request we must adapt it. The Overpass Assistant
+Turbo produces queries whose result is in JSON format. uMap
+knows how to read data in several formats, including the GeoJSON format,
+but not the JSON format produced by Overpass. However, uMap includes
+very well the XML format according to the OSM syntax (OpenStreetMap).
 
-Pour que la requête produise des données au format XML/OSM, il suffit de
-modifier dans l’éditeur de requête la clause **`[out:json]`** par
-**`[out:xml]`**. Vous pouvez à nouveau exécuter la requête et observer
-la différence de format dans l’onglet **Données** qui montre le résultat
-de la requête.
+For the query to produce data in XML/OSM format, simply
+modify in the query editor the clause **`[out:json]`** by
+**`[out:xml]`**. You can run the query again and observe
+the format difference in the **Data** tab that shows the result
+of the request.
 
-![Capture d’écran du site d'Overpass Turbo avec l'option XML activée et les données rendues visibles](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_format_xml.png)
+![Screenshot of the Overpass Turbo site with XML enabled and data made visible](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_format_xml.png)
 
-#### Exporter la requête Overpass
+#### Export Overpass query
 
-Exportez la requête en cliquant sur **Exporter** : un panneau s’affiche.
-Aller à la partie **Requête** et cliquez droit sur **compact** à droite de
-**Overpass QL** et choisir **Copier l’adresse du lien** (avec Mozilla Firefox) :
-l’URL de la requête est copié dans le presse-papier.
+Export the query by clicking on **Export**: a panel is displayed.
+Go to the **Request** part and right click on **compact** to the right of
+**Overpass QL** and choose **Copy link address** (with Mozilla Firefox):
+The URL of the request is copied to the clipboard.
 
-![Capture d’écran du site d'Overpass Turbo avec le déroulé des opérations à réaliser](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_exporter.png)
+![Screenshot of the Overpass Turbo site with the progress of the operations to be carried out](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_exporter.png)
 
-#### Utiliser la requête dans uMap
+#### Use the query in uMap
 
-![Capture d’écran du site de Umap](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_requete_overpass_url.png)
+![Screenshot from Umap](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_requete_overpass_url.png)
 
-Dans un nouvelle carte uMap, créez un calque et ouvrez l’onglet
-**Données distantes**. Collez dans la case URL le contenu du
-presse-papier et sélectionez le format **osm**, qui correspond au format
-XML dans Overpass.
+In a new uMap card, create a layer and open the tab
+**Distant data**. Paste the contents of the
+clipboard and select the **osm** format, which corresponds to the format
+XML in Overpass.
 
-Notez que l’URL est *encodée* pour pouvoir être utilisée comme requête
-HTTP : les caractères spéciaux comme `"` sont convertis en `%22`. Ne les
-modifiez pas !
+Note that the URL is *encoded* to be used as a query
+HTTP: Special characters like `"` are converted to `%22`. Do not
+Don't change!
 
-Vous pouvez configurer le calque comme cela a été décrit dans les
-tutoriels précédents.
+You can configure the layer as described in the
+Previous tutorials.
 
-![Capture d’écran du site de uMap avec les marqueurs affichés](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_overpass_infobulle.jpg)
+![Screenshot of the uMap site with the markers displayed](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_overpass_infobulle.jpg)
 
-De la même façon que les valeurs d’un tableur peuvent être affichées dans les
-infobulles (voir [cette section](9-map-from-spreadsheet.md)
-du tutoriel précédent), vous pouvez afficher dans les infobulles les
-*tags* OpenStreetMap. Les tags disponibles sont visibles dans l’onglet
-Données sur Overpass Turbo.
+In the same way that the values of a spreadsheet can be displayed in the
+tooltips (see [this section](9-map-from-spreadsheet.md)
+from the previous tutorial), you can display in the tooltips the
+*tags* OpenStreetMap. Available tags are visible in the tab
+Data on Overpass Turbo.
 
-Par exemple le gabarit suivant permet d’afficher des infobulles comme
-celle de droite.
+For example, the following template allows you to display tooltips like
+The one on the right.
 
     # {name}
-    {capacity} emplacements
-    Carte bancaire : {payment:credit_cards}
+    {capacity} locations
+    Credit card : {payment:credit_cards}
     {note}
 
-### 2. J’affiche les parkings à vélo efficacement
+### 2. I display bicycle parking efficiently
 
-Ajoutons à notre carte les parkings à vélo. La requête Overpass pour
-obtenir les parkings à vélos de Nantes est semblable à celle utilisée
-pour les locations, et peut être créée avec l’assistant :
+Let's add to our menu the bicycle parking. The Overpass request for
+obtaining the bicycle car parks of Nantes is similar to the one used
+for rentals, and can be created with the assistant:
 `amenity=bicycle_parking in Nantes`.
 
-L’exécution de cette requête prend près de 5 secondes. Ce délai est trop
-long pour une carte *interactive*. Aussi plutôt que d’exécuter le
-requête lors de l’affichage de la carte nous préférons extraire les
-données et les importer dans uMap.
+The execution of this request takes almost 5 seconds. This delay is too much
+long for a *interactive* card. Also rather than executing the
+query when displaying the card we prefer to extract the
+data and import them into uMap.
 
-#### Importer des données statiques
+#### Import static data
 
-![Capture d’écran du site d'Overpass Turbo avec l'endroit où cliquer](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_export_geojson.png)
+![Screenshot of the Overpass Turbo site with the place to click](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/overpass_turbo_export_geojson.png)
 
-Dans Overpass Turbo, cliquez sur **Exporter**, dans la section
-**Données** il y a une catégorie **GeoJSON**, cliquez sur **télécharger**. Cette
-opération convertit le résultat de la requête dans le format GeoJSON (un
-format standard pour transférer des données géographiques sur internet)
-et crée un fichier nommé `export.geojson` dans le dossier
-`Téléchargements` de votre ordinateur
-(vous pouvez aussi cliquer sur **copier** et utiliser votre presse-papier).
+In Overpass Turbo, click **Export**, in the section
+**Data** there is a category **GeoJSON**, click on **download**. This
+operation converts the result of the query into the GeoJSON format (a
+standard format for transferring geographic data over the internet)
+and create a file named `export.geojson` in the folder
+`Downloads` of your computer
+(you can also click **copy** and use your clipboard).
 
-Dans la carte uMap importez le fichier ainsi produit dans un nouveau
-calque (voir [cette section](9-map-from-spreadsheet.md) du tutoriel précédent).
-Les parkings à vélos sont affichés mais la carte
-perd en fluidité et ne réagit pas immédiatement lorsqu’on zoome ou la
-déplace. Cela est dû au nombre élevé de marqueurs affichés sur la carte
-(plus de 1600).
+In the uMap card import the file thus produced in a new one
+layer (see [this section](9-map-from-spreadsheet.md) from the previous tutorial).
+Bicycle parking is displayed but the map
+loses fluidity and does not react immediately when zooming or
+move. This is due to the high number of markers displayed on the map
+(over 1600).
 
-#### Afficher une carte de densité
+#### Show a density map
 
-![Paramètres uMap pour afficher une carte de densité](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_heatmap.png)
+![UMap settings to display a density map](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_heatmap.png)
 
-Une possibilité pour
-contourner ce problème est d’afficher les marqueurs sous forme de
-clusters, ou de carte de chaleur (heatmap), aussi appelée carte de
-densité. Nous choisissons la seconde option qui permet de prendre en
-compte le nombre de places de chaque parking, stocké dans le tag
+A possibility for
+Bypassing this problem is to display markers as
+clusters, or heatmap, also called map of
+density. We choose the second option that allows to take in
+counts the number of places of each parking lot, stored in the tag
 `capacity`.
 
-Ainsi la carte montrera non pas le nombre de parkings à vélos mais le
-nombre de places de stationnement (dans OpenStreetMap un seul parking à
-vélo peut représenter un grand nombre d’*appuis-vélos*).
+Thus the map will show not the number of bicycle parkings but the
+number of parking spaces (in OpenStreetMap a single parking lot to
+bicycle can represent a large number of *bike support*).
 
-Dans les propriétés du calque, sélectionnez le Type de calque
+In the properties of the layer, select the Layer Type
 **Heatmap**.
 
-Ensuite, dans l’onglet **Propriétés avancées** saisissez `capacity` dans
-le champ **Propriété optionnelle à utiliser pour calculter l’intensité
-de la heatmap**. Enfin vous pouvez ajuster l’intensité de la couleur en
-modifiant la **Valeur de rayon pour la heatmap**.
+Then, in the **Advanced Properties**tap `capacity` in
+the **Optional property field to use to calculate the intensity
+from the heatmap**. Finally you can adjust the intensity of the color in
+modifying the **Ray value for the heatmap**.
 
-La carte gagne en fluidité, mais l’utilisation d’une *heatmap* ne permet
-pas d’identifier l’emplacement précis des parkings à vélos. L’étape
-suivante propose une solution pour résoudre cette inconvénient.
+The map gains fluidity, but the use of a *heatmap* does not allow
+not to identify the precise location of bicycle parking. The stage
+following proposes a solution to solve this drawback.
 
-### 3. J’affiche un calque en fonction du niveau de zoom
+### 3. I display a layer based on the zoom level
 
-Lorsque les données d’un calque sont ***distantes*** (c’est-à-dire
-**non** stockées sur le serveur uMap), il est possible de contrôler
-l’affichage de ces données en fonction du niveau de zoom. Il faut pour
-cela déposer le fichier de données sur un serveur et déterminer l’URL de
-ce fichier.
+When the data of a layer is ***distant*** (i.e.
+**no** stored on the uMap server), it is possible to control
+display of this data according to the zoom level. It takes for
+this drops the data file on a server and determine the URL of
+that file.
 
-#### Utiliser un fichier stocké sur un serveur
+#### Using a file stored on a server
 
 ![umap_donnees_distantes_wordpress.png](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_donnees_distantes_wordpress.png)
 
-Si vous disposez d’un accès FTP à un serveur, cela ne pose pas de
-difficulté. Si vous avez accès au *back office* d’un CMS comme
-Wordpress, vous pouvez probablement y déposer un fichier. Prenons
-l’exemple de Wordpress.
+If you have FTP access to a server, this does not
+difficulty. If you have access to the *back office* of a CMS such as
+Wordpress, you can probably drop a file. Let's take
+Example of Wordpress.
 
-Par sécurité Wordpress ne permet pas de déposer un fichier au format
-JSON. Il se fie pour cela à l’extension du nom de fichier, il est donc
-possible de contourner cette contrainte en renommant le fichier.
-Procédons par étapes.
+For security Wordpress does not allow to deposit a file in format
+JSON. It relies on the extension of the file name, so it is
+possible to bypass this constraint by renaming the file.
+Proceedings in stages.
 
-1.  renommez le fichier `export.geojson` produit plus haut en
+1.  rename the file `export.geojson` produced above in
     `parkings-velos-nantes.txt`
-2.  dans le *back office* Wordpress, ajoutez un **Média** et
-    sélectionnez le fichier ainsi renommé
-3.  affichez les détails du fichier et copiez son **Adresse Web**, de la
-    forme
+2.  in the *back office* Wordpress, add a **Media** and
+    select the file so renamed
+3.  view the file details and copy its **Web address**, from the
+    form
     `http://monsite.fr/wp-content/uploads/2018/01/parkings-velos-nantes.txt`
-4.  créez un nouveau calque uMap et collez cette adresse Web dans le
-    champ **URL** de l’onglet **Données distantes**
-5.  sélectionnez le format **geojson**
-6.  précisez la licence qui s’applique aux données : **ODbL 1.0**
-    puisqu’il s’agit de données OpenStreetMap
-7.  activez l’option **Avec proxy** en bas de cet onglet : cela autorise
-    le navigateur Web à accéder à un fichier stocké sur un serveur autre
-    que le serveur uMap
-8.  enregistrez les modifications de la carte
+4.  create a new uMap layer and paste this web address into the
+    **URL** field of the **Remote data** tab
+5.  select **geojson** format
+6.  specify the license that applies to the data: **ODbL 1.0**
+    This is OpenStreetMap data
+7.  Enable the **With proxy** option at the bottom of this tab: this allows
+    the web browser to access a file stored on a different server
+    that the uMap server
+8.  save the changes to the card
 
-#### Combiner deux calques utilisant le même fichier
+#### Combine two layers using the same file
 
-Pour associer fluidité de la carte et affichage de chaque parking nous
-allons associer deux calques utilisant les mêmes données :
+To combine fluidity of the map and display of each car park us
+will associate two layers using the same data:
 
--   jusqu’au niveau de zoom 16, un calque montrant la capacité de
-    stationnement sous forme de *heatmap*
--   à partir du niveau de zoom 16, un calque montrant les parkings à
-    vélo sous forme de marqueurs
+-   up to zoom level 16, a layer showing the capacity of
+    parking in the form of *heatmap*
+-   from zoom level 16, a layer showing the car parks to
+    Bike in the form of markers
 
-À nouveau procédons par étapes.
+Let's proceed in stages again.
 
-1.  éditez le calque créé précedemment et dans l’onglet **Données
-    distantes** saisissez la valeur **16** dans le champ **Jusqu’au
+1.  edit the previously created layer and in the **Data tab
+    remote** enter the value **16** in the **up to field
     zoom**
-2.  dupliquez le calque avec l’action **Cloner** de l’onglet **Actions
-    avancées** : ainsi le nouveau calque est déjà configuré pour
-    utiliser le fichier placé sur le seveur
-3.  sélectionnez le **Type de calque** par défaut pour le nouveau calque
-4.  dans l’onglet **Données distantes** saisissez la valeur **16** dans
-    le champ **À partir du zoom**
+2.  duplicate the layer with the **Cloner** action of the **Actions tab
+    advanced** : so the new layer is already configured to
+    use the file placed on the server
+3.  select the **Default layer type** for the new layer
+4.  in the **Remote data** tab, enter the value **16** in
+    the field **From zoom**
 
 ![umap_heatmap_et_infobulle.jpg](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/umap_heatmap_et_infobulle.jpg)
 
-Enfin vous pouvez renommer le nouveau calque, configurer le type de
-marqueur, et définir le gabarit de popup, par exemple :
+Finally you can rename the new layer, configure the type of
+marker, and define the popup template, for example:
 
-    # {capacity} emplacements
+    # {capacity} locations
     Type : {bicycle_parking}
-    Couvert : {covered}
+    Covered : {covered}
 
-L’image à droite montre un extrait de la carte au niveau de zoom 16,
-auquel nous avons choisi d’afficher les deux calques.
+The image on the right shows an extract of the map at the zoom level 16,
+to which we have chosen to display the two layers.
 
-### 4. J’utilise une requête dynamique
+### 4. I use a dynamic request
 
-Utiliser des données extraites plutôt qu’une requête présente un
-inconvénient : la mise à jour des données sur OpenStreetMap n’est pas
-répercutée sur notre carte. Pour pallier à cela nous vous proposons de
-modifier le calque montrant les parkings à vélos sous forme de
-marqueurs, de sorte qu’il utilise une requête dynamique.
+Use extracted data rather than a query presents a
+disadvantage: the update of the data on OpenStreetMap is not
+uploaded to our map. To overcome this we offer you
+modify the layer showing the bicycle parking in the form of
+markers, so that it uses a dynamic request.
 
-Une **requête dynamique** permet d’*injecter* dans la requête des
-*variables* relatives à l’état actuel de la carte uMap. Nous allons
-utiliser une requête qui s’applique sur la seule partie visible de la
-carte, définie par un rectangle (ou *bounding box*). Cette requête
-s’exécutera à chaque zoom ou déplacement de la carte (d’où le terme
-*dynamique*) et récupérera les parkings à vélos à l’intérieur de ce
+A **dynamic request** allows to *inject* into the request of
+*variables* relating to the current status of the uMap card. We're going
+use a query that applies to the only visible part of the
+card, defined by a rectangle (or *bounding box*). This request
+will run with each zoom or displacement of the map (hence the term
+*dynamic*) and will pick up bicycle parking inside this
 rectangle.
 
-#### Simplifier la requête Overpass
+#### Simplify the Overpass request
 
-Pour faciliter l’opération nous commençons par
-simplifier la requête Overpass. Les points importants sont :
+To facilitate the operation we start with
+simplify the Overpass request. The important points are:
 
-1.  placer la clause **`[bbox:{{bbox}}]`** en entête de requête pour que
-    ce paramètre ne soit présent qu’une seule fois
-2.  remplacer la production du résultat par la clause **`out center;`**
-    qui permet de convertir chaque *way* (fermé ou pas) en un point
+1.  place the clause **`[bbox:{{bbox}}]`** at the query header for
+    This parameter is only present once
+2.  replace the production of the result with clause **`out center;`**
+    which allows to convert each *way* (closed or not) to a point
 
         [out:xml][bbox:{{bbox}}];
         (
@@ -265,82 +265,82 @@ simplifier la requête Overpass. Les points importants sont :
         );
         out center;
 
-Nous obtenons alors ce résultat sur la carte :
+We then obtain this result on the map:
 
-![Capture du site d'Overpass Turbo avec la nouvelle requête](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique.png)
-
-
-#### Adapter et exporter la requête
+![Capture the Overpass Turbo site with the new query](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique.png)
 
 
-L’opération est délicate, et exige sang froid et concentration :
+#### Adapt and export the query
 
-1.  remplacez `{{box}}` par `{south},{west},{north},{east}` : il s’agit
-    de 4 variables qu’uMap remplacera, lors de l’exécution de la
-    requête, par les valeurs définissant l’emprise de la carte.
-2.  **exportez** la requête en utilisant l’option **requête autonome → télécharger** :
-    un fichier texte est produit et téléchargé.
-    ![Capture du site d'Overpass Turbo avec la nouvelle requête modifiée](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique_2.png)
 
-3.  ouvrez le fichier dans un éditeur de texte et ajoutez en début de
-    ligne la base de l’URL permettant d’exécuter une requête Overpass :
+The operation is delicate, and requires cold blood and concentration:
+
+1.  replace `{{box}}` with `{south},{west},{north},{east}`: this is
+    of 4 variables that uMap will replace, when performing the
+    request, by the values defining the control of the card.
+2. **export** the request using the option **standalone request → download** :
+    A text file is produced and downloaded.
+    ![Capture the Overpass Turbo site with the new modified request](../../static/tutoriels/11-je-valorise-les-donnees-openstreetmap-avec-overpass-et-umap/requete_dynamique_2.png)
+
+3.  open the file in a text editor and add at the beginning of
+    line the base of the URL to execute an Overpass request:
     `http://overpass-api.de/api/interpreter?data=`
-4.  copiez la requête modifiée et collez le texte dans le champ URL de
-    l’onglet **Données distantes**
-5.  activez l’option **Dynamique** et définissez le zoom à partir duquel
-    le calque est affiché
-6.  selon le serveur Overpass utilisé, l’option **Avec
-    proxy** doit être activée ou désactivée (voir ci-dessous)
+4.  Copy the modified query and paste the text into the URL field of
+    the **Remote Data** tab
+5.  Enable the **Dynamic** option and set the zoom from which
+    The layer is displayed
+6.  according to the Overpass server used, the option **With
+    proxy** must be enabled or disabled (see below)
 
-Par commodité la requête modifiée est reprise ci-dessous :
+For convenience the modified request is taken below:
 
     http://overpass-api.de/api/interpreter?data=[out:xml][bbox:{south},{west},{north},{east}];(node["amenity"="bicycle_parking"];way["amenity"="bicycle_parking"];);out center;
 
 
 !!! note
-    N’hésitez pas à utiliser un autre serveur Overpass en
-    libre service, dont la liste est disponible dans les **Paramètres
-    généraux** de Overpass Turbo, par exemple
-    `https://overpass.kumi.systems/`. Attention ce dernier exige
-    d’**activer** l’option **Avec proxy**, alors que le serveur
-    `http://overpass-api.de/` nécessite que l’option soit **désactivée**.
+    Do not hesitate to use another Overpass server in
+    self-service, the list of which is available in the **Settings
+    Generals** of Overpass Turbo, for example
+    `https://overpass.kumi.systems/`. Attention the latter requires
+    **enable** option **With proxy**, while the server
+    `http://overpass-api.de/` requires the option to be **disabled**.
 
 !!! note
 
-    N’utilisez pas la variable `{bbox}` car elle sera
-    remplacée par des coordonnées dont l’ordre (W,S,N,E) n’est pas celui
-    attendu par Overpass (S,W,N,E) !
+    Do not use the variable `{bbox}` because it will be
+    replaced by coordinates whose order (W,S,N,E) is not that
+    expected by Overpass (S,W,N,E)!
 
-Vous pouvez manipuler ci-dessous la carte produite par l’ensemble de ce
-tutoriel. Zoomez jusqu’à ce que les parkings à vélos apparaissent et
-déplacez la carte pour constater l’aspect dynamique des requêtes.
+You can manipulate below the map produced by this
+tutorial. Zoom in until the bicycle parking lots appear and
+move the map to see the dynamic aspect of the requests.
 
 <iframe width="100%" height="400px" frameBorder="0" src="https://umap.openstreetmap.fr/fr/map/le-velo-a-nantes_189194?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false"></iframe><p><a href="http://umap.openstreetmap.fr/fr/map/le-velo-a-nantes_189194">Voir en plein écran</a></p>
 
 
-## Faisons le point
+## Let's take stock
 
-Nous avons vu comment créer une carte montrant les données OpenStreetMap
-à jour, à l’aide de requêtes Overpass. Seule la couche montrant la
-densité des stationnements sous forme de *heatmap* nécessitera de
-renouveler l’extraction des données de temps en temps.
+We saw how to create a map showing OpenStreetMap data
+Up-to-date, using Overpass requests. Only the layer showing the
+density of parking in the form of *heatmap* will require
+renew the extraction of data from time to time.
 
 !!! note
-    Les serveurs Overpass utilisés dans ce tutoriel sont
-    des serveurs en libre service mis à disposition gracieusement. Ces
-    serveurs sont très sollicités aussi il convient de les utiliser avec
-    modération.
+    The Overpass servers used in this tutorial are
+    self-service servers made available free of charge. These
+    servers are also very in demand it should use them with
+    moderation.
 
-    Si vous produisez une carte destinée à un grand nombre de consultations,
-    préférez l’utilisation de données statiques, importées dans uMap ou
-    stockées sur un serveur. Merci !
+    If you produce a map for a large number of consultations,
+    prefer the use of static data, imported into uMap or
+    stored on a server. Thank you!
 
-    Si vous utilisez Github, ce [court
-    tutoriel](https://hackmd.io/OkwpRqQ7QXC3p8C0jfTUGQ?view) en anglais
-    explique comment utiliser un *workflow* pour exécuter une requête
-    Overpass et placer le résultat en cache.
+    If you use Github, this [short
+    tutorial](https://hackmd.io/OkwpRqQ7QXC3p8C0jfTUGQ?view) in English
+    Explains how to use a *workflow* to execute a query
+    Overpass and cache the result.
 
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:11_-_je_valorise_les_donnees_openstreetmap_avec_umap) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).

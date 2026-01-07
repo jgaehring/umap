@@ -1,62 +1,62 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Vérifier le formats du fichier
-    - Importer le fichier dans uMap
-    - Régler l’apparences des cercles
+    - Check the file formats
+    - Import the file into uMap
+    - Adjust the appearance of circles
 
-## Procédons par étapes
+## Step-by-step procedures
 
-Nous allons importer des données quantitatives et les représenter sous forme de cercles proportionnels. On peut aussi représenter des données distantes par cercles proportionnels (voir les tutoriels plus avancés).
+We will import quantitative data and represent them in the form of proportional circles. We can also represent remote data by proportional circles (see more advanced tutorials).
 
 
-### 1. Vérifier le format du fichier
+### 1. Check the file format
 
-Pour être utilisable dans uMap, le fichier doit être enregistré au format `.csv`, il doit intégrer les cordonnées géographiques. Sans ces deux conditions, le fichier de données n’est pas traité.
+To be usable in uMap, the file must be saved in `.csv` format, it must integrate geographic coordinates. Without these two conditions, the data file is not processed.
 
-Il faut également éviter les mises en forme du type espace entre des blocs de trois zéros, sans quoi les cercles ne seront pas proportionnels, mais tous de même taille.
+It is also necessary to avoid the shaping of the space type between blocks of three zeros, otherwise the circles will not be proportional, but all of the same size.
 
-Si la latitude et la longitude ne sont pas présentes, le fichier doit être géocodé.
-Le site de la Base Adresse Nationale propose un outil très pratique : <https://adresse.data.gouv.fr/csv>
+If latitude and longitude are not present, the file must be geocoded.
+The website of the National Address Database offers a very practical tool: <https://adresse.data.gouv.fr/csv>
 
-Il suffit de placer un fichier au format `.csv` contenant des adresses et de cliquer sur « géocodage ». L’outil en ligne ajoute les coordonnées géographiques des adresses.
+Simply place a file in `.csv` format containing addresses and click on "geocoding". The online tool adds the geographical coordinates of the addresses.
 
-### 2. Importer le fichier dans uMap
+### 2. Import the file into uMap
 
-Cliquer sur l’outil d’importation en barre de droite :
+Click on the import tool in the right bar:
 
 <shot-scraper
     data-output="static/tutoriels/upload-data.png"
     data-url="https://umap.openstreetmap.fr/fr/map/new/"
-    data-alt="Bouton d’import de données."
+    data-alt="Data import button."
     data-width="46"
     data-height="47"
     data-selector=".leaflet-toolbar-icon.upload-data"
     data-padding="5"
-    >Bouton d’import de données.</shot-scraper>
+    >Data import button.</shot-scraper>
 
-Puis choisir le fichier, par exemple ici la population municipale du Cher, le format est `.csv` et cliquer sur « importer » :
+Then choose the file, for example here the municipal population of Cher, the format is `.csv` and click on "import":
 
 ![](../../static/tutoriels/circles-markers.png)
 
-Toutes les communes sont représentées par un pointeur. Il reste juste à préciser que les données de ce calque doivent être affichées par cercles proportionnels. Pour ce faire, cliquer sur l’outil « Gérer les calques » en barre de droite :
+All municipalities are represented by a pointer. It remains to be specified that the data of this layer must be displayed in proportional circles. To do this, click on the tool "Manage the layers" in the right bar:
 
 <shot-scraper
     data-output="static/tutoriels/control-browse.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône du sélecteur de calque(s)."
+    data-alt="Layer(s) selector icon."
     data-selector=".umap-control-browse"
     data-width="48"
     data-height="48"
     data-padding="5"
-    >Icône du sélecteur de calque(s).</shot-scraper>
+    >Layer selector icon(s).</shot-scraper>
 
-Puis dans le menu déroulant, sélectionner « Cercles proportionnels » et la donnée de votre tableau que vous voulez représenter en cercles proportionnels :
+Then in the drop-down menu, select “Proportional Circles” and the data of your table that you want to represent in proportional circles:
 
 ![](../../static/tutoriels/circles-proportional.jpg)
 
-Il est tout à fait possible de régler la proportionnalité sur les barres de rayon minimum et maximum pour modifier le rendu : l’écart est alors amplifié ou plutôt écrasé.
+It is quite possible to adjust the proportionality on the bars of minimum and maximum radius to modify the rendering: the gap is then amplified or rather crushed.
 
 !!! notes
 
-    Pour modifier les couleurs des cercles, voir le tutoriel
-    [Dessiner sur sa carte](/fr/tutorials/4-draw-items/).
+    To change the colors of the circles, see the tutorial
+    [Draw on your map](/en/tutorials/4-draw-items/).

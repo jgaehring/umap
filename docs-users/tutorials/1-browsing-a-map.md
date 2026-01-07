@@ -1,228 +1,228 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    -   Manipuler une carte uMap
-    -   Partager une carte uMap
-    -   Connaître les principales fonctionnalités de uMap
-
-
-## Procédons par étapes
-
-### 1. Manipuler la carte
-
-Vous avez reçu par mail un lien vers une carte uMap. Voici les
-principaux éléments de la carte, et les opérations disponibles pour la
-manipuler. La carte uMap représentée ci-dessous est disponible
-[ici](http://umap.openstreetmap.fr/fr/map/festival-des-3-continents_26381).
-
-![Description des différents éléments d’une carte](../../static/tutoriels/1-je-consulte-une-carte-umap/anatomie_carte_umap_2021.jpg)
+    - Handle a uMap card
+    - Share a map uMap
+    - Know the main features of uMap
 
 
-À droite de la carte et selon le choix de son auteur peut être affiché
-un des deux panneaux suivants :
+## Step-by-step procedures
 
--   **À propos** : le titre de la carte, une description éventuelle, et
-    la liste des calques
--   **Visualiser les données** : l’ensemble des éléments de la carte,
-    répartis par calques (voir plus bas)
+### 1. Handle the map
 
-Le panneau À propos peut être affiché en cliquant sur le mot "À propos",
-toujours visible en bas à droite de la carte.
+You have received a link to an uMap card by email. Here are the
+main elements of the map, and the operations available for the
+manipulate. The uMap map shown below is available
+[here](http://umap.openstreetmap.fr/fr/map/festival-des-3-continents_26381).
 
-Comme pour la plupart des cartes interactives vous pouvez :
+![Description of the different elements of a map](../../static/tutoriels/1-je-consulte-une-carte-umap/anatomie_carte_umap_2021.jpg)
 
--   déplacer la carte par un glisser-déposer
--   effectuer zooms avant et arrière avec les boutons + et -, ou avec la
-    molette de la souris
--   sélectionner un élément de la carte par un clic de la souris :
-    apparaît alors une fenêtre *popup* affichant une description de
-    l’élément. Celle-ci peut inclure du texte, une image, un lien vers
-    un site Web. Dans notre exemple la description de chaque cinéma
-    contient une image qui est un lien sur le site Web du cinéma.
 
-**Remarque** : les boutons en haut à gauche de la carte, ainsi que la
-barre de légende, peuvent ne pas être disponibles si l’auteur de la
-carte a choisi de les cacher.
+To the right of the map and according to the choice of its author can be displayed
+one of the following two panels:
 
-Voyons maintenant quelques fonctionnalités propres à uMap.
+-   **About** : the title of the card, a possible description, and
+    the list of layers
+-   **Visualize the data** : all the elements of the card,
+    distributed by layers (see below)
 
-### 2. Le sélecteur de calques
+The About panel can be displayed by clicking on the word "About",
+Always visible at the bottom right of the map.
 
-Les éléments d’une carte umap peuvent être répartis dans plusieurs
-calques, ou couches. Cela permet de structurer une carte, pour qu’elle
-soit plus claire et plus facile à maintenir. L’utilisateur peut choisir
-d’afficher ou cacher chaque calque individuellement.
+As with most interactive maps you can:
+
+-   move the card by a drag and drop
+-   zoom in and out with the + and - buttons, or with the
+    Mouse wheel
+-   select an element of the map by a click of the mouse:
+    Then appears a window *popup* displaying a description of
+    the element. This can include text, an image, a link to
+    a website. In our example the description of each cinema
+    contains an image that is a link on the movie website.
+
+**Note** : the buttons at the top left of the map, as well as the
+legend bar, may not be available if the author of the
+card chose to hide them.
+
+Now let’s look at some features specific to uMap.
+
+### 2. The layer selector
+
+The elements of an umap card can be distributed in several
+layers, or layers. This allows you to structure a map, so that it
+be clearer and easier to maintain. The user can choose
+to display or hide each layer individually.
 
 <shot-scraper
     data-output="static/tutoriels/control-browse.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône du sélecteur de calque(s)."
+    data-alt="Layer(s) selector icon."
     data-selector=".umap-control-browse"
     data-width="48"
     data-height="48"
     data-padding="5"
-    >Icône du sélecteur de calque(s).</shot-scraper>
+    >Layer selector icon(s).</shot-scraper>
 
-Le sélecteur de calques est
-l’icône visible en haut à gauche de la carte sous les boutons de zoom.
-Lorsque vous positionnez la souris sur ce bouton, la liste des calques
-apparaît, vous pouvez alors afficher ou cacher chaque calque, ou encore
-centrer la carte sur le contenu d’un calque.
+The layer selector is
+the icon visible at the top left of the map under the zoom buttons.
+When you position the mouse over this button, the list of layers
+appears, you can then display or hide each layer, or
+center the map on the contents of a layer.
 
-![Une description des différentes parties d’un sélecteur de calques](../../static/tutoriels/1-je-consulte-une-carte-umap/umap_sélecteur_calques.png)
+![A description of the different parts of a layer selector](../../static/tutoriels/1-je-consulte-une-carte-umap/umap_sélecteur_calques.png)
 
-Dans cet exemple le calque « Stations Bicloo » est caché :
-cliquer sur l’oeil de ce calque permet de l’afficher.
-La liste des calques, avec éventuellement un descriptif de chaque
-calque, est aussi visible dans la légende de la carte.
+In this example, the “Bicloo Stations” layer is hidden:
+Click on the eye of this layer allows you to display it.
+The list of layers, with possibly a description of each
+layer, is also visible in the legend of the map.
 
-### 3. Le bouton Plus
+### 3. The Plus button
 
 <shot-scraper
     data-output="static/tutoriels/control-more.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône pour afficher plus d’options."
+    data-alt="Icon for displaying more options."
     data-width="46"
     data-height="33"
     data-selector=".umap-control-more"
     data-padding="5"
-    >Icône pour afficher plus d’options.</shot-scraper>
+    >Icon for displaying more options.</shot-scraper>
 
-Sous le sélecteur de carte est visible un bouton portant le texte « Plus ».
-Un clic sur ce bouton fait apparaître une autre série de boutons.
+Under the card selector is visible a button with the text "More".
+A click on this button shows another series of buttons.
 
 <shot-scraper
     data-output="static/tutoriels/control-search.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône du sélecteur de recherche."
+    data-alt="Search selector icon."
     data-selector=".leaflet-control-search"
     data-width="48"
     data-height="48"
     data-padding="5"
-    >Permet de chercher une localité et de centrer la carte dessus :
-    saisissez le nom d’une commune et tapez sur `Entrée`</shot-scraper>
+    >Allows to search for a locality and center the map on it:
+    Type the name of a municipality and tap on `Enter`</shot-scraper>
 
 <shot-scraper
     data-output="static/tutoriels/control-fullscreen.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône de la mise en plein écran."
+    data-alt="Icon of full screening."
     data-selector=".leaflet-control-fullscreen"
     data-width="48"
     data-height="48"
     data-padding="5"
-    >Place le navigateur en mode plein écran, que l’on peut quitter avec le même
-    bouton ou avec la touche `Échap` du clavier.</shot-scraper>
+    >Places the browser in full screen mode, which you can leave with the same
+    button or with the `Escape key of the keyboard.</shot-scraper>
 
 <shot-scraper
     data-output="static/tutoriels/control-embed.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône du partage et de l’intégration."
+    data-alt="Icon of sharing and integration."
     data-selector=".leaflet-control-embed"
     data-width="48"
     data-height="48"
     data-padding="5"
-    >Permet de partager la carte ou d’en exporter les données.
-    Un panneau à droite de la carte est affiché, il est expliqué ci-dessous.</shot-scraper>
+    >Allows you to share the map or export the data.
+    A panel to the right of the map is displayed, it is explained below.</shot-scraper>
 
 <shot-scraper
     data-output="static/tutoriels/control-locate.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône de la géolocalisation."
+    data-alt="Icon of geolocation."
     data-selector=".leaflet-control-locate"
     data-width="48"
     data-height="48"
     data-padding="5"
     data-javascript="document.querySelector('.umap-control-more').click()"
     >
-    Permet de vous géolocaliser, c’est-à-dire centrer la carte sur votre position
-    actuelle. La géolocalisation exige de demander l’autorisation de l’utilisateur,
-    votre navigateur Web peut donc vous demander d’accepter ou activer la géolocalisation.
+    Allows you to geolocate, i.e. center the map on your position
+    current. Geolocation requires the user to be asked for permission,
+    Your web browser may therefore ask you to accept or activate geolocation.
 </shot-scraper>
 
 <shot-scraper
     data-output="static/tutoriels/measure-control.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône de mesure."
+    data-alt="Measuring icon."
     data-selector=".leaflet-measure-control"
     data-width="48"
     data-height="48"
     data-padding="5"
     data-javascript="document.querySelector('.umap-control-more').click()"
     >
-    Est un outil de mesure.
-    Activer cet outil a deux effets : d’une part il affiche la longueur
-    des éléments linéaires de la carte et l’aire des éléments
-    surfaciques ; d’autre part il vous permet de tracer sur la carte une
-    ligne dont la longueur est affichée. Cliquez à nouveau sur le bouton
-    pour désactiver cet outil.
+    Is a measuring tool.
+    Activate this tool has two effects: on the one hand it displays the length
+    linear elements of the map and the area of the elements
+    surface; on the other hand it allows you to trace on the map one
+    line whose length is displayed. Click the button again
+    to disable this tool.
 </shot-scraper>
 
 <shot-scraper
     data-output="static/tutoriels/control-edit-in-osm.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône pour éditer les données OpenStreetMap."
+    data-alt="Icon for editing OpenStreetMap data."
     data-selector=".leaflet-control-edit-in-osm"
     data-width="48"
     data-height="48"
     data-padding="5"
     data-javascript="document.querySelector('.umap-control-more').click()"
     >
-    Est utile pour améliorer la carte OpenStreetMap - ce qui sort de l’objet de ce tutoriel.
+    Is useful for improving the OpenStreetMap card - which is apparent from the purpose of this tutorial.
 </shot-scraper>
 
 <shot-scraper
     data-output="static/tutoriels/control-icon-layers.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône de changement de fond de carte."
+    data-alt="Card background change icon."
     data-selector=".leaflet-iconLayers"
     data-width="48"
     data-height="48"
     data-padding="5"
     data-javascript="document.querySelector('.umap-control-more').click()"
     >
-    Affiche plusieurs fonds de carte au survol :
-    cliquer sur l’un d’eux change le fond de la carte.</shot-scraper>
+    Displays several backgrounds of map in the flyby:
+    Click on one of them changes the background of the map.</shot-scraper>
 
 
-#### Partager la carte
+#### Share the map
 
-Le panneau de partage de la carte offre trois possibilités. Votre choix
-dépend de la manière dont vous souhaitez partager la carte :
+The card sharing panel offers three possibilities. Your choice
+depends on how you want to share the card:
 
--   **URL courte** permet de copier une URL abrégée - équivalente à
-    l’URL de la carte - que vous pouvez par exemple envoyer dans un
+-   **URL short** allows you to copy an abridged URL - equivalent to
+    the URL of the card - which you can for example send in a
     mail.
--   **Embarquer la carte en iframe** permet d’inclure la carte dans une
-    page Web : il suffit de copier le code HTML et de l’insérer dans
-    celui de votre page Web. Cette possibilité est explorée en détails
-    dans le tutoriel
-    [Je publie ma carte et en contrôle l’accès](7-publishing-and-permissions.md).
--   **Télécharger les données** permet d’obtenir les données visibles
-    sur la carte, dans différents formats. Cela peut vous permettre
-    d’utiliser ces données avec un autre outil.
+-   **Embark the card in iframe** allows you to include the card in a
+    web page : just copy the HTML code and insert it into
+    The one on your web page. This possibility is explored in detail
+    in the tutorial
+    [I publish my map and access control](7-publishing-and-permissions.md).
+-   **Download data** allows you to obtain visible data
+    on the map, in different formats. This can allow you
+    use this data with another tool.
 
 
-### 4. Visualiser les données
+### 4. Visualize the data
 
 ![umap_donnees.jpg](../../static/tutoriels/1-je-consulte-une-carte-umap/umap_donnees.jpg)
 
-La liste des éléments de la carte peut être affichée avec un clic sur
-**Visualiser les données**, accessible depuis le sélecteur de calques,
-la barre de légende, ou encore en haut du panneau Légende.
+The list of items in the map can be displayed with a click on
+**View data**, accessible from the layer selector,
+the legendary bar, or at the top of the Legend panel.
 
-Le panneau alors visible à droite montre l’ensemble des éléments de la
-carte, organisés par calques. La loupe à gauche de chaque élément permet
-d’afficher sur la carte la popup décrivant cet élément. Le texte de
-saisie au-dessus de la liste permet de rechercher un élément, en ne
-montrant que ceux dont le nom contient le texte saisi.
-
-
-## Faisons le point
-
-Ce premier tutoriel nous a permis de découvrir les principales
-fonctionnalités d’une carte uMap. Nous allons maintenant
-[apprendre à créer une telle carte](2-first-map.md).
+The panel then visible on the right shows all the elements of the
+map, organized by layers. The magnifying glass to the left of each element allows
+to display on the map the popup describing this element. The text of
+input above the list allows you to search for an item, by
+showing that those whose name contains the text entered.
 
 
-??? info "Licence"
+## Let's take stock
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:1_-_je_consulte_une_carte_umap) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+This first tutorial allowed us to discover the main ones
+features of an uMap card. We're going now
+[learn how to create such a map](2-first-map.md).
+
+
+??? info "License"
+
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).

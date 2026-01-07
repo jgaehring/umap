@@ -1,141 +1,141 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Créer un gabarit Grist compatible uMap
-    - Géocoder des adresses (:fontawesome-solid-landmark-flag: pour les agents publics seulement)
-    - Rendre un document Grist public
-    - Lier le CSV de Grist avec un calque uMap
-
-
-Un [un film tutoriel](https://tube.numerique.gouv.fr/w/kya6m1aFtgDcy2LMkgUBya?start=12s)
-a été créé pour montrer le déroulé de ce tutoriel.
+    - Create a Grist template compatible uMap
+    - Geocoder addresses (:fontawesome-solid-landmark-flag: for public officials only)
+    - Make a document Grist public
+    - Link the CSV of Grist with a layer uMap
 
 
-## 1. Créer un gabarit Grist compatible uMap
+A [a tutorial film](https://tube.numerique.gouv.fr/w/kya6m1aFtgDcy2LMkgUBya?start=12s)
+was created to show the course of this tutorial.
 
-!!! osm-instance "Pour le grand public, les associations…"
 
-    Rendez-vous sur le [site officiel de Grist](https://www.getgrist.com/) ou votre propre instance.
+## 1. Create a Grist template compatible uMap
 
-!!! french-instance "Pour les agents publics"
+!!! osm-instance "For the general public, associations..."
 
-    Rendez-vous sur le site Grist agents publics via
-    [La Suite Numérique](https://lasuite.numerique.gouv.fr/services/grist).
+    Visit the [official Grist website](https://www.getgrist.com/) or your own instance.
 
-Créer un nouveau document vide :
+!!! french-instance "For public officials"
 
-![Interface pour créer un nouveau document Grist.](../../static/tutoriels/grist-new-document.png)
+    Visit the Grist public agents website via
+    [The Digital Suite](https://lasuite.numerique.gouv.fr/services/grist).
 
-Ajouter les colonnes nécessaires, plus au moins ces trois colonnes : `Adresse`, `Latitude`, `Longitude`.
+Create a new empty document :
 
-![Interface d’un nouveau document Grist vide.](../../static/tutoriels/grist-empty-document.png)
+![Interface to create a new Grist document.](../../static/tutoriels/grist-new-document.png)
+
+Add the necessary columns, plus at least these three columns: `Address`, `Latitude`, `Longitude'.
+
+![Interface of a new empty Grist document.](../../static/tutoriels/grist-empty-document.png)
 
 
 !!! warning
 
-    Attention, il faut mettre les colonnes `Latitude` et `Longitude` en type `Texte` :
+    Attention, it is necessary to put the columns `Latitude` and `Longitude` in type `Text` :
 
-    ![Interface pour renseigner le type des colonnes.](../../static/tutoriels/grist-column-type-text.png)
-
-
-## 2. Géocoder des adresses (:fontawesome-solid-landmark-flag: pour les agents publics seulement)
-
-!!! french-instance "Pour les agents publics"
-
-    Cette conversion n’est accessible qu’aux agents publics, elle consiste
-    à convertir automatiquement les adresses en coordonnées géographiques
-    (latitude, longitude). Si vous avez déjà ces informations dans votre
-    document, vous pouvez passer à l’étape 3 ci-dessous.
+    ![Interface to enter the column type.](../../static/tutoriels/grist-column-type-text.png)
 
 
-Il faut maintenant ajouter l’outil de géocodage développé par l’ANCT.
-Pour ça, cliquer sur « Ajouter une vue à la page » :
+## 2. Geocoder addresses (:fontawesome-solid-landmark-flag: for public officials only)
 
-![Interface pour créer une vue Grist.](../../static/tutoriels/grist-empty-view.png)
+!!! french-instance "For public officials"
+
+    This conversion is only accessible to public officials, it consists of
+    automatically convert addresses into geographic coordinates
+    (Latitude, longitude). If you already have this information in your
+    document, you can proceed to step 3 below.
 
 
-Puis choisir `Custom`, sélectionner le nom de la table dans la source des données
-(ici « Table1 »), et aussi sélectionner la table dans `Select by` :
+It is now necessary to add the geocoding tool developed by the ANCT.
+To do this, click on "Add a view to the page" :
 
-![Interface pour créer une vue custom Grist.](../../static/tutoriels/grist-custom-view.png)
+![Interface to create a Grist view.](../../static/tutoriels/grist-empty-view.png)
 
-Dans la colonne de droite, si on est sur l’instance Grist de l’ANCT,
-choisir « Geocodeur » dans la liste déroulante,
-sinon choisir `Custom URL` et ajouter l’URL suivante:
+
+Then choose `Custom`, select the name of the table in the data source
+(here "Table1"), and also select the table in `Select by` :
+
+![Interface to create a custom view Grist.](../../static/tutoriels/grist-custom-view.png)
+
+In the right column, if you are on the Grist instance of the ANCT,
+choose "Geocoder" from the drop-down list,
+otherwise choose `Custom URL` and add the following URL:
 
 <https://betagouv.github.io/grist-custom-widgets-fr-admin/geocode>
 
-Dans le panneau de droite, sélectionner les colonnes permettant de connecter
-l’outil à notre tableau :
+In the right panel, select the columns to connect
+the tool on our table :
 
-![Interface pour associer les colonnes sur une vue Grist.](../../static/tutoriels/grist-columns-view.png)
+![Interface to associate columns on a Grist view.](../../static/tutoriels/grist-columns-view.png)
 
-La colonne `Adresse` comme source, puis bien référence les colonnes `Latitude` et `Longitude`.
+The `Address` column as source, then refers well to the columns `Latitude` and `Longitude'.
 
-On peut optionnellement ajouter une colonne `Adresse normalisée` (dans le tableur)
-et la référencer ici, dans ce cas le géocodeur affichera l’adresse qu’il a trouvé.
-Ça permet un contrôle de plus.
+You can optionally add a `Standard Address` column (in the spreadsheet)
+and reference it here, in this case the geocoder will display the address it has found.
+It allows for more control.
 
-Renseigner ensuite une ou plusieurs lignes de données,
-en essayant d’avoir une adresse aussi précise que possible :
+Then enter one or more lines of data,
+Trying to have an address as accurate as possible:
 
-![Interface pour convertir via une vue Grist.](../../static/tutoriels/grist-conversion-view.png)
+![Interface to convert via a Grist view.](../../static/tutoriels/grist-conversion-view.png)
 
-Puis cliquer sur « Traitement spécifique » pour ne traiter
-que la ligne sélectionnée, ou bien sur « Traitement global »
-pour traiter toutes les lignes du document.
+Then click on “Specific Treatment” to treat
+that the selected line, or on “Global Processing”
+to process all the lines of the document.
 
-![Interface pour convertir via une vue Grist (résultat).](../../static/tutoriels/grist-conversion-view-result.png)
-
-
-## 3. Rendre un document Grist public
-
-Il faut ensuite rendre le document Grist public pour pouvoir ensuite le référencer côté uMap.
-
-Pour ça, aller dans « Gérer les utilisateurs » :
-
-![Interface pour gérer les utilisateurs dans Grist.](../../static/tutoriels/grist-user-management.png)
-
-Puis activer l’accès public :
-
-![Interface pour ouvrir les permissions dans Grist.](../../static/tutoriels/grist-permissions-management.png)
+![Interface to convert via a Grist view (result).](../../static/tutoriels/grist-conversion-view-result.png)
 
 
-## 4. Lier le CSV de Grist avec un calque uMap
+## 3. Make a document Grist public
 
-Pour copier l’URL qu’on va indiquer côté uMap, c’est ici
-(clic droit « enregistrer le lien ») :
+It is then necessary to make the document Grist public to be able to then reference it on the uMap side.
 
-![Interface pour copier le lien vers l’export CSV dans Grist.](../../static/tutoriels/grist-download-csv.png)
+For this, go to “Manage users”:
 
-Le lien devrait ressembler à quelque chose comme ça :
+![Interface to manage users in Grist.](../../static/tutoriels/grist-user-management.png)
+
+Then activate public access:
+
+![Interface to open permissions in Grist.](../../static/tutoriels/grist-permissions-management.png)
+
+
+## 4. Link the Grist CSV with a uMap layer
+
+To copy the URL that we will indicate on the uMap side, it is here
+(right click “record link”):
+
+![Interface to copy the link to the CSV export in Grist.](../../static/tutoriels/grist-download-csv.png)
+
+The link should look like something like that:
 
 https://grist.incubateur.net/o/docs/api/docs/4McELEs6kBpQAkmzupHy9F/download/csv?viewSection=1&tableId=Table1&activeSortSpec=%5B%5D&filters=%5B%5D&linkingFilter=%7B%22filters%22%3A%7B%7D%2C%22operations%22%3A%7B%7D%7D
 
-Maintenant, créer une carte sur uMap et ajouter un calque :
+Now, create a map on uMap and add a layer:
 
-![Interface pour ajouter un calque dans uMap.](../../static/tutoriels/grist-umap-newlayer.png)
+![Interface to add a layer in uMap.](../../static/tutoriels/grist-umap-newlayer.png)
 
-![Interface pour ajouter un calque dans uMap avec un nom.](../../static/tutoriels/grist-umap-newlayer-name.png)
+![Interface to add a layer in uMap with a name.](../../static/tutoriels/grist-umap-newlayer-name.png)
 
-Dans « Données distantes », ajouter l’URL de Grist et choisir le format `CSV` :
+In “Remote Data”, add the Grist URL and choose the `CSV` format:
 
-![Interface pour ajouter un calque dans uMap avec une URL.](../../static/tutoriels/grist-umap-newlayer-url.png)
+![Interface to add a layer in uMap with a URL.](../../static/tutoriels/grist-umap-newlayer-url.png)
 
-Pour une meilleure expérience utilisateurs, vous pouvez choisir
-l’option `Proxy` avec un cache de la bonne durée selon la fréquence
-de mise à jour des données dans Grist :
+For a better user experience, you can choose
+the `Proxy` option with a cache of the right duration according to frequency
+update data in Grist :
 
-![Interface pour ajouter un calque dans uMap avec un proxy.](../../static/tutoriels/grist-umap-newlayer-proxy.png)
+![Interface to add a layer in uMap with a proxy.](../../static/tutoriels/grist-umap-newlayer-proxy.png)
 
-Pour améliorer l'intégration des données, allez dans les paramètres avancés
-de la carte, puis dans les propriétés par défaut et :
+To improve data integration, go to the advanced settings
+of the card, then in the default properties and:
 
-- ajouter `Nom` comme clé pour le libellé, le filtre et la recherche
-- ajouter `Catégorie` pour générer des filtres automatiques
+-   add `Name` as key for label, filter and search
+-   add `Category` to generate automatic filters
 
-![Interface pour ajouter un calque avec des filtres dans uMap.](../../static/tutoriels/grist-umap-newlayer-advanced.png)
+![Interface to add a layer with filters in uMap.](../../static/tutoriels/grist-umap-newlayer-advanced.png)
 
-Et voilà !
+And there you go!
 
-![Interface de la carte finale dans uMap.](../../static/tutoriels/grist-umap-result.png)
+![Final card interface in uMap.](../../static/tutoriels/grist-umap-result.png)
 

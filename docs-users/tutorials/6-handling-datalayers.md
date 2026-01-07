@@ -1,185 +1,185 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Créer des calques et organiser le contenu de la carte
-    - Définir les propriétés d’un calque
-    - Gérer les calques d’une carte
+    - Create layers and organize the content of the map
+    - Define the properties of a layer
+    - Manage the layers of a card
 
-## Procédons par étapes
+## Step-by-step procedures
 
-### 1. Créer un calque
+### 1. Creating a layer
 
-Reprenons la [carte du Festival des 3 continents](http://u.osmfr.org/m/26381/)
-vu dans le tutoriel [Naviguer dans une carte](1-browsing-a-map.md). Les
-données de cette carte sont organisées en plusieurs calques :
+Let's take the [map of the Festival of 3 continents](http://u.osmfr.org/m/26381/)
+seen in the tutorial [Sail in a map](1-browsing-a-map.md). The
+data of this card are organized in several layers:
 
--   les cinémas : marqueurs jaunes
--   les autres lieux du festival : marqueurs bruns
--   les lignes de transport en commun
--   les stations de vélo-partage Bicloo
+-   cinemas : yellow markers
+-   the other venues of the festival : brown markers
+-   public transport lines
+-   Bicloo bike-sharing stations
 
 ![umap_calques_gauche_droite.jpg](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_calques_gauche_droite.jpg)
 
-Le sélecteur de calques permet à l’utilisateur de zoomer sur l’ensemble
-des éléments d’un calque, de le masquer ou l’afficher à loisir. Chaque
-calque peut être décrit dans le panneau latéral de la carte. Organiser
-les éléments d’une carte est donc pratique pour consulter la carte, nous
-verrons aussi que cela permet de faciliter sa création.
+The layer selector allows the user to zoom in on the set
+elements of a layer, to hide it or display it at leisure. Every
+layer can be described in the side panel of the card. Organize
+the elements of a map is therefore convenient to consult the map, we
+See also that it facilitates its creation.
 
 <shot-scraper
     data-output="static/tutoriels/control-browse.png"
     data-url="https://umap.openstreetmap.fr/en/map/new/"
-    data-alt="Icône du sélecteur de calque(s)."
+    data-alt="Layer(s) selector icon."
     data-selector=".umap-control-browse"
     data-width="48"
     data-height="48"
     data-padding="5"
-    >Icône du sélecteur de calque(s).</shot-scraper>
+    >Layer(s) selector icon.</shot-scraper>
 
-Le menu **Gérer les calques**, disponible en mode édition, affiche la liste des calques
-existants et permet de créer un nouveau calque. Cliquez ensuite sur
-**Ajouter un calque**, apparaît alors le panneau **Propriétés du calque**
-du nouveau calque.
+The **Manage layers** menu, available in edit mode, displays the list of layers
+existing and allows to create a new layer. Then click on
+**Add a layer**, then appears the panel **Layer Properties**
+of the new layer.
 
 ![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_props_top.png)
 
-Saisissez le nom du calque et une description de la catégorie d’éléments
-auxquels vous destinez ce calque : ils seront affichés dans le panneau
-**À propos**. Ci-dessous le résultat correspondant aux propriétés
-saisies à droite.
+Enter the layer name and a description of the item category
+to which you intend this layer: they will be displayed in the panel
+**About**. Below is the result corresponding to the properties
+seized on the right.
 
 ![umap_layer_description.png](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_description.png)
 
 !!! note
-    Sautez une ligne en début de description
-    pour celle-ci apparaisse **sous** le nom du calque et non à côté dans le
-    panneau À propos.
+    Skip a line at the beginning of the description
+    for this one appears **under** the name of the layer and not next to it in the
+    panel About.
 
-### 2. Organiser le contenu de la carte
+### 2. Organize the content of the map
 
 
-Lorsque vous
-ajoutez un élément à la carte, en haut du panneau de propriétés de
-l’élément se trouve un **menu déroulant** qui vous permet de choisir le
-calque où placer l’élément.
+When you
+add an item to the map, at the top of the properties panel of
+the element is a **drop-down menu** that allows you to choose the
+layer where to place the element.
 
 ![umap_layer_select.png](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_select.png)
 
-Il est bien sûr possible de changer le calque d’un élément déjà créé.
-N’hésitez donc pas, lorsque votre carte s’enrichit, à *restructurer* son
-contenu en plusieurs couches.
+It is of course possible to change the layer of an element already created.
+So do not hesitate, when your card is enriched, to *restructure* sound
+content in several layers.
 
-#### Comment définir les calques d’une carte ?
+### How to define the layers of a card?
 
-Il n’y a pas de méthode établie pour définir les calques : cela dépend
-vraiment des données placées sur la carte et de l’expérience du
-cartographe. Voici, pour quelques thématiques de cartes et à titre
-d’exemples, une proposition de listes de calques :
+There is no established method to define layers: it depends
+really data placed on the map and experience of
+Cartographer. Here, for some map themes and for example
+of examples, a proposal of lists of layers:
 
--   tourisme : hébergement, restauration, transports, musées, points de
-    vue…
--   logistique d’un festival : accès, scènes, restauration, sanitaires,
-    déchets, postes de secours, réseau électrique…
--   événement à portée internationale : un ou plusieurs calques par
-    langue
--   structures d’un réseau : structures porteuses, adhérentes au réseau,
-    partenaires
--   projet d’aménagement : les différents scénarios ou variantes du
-    projet
+-   tourism: accommodation, catering, transport, museums, points of
+    View...
+-   logistics of a festival: access, stages, catering, sanitary,
+    waste, emergency stations, power grid...
+-   event with an international scope: one or more layers by
+    language
+-   structures of a network: supporting structures, members of the network,
+    Partners
+-   development project: the different scenarios or variants of the
+    Project
 
-Nous verrons plus loin que lorsqu’une carte est intégrée à une page Web,
-il est possible de créer plusieurs présentations de la même carte, et de
-sélectionner pour chacune quels calques sont visibles. Vous pourrez
-donc, à partir d’une même carte uMap, diffuser plusieurs cartes dont le
-contenu est adapté au public visé par chacune des cartes.
+We’ll see later than when a map is embedded on a web page,
+it is possible to create several presentations of the same card, and
+Select for each one which layers are visible. You can
+therefore, from the same uMap card, broadcast several cards including the
+content is suitable for the target audience of each card.
 
-Ainsi pour une carte multi-lingues vous pourrez diffuser la carte en
-différentes langues en sélectionnant le ou les calques de chaque langue.
-Pour l’exemple d’une carte de la logistique d’un festival, vous pourrez
-ainsi diffuser une carte vers le public (accès, scènes, restauration,
-sanitaires), une autre vers les équipes techniques (sanitaires, déchets,
-réseau électrique), une troisième vers la sécurtié civile (accès, postes
-de secours, réseau électrique), etc.
+So for a multi-lingual card you can broadcast the card in
+different languages by selecting the layer(s) of each language.
+For the example of a map of the logistics of a festival, you can
+thus broadcast a map to the public (access, scenes, restoration,
+sanitary), another to the technical teams (sanitary, waste,
+electricity network), a third towards civil security (access, stations
+emergency, electrical network, etc.
 
-### 3. Définir les propriétés d’un calque
+### 3. Define the properties of a layer
 
-Un intérêt majeur de l’utilisation des calques est la possibilité de
-définir, pour chaque calque, le **style par défaut** des éléments qui
-seront ajoutés au calque. Vous éviterez ainsi la tâche fastidieuse de
-définir un à un le style de chaque élément et la carte sera nettement
-plus *lisible* car homogène. Surtout, si vous décidez que les cinémas
-doivent être affichés non plus en jaune mais en rouge, vous ne ferez la
-modification qu’une seule fois pour l’ensemble du calque et non pour
-chacun des éléments.
+A major interest in the use of layers is the possibility of
+set, for each layer, the **style by default** of the elements that
+will be added to the layer. This will prevent the tedious task of
+define one by one the style of each element and the map will be clearly
+more *readable* because homogeneous. Especially if you decide that cinemas
+must be displayed also in yellow but in red, you will not do the
+modification only once for the whole layer and not for
+Each of the elements.
 
 ![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_edit.png)
 
-Dans le
-panneau de gestion des calques cliquez sur le crayon pour éditer les
-propriétés du calque. Les onglets **Propriétés de la forme** et
-**Propriétés avancées** vous permettent de définir les styles par défaut
-du calque. Vous retrouvez les mêmes propriétés que celles utilisées dans
-le tutoriel [Créer un compte](3-create-account.md).
+In the
+Layer management panel click on the pencil to edit the
+properties of the layer. Tabs **Properties of the form** and
+**Advanced properties** allow you to set default styles
+of the layer. You find the same properties used in
+the tutorial [Create an account](3-create-account.md).
 
 ![umap_legende.png](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_legende.png)
 
-Toutes les propriétés, qui
-s’appliquent aux marqueurs, aux lignes et aux polygones, sont ici
-disponibles. Un calque peut en effet contenir indifféremment les trois
-types d’éléments, vous pouvez donc définir les propriétés par défaut
-pour chaque catégorie.
+All properties, which
+apply to markers, lines and polygons, are here
+Available. A layer may contain the three indifferently
+Types of items, so you can set the default properties
+for each category.
 
-Une remarque toutefois : vous pouvez définir **une et une seule
-couleur**, qui s’applique à tous les éléments quel que soit leur type.
-Cette contrainte vise à créer une carte lisible, en associant une
-couleur à chaque calque. Cette couleur apparaît en **légende du panneau
-À propos**, comme dans l’exemple ci-contre.
+One remark though: you can define **one and only one
+color**, which applies to all elements regardless of their type.
+This constraint aims to create a readable map, by associating a
+color to each layer. This color appears in **legend of the panel
+About**, as in the example below.
 
-### 4. Gérer les calques
+### 4. Managing the layers
 
 
-Revenons au **panneau de gestion des calques**. Nous avons vu comment
-créer un nouveau calque et définir ses propriétés.
+Let's go back to **layer management panel**. We have seen how
+Create a new layer and define its properties.
 
 ![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_gestion_calques.png)
 
-Le carré à droite permet de modifier l’**ordre des calques** par un
-glisser-déposer. L’ordre ainsi défini est celui que l’on retrouve dans
-le sélecteur de calques et dans la liste des calques du panneau À
-Propos.
+The square on the right allows to modify the **order of the layers** by a
+Drag and drop. The order thus defined is that which is found in
+the layer selector and in the list of layers in the To panel
+About.
 
-L’œil permet de cacher/afficher un calque et la loupe de zoomer sur son
-contenu, comme pour le sélecteur de calques. Nous verrons plus loin
-l’utilité d’**Éditer dans un tableau** le contenu du calque. **Supprimer
-le calque** vous demandera de confirmer l’opération, cette opération
-supprimant le contenu du calque.
+The eye allows you to hide/display a layer and the magnifying glass to zoom in on sound
+content, as for the layer selector. We will see later
+the usefulness of **Edit in a table** the content of the layer. **Delete
+the layer** will ask you to confirm the operation, this operation
+removing the content of the layer.
 
 ![](../../static/tutoriels/6-je-structure-ma-carte-avec-des-calques/umap_layer_advanced.png)
 
-Enfin, l’onglet **Actions avancées** permet de vider un calque : cela
-supprime ses données mais conserve le calque. Vous pouvez également
-**cloner un calque** : cette opération copie le contenu et les
-propriétés du calque.
+Finally, the **Advanced Actions** tab allows you to empty a layer: this
+deletes its data but retains the layer. You can also
+**cloning a layer** : this operation copies the content and the
+properties of the layer.
 
 
 !!! note
-    Pour créer rapidement un nouveau calque dont
-    les propriétés sont proches d’un calque existant, vous pouvez cloner le
-    calque initial puis renommer le clone et vider son contenu.
+    To quickly create a new layer including
+    the properties are close to an existing layer, you can clone the
+    initial layer then rename the clone and empty its contents.
 
-## Faisons le point
+## Let's take stock
 
-S’il est un peu abstrait, le concept de calques est un des atouts de
-uMap. Au moment de créer un carte, prenez le temps de définir les
-principaux calques en anticipant les usages et les mises à jours de la
-carte. Familiarisez-vous à l’utilisation des calques, nous en ferons une
-grande utilisation dans le niveau avancé.
+If it is a little abstract, the concept of layers is one of the strengths of
+uMap. When creating a map, take the time to define the
+main layers by anticipating the uses and updates of the
+map. Familiarize yourself with the use of layers, we will make one
+great use in advanced level.
 
-Nous avons à présent tous les éléments pour réaliser des cartes
-structurées, utiles, dont le contenu est riche et joli. Il est temps
-d’apprendre à publier une carte sur un site internet, c’est l’objet du
-[prochain tutoriel](7-publishing-and-permissions.md).
+We now have all the elements to make cards
+structured, useful, whose content is rich and beautiful. It's time
+to learn how to publish a map on a website, this is the purpose of
+[next tutorial](7-publishing-and-permissions.md).
 
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:6_-_je_structure_ma_carte_avec_des_calques) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).

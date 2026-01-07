@@ -1,408 +1,408 @@
-!!! abstract "Ce que nous allons apprendre"
+!!! abstract "What We'll Learn"
 
-    - Créer un calque qui utilise des données distantes
-    - Produire une carte de chaleur (heatmap)
-    - Afficher des calques en fonction du niveau de zoom
-    - Afficher des données qui évoluent en temps réel
-    - Utiliser un portail *open data*
-    - Créditer la source des données pour respecter la licence
+    - Create a layer that uses remote data
+    - Produce a heat map (heatmap)
+    - Display layers according to the zoom level
+    - Display data that evolves in real time
+    - Use a portal *open data*
+    - Credit the data source to comply with the license
 
 
-## Procédons par étapes
+## Step-by-step procedures
 
-Jusqu’ici toutes les cartes que nous avons créées montrent des données
-gérées par uMap. Même lorsque nous avons utilisé les données d’un
-tableur dans le tutoriel précédent, ces données ont été *importées* sur
-le serveur uMap, où elles sont *stockées*. Si ces données sont
-modifiées, nous devons de nouveau les importer pour mettre à jour la
-carte.
+So far all the maps we have created show data
+managed by uMap. Even when we used the data of a
+spreadsheet in the previous tutorial, this data was *imported* on
+the uMap server, where they are *stocked*. If these data are
+modified, we have to import them again to update the
+map.
 
-Dans ce tutoriel nous allons apprendre comment créer une carte qui
-utilise des **données distantes**, c’est-à-dire stockées sur un autre
-serveur que le serveur uMap.
+In this tutorial we will learn how to create a map that
+use **remote data**, i.e. stored on another
+server that the uMap server.
 
-### 1. J’utilise des données distantes
+### 1. I use remote data
 
-Nous prenons pour ce tutoriel le thème des stations de vélo-partage à
-Paris, les fameux Vélib’, dont les données sont disponibles en open
-data.
+We take for this tutorial the theme of bike-sharing stations to
+Paris, the famous Vélib’, whose data is available in open
+Data.
 
-#### Utiliser un portail open data
+#### Use an open data portal
 
-Commençons par observer le jeu de données « Vélib’ - Localisation et
-caractéristique des stations », disponible sur le portail open data de
-la ville de Paris :
-<https://opendata.paris.fr/explore/dataset/velib-emplacement-des-stations/>.
+Let’s start by observing the dataset “Vélib’ - Location and
+characteristic of the stations”, available on the open data portal of
+the city of Paris :
+<https://opendata.paris.fr/explore/dataset/velib-location-des-stations/>.
 
-L’onglet **Informations** explique que les données « sont actualisées
-chaque minute selon la norme GBFS 1.0 ». Cette norme décrit plusieurs
-fichiers, accessibles avec l’API décrite dans l’onglet **API**, dont le
-format n’est pas compris par uMap.
+The **Information** tab explains that the data “are updated
+every minute according to GBFS 1.0.” This standard describes several
+files, accessible with the API described in the **API** tab, including the
+format is not included by uMap.
 
-L’onglet **Tableau** montre les données : chaque station a un nom et une
-capacité (nombre d’emplacements), ainsi qu’une position géographique.
+The **Table** tab shows the data: each station has a name and a
+capacity (number of locations), as well as a geographical position.
 
-L’onglet **Export** propose plusieurs formats, dont les formats
-**GeoJSON**, **KML** et **GPX**, tous trois compris par uMap. Nous
-choisissons le [format GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON),
-qui permet d’exploiter tous les attributs présents dans les données.
+The **Export** tab offers several formats, including formats
+**GeoJSON**, **KML** and **GPX**, all three included by uMap. We
+Let's choose the [GeoJSON format](https://fr.wikipedia.org/wiki/GeoJSON),
+which allows to exploit all the attributes present in the data.
 
-Une possibilité serait de télécharger le fichier puis de l’importer dans
-uMap, comme nous l’avons fait dans le tuto précédent avec un fichier au
-format CSV. Outre les manipulations, cela impliquerait de mettre à jour
-ces données régulièrement. Nous allons plutôt configurer notre carte
-pour accéder directement aux données mises à disposition par le portail
-open data. Pour cela nous copions le lien vers le fichier : un clic
-droit ouvre un menu contextuel qui permet de **copier le lien** vers le
-fichier :
+One option would be to download the file and then import it into
+uMap, as we did in the previous tutorial with a file at
+CSV format. Besides manipulations, this would involve updating
+these data regularly. Instead, we will configure our map
+to access directly the data made available by the portal
+open data. For this we copy the link to the file: a click
+right opens a context menu that allows to **copy the link** to the
+file :
 
     https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-emplacement-des-stations/exports/geojson?lang=fr&timezone=Europe%2FBerlin
 
 ![umap-donnees-distantes.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-donnees-distantes.png)
 
-#### Configurer les données distantes
+#### Configure remote data
 
-Voyons maintenant comment utiliser ce lien dans uMap. Pour cela nous
-créons un nouveau calque et ouvrons, dans les Propriétés du calque,
-l’onglet **Données distantes**. Les informations à fournir sont les
-suivantes :
+Now let’s see how to use this link in uMap. For this we
+Let us create a new layer and open, in the Properties of the layer,
+the **Remote data** tab. The information to be provided is the
+following :
 
--   **URL** : nous collons ici le lien vers le fichier copié
-    précédemment.
--   **Format** : nous devons sélectionner le format, ici **geojson**
--   **Licence** : ODbL comme indiqué sur la page d’export du portail
+-   **URL** : we paste here the link to the copied file
+    previously.
+-   **Format** : we have to select the format, here **geojson**
+-   **License** : ODbL as indicated on the export page of the portal
     open data
 
-Le bouton **Vérifier l’URL** permet de tester l’accès au fichier depuis
-uMap, et de vérifier que le format choisi correspond bien aux données.
-Les données sont alors affichées sur la carte.
+The **Check URL** button allows you to test the file access from
+uMap, and to check that the chosen format corresponds to the data.
+The data is then displayed on the map.
 
-#### Proxy ou pas proxy ?
+#### Proxy or not proxy?
 
-Si cela ne fonctionne pas (uMap affiche un bandeau qui indique «
-Problème dans la réponse du serveur »), il est probable que le serveur
-sur lequel le fichier est stocké n’autorise pas l’accès au fichier
-depuis un service tiers.
+If it doesn’t work (uMap displays a banner that says “
+Problem in the server response”), it is likely that the server
+on which the file is stored does not allow access to the file
+from a third party service.
 
 !!! note
 
-    Il s’agit du mécanisme CORS, décrit dans l’article
-    Wikipédia [Cross-origin ressource
+    This is the CORS mechanism, described in the article
+    Wikipedia [Cross-origin resource
     sharing](https://fr.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
-uMap permet de contourner cette contrainte en faisant transiter le
-fichier par le serveur uMap, grâce à l’option **Avec proxy** qu’il
-convient alors d’activer. Cette option est associée au menu déroulant
-**Cacher la requête avec proxy**, qui permet au serveur uMap de
-conserver le fichier afin de ne pas le récupérer à chaque affichage de
-la carte. La durée la plus longue (1 jour) serait ici adaptée.
+uMap allows you to bypass this constraint by transiting the
+file by the uMap server, thanks to the **With proxy** option it
+Then agree to activate. This option is associated with the drop-down menu
+**Hide the request with proxy**, which allows the uMap server to
+keep the file so as not to recover it with each display of
+The map. The longest duration (1 day) would be adapted here.
 
-#### Au sujet de la licence
+### About the license
 
-Le fichier des emplacements de stations Vélib’ est publié sous la
-[licence ODbL](https://opendatacommons.org/licenses/odbl/). Celle-ci
-exige que le producteur des données soit crédité lors de leur
-utilisation. Les informations sur le portail open data indique que ce
-producteur est « Autolib Velib Métropole ». Il convient donc de le citer
-dans les **Crédits** de la carte, un onglet du menu *Propriétés de la
-carte*.
+The Vélib’ station locations file is published under the
+[ODbL license](https://opendatacommons.org/licenses/odbl/). This one
+requires the producer of the data to be credited with the
+Use. The information on the open data portal indicates that this
+Producer is “Autolib Velib Métropole”. It should therefore be cited
+in the **Credits** of the map, a tab of the *Properties menu of the
+map*.
 
 ![umap-geojson-properties.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-geojson-properties.png)
 
-#### Afficher le nom et la capacité des stations
+#### Show the name and capacity of the stations
 
-Afin d’afficher le nom et la capacité de chaque station dans une
-infobulle, nous devons déterminer les clefs permettant d’accéder à ces
-informations. Pour cela il nous faut observer le fichier GeoJSON.
+To display the name and capacity of each station in one
+tooltip, we need to determine the keys to access these
+information. For this we need to observe the GeoJSON file.
 
-Nous téléchargeons ce fichier depuis l’onglet Export du portail open
-data, ou collons le lien copié précédemment dans la barre de navigation
-du navigateur. Soit le fichier est directement affiché dans le
-navigateur, soit il est téléchargé : une possibilité consiste alors à
-l’ouvrir dans un éditeur de texte, ou à le déposer dans la fenêtre du
-navigateur.
+We download this file from the Export tab of the open portal
+data, or paste the previously copied link into the navigation bar
+of the browser. Either the file is directly displayed in the
+browser, or it is downloaded: a possibility is then to
+open it in a text editor, or drop it in the window of the
+Navigator.
 
-Dans le bloc `properties` de chaque élément, nous observons plusieurs
-associations clef-valeur : la propriété **name** contient le nom de la
-station, **capacity** contient le nombre d’emplacements. Ces propriétés
-correspondent à nos entêtes de colonnes d’un fichier CSV (cf. tuto
-précédent).
+In the `properties` block of each element, we observe several
+key-value associations : the **name** property contains the name of the
+station, **capacity** contains the number of locations. These properties
+correspond to our column headers of a CSV file (see tutorial
+previous).
 
-Nous pouvons alors configurer le **Gabarit de la popup** pour afficher
-ces informations dans l’infobulle de chaque station, comme nous l’avons
-vu dans le [tuto précédent](9-map-from-spreadsheet.md).
+We can then configure the **Popup Template** to display
+this information in the tooltip of each station, as we have
+seen in the [previous tutorial](9-map-from-spreadsheet.md).
 
-Par exemple :
+For example :
 
     # {name}
-    {capacity} emplacements
+    {capacity} locations
 
-### 2. Je combine deux calques pour les mêmes données
+### 2. I combine two layers for the same data
 
-Il y a beaucoup de stations Vélib’ et la carte est un peu dense à
-l’échelle de Paris. À cette échelle il serait plus intéressant d’avoir
-une vue d’ensemble de la répartition de l’offre Vélib’ sur la capitale
-et les communes voisines.
+There are many stations Vélib’ and the map is a little dense to
+The Paris Ladder. At this scale it would be more interesting to have
+an overview of the distribution of the Vélib’ offer on the capital
+and the neighbouring municipalities.
 
 ![umap-heatmap.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-heatmap.png)
 
-#### Produire une carte de chaleur ou « Heatmap »
+#### Produce a heat map or “Heatmap”
 
-uMap permet de présenter les données d’un calque sous plusieurs formes,
-avec le menu déroulant **Type de calque** dans le menu *Propriétés du
-calque*. Les différents types de calques sont :
+uMap allows to present the data of a layer in several forms,
+with the **Layer Type** drop-down menu in the *Properties menu of the
+layer*. The different types of layers are:
 
--   **Par défaut** : chaque donnée est affichée individuellement.
--   **Avec cluster** : les points proches sont regroupés en un seul
-    cercle.
--   **Heatmap** : les données sont représentées sous forme de *carte de
-    chaleur*.
--   **Choroplèthe** : cet affichage est adapté aux polygones, et permet
-    de graduer leur couleur.
--   **Cercles proportionnels** : cette représentation est adaptée pour
-    des valeurs quantitatives absolues (qui peuvent s’ajouter).
-    La surface des cercles est proportionnelle à la quantité.
+-   **By default** : each data is displayed individually.
+-   **With cluster** : the nearby points are grouped into one
+    Circle.
+-   **Heatmap** : the data are represented in the form of *card of
+    heat*.
+-   **Choropleth** : this display is suitable for polygons, and allows
+    to graduate their color.
+-   **Proportional circles** : this representation is suitable for
+    absolute quantitative values (which can be added).
+    The surface area of the circles is proportional to the quantity.
 
-Les types *Avec cluster* et *Heatmap* sont plutôt adaptés aux calques
-contenant uniquement des points. Lorsqu’on choisit un de ces modes, un
-onglet de configuration apparaît. Pour le type *Heatmap*, l’onglet
-**Heatmap: paramètres** permet d’ajuster l’intensité – ou *chaleur* – de
-la carte (du bleu glacial au rouge brûlant), et de sélectionner une
-propriété pour évaluer cette *chaleur*. Celle-ci doit correspondre à une
-propriété de nos données contenant des valeurs numériques. Si aucune
-propriété n’est définie, chaque point a la même valeur et seule la
-densité géographique des points influe sur la *heatmap*.
+The types *With cluster* and *Heatmap* are rather suitable for layers
+containing only points. When you choose one of these modes, a
+Configuration tab appears. For the *Heatmap* type, the tab
+**Heatmap: parameters** allows to adjust the intensity – or *heat* – of
+the card (from the icy blue to the burning red), and select a
+property to rate this *heat*. This must correspond to a
+ownership of our data containing numerical values. If none
+property is not defined, each point has the same value and only the
+Geographical density of points affects the *heatmap*.
 
-Notre fichier de stations contient justement la propriété `capacity`,
-qui correspond au nombre d’emplacements de chaque station – un bon
-critère pour représenter l’offre de vélos en libre-service. Quant au
-**Rayon de heatmap**, un curseur permet de l’ajuster avec effet immédiat
-sur la carte. Il est judicieux de tester ce rayon à différents niveaux
-de zoom de la carte, afin que la carte révèle bien les données.
+Our station file contains precisely the `capacity` property,
+which corresponds to the number of locations of each station – a good one
+criteria to represent the offer of self-service bicycles. As for the
+**Sheet radius**, a slider allows you to adjust it with immediate effect
+on the map. It is a good idea to test this ray at different levels
+zoom the map, so that the map reveals the data.
 
-#### Dupliquer le calque
+### Duplicate the layer
 
-Le type d’affichage d’un calque s’applique quel que soit le niveau de
-zoom. Or aux niveaux de zooms élevés, à l’échelle du quartier, il est
-plus intéressant de montrer les stations individuelles que la carte de
-chaleur. Nous allons combiner les 2 représentations en créant 2 calques
-qui utilisent les mêmes données, l’un affichant les stations
-individuelles, l’autre sous forme de Heatmap. L’astuce consiste ensuite
-à activer ou désactiver chaque calque en fonction du niveau de zoom.
+The type of display of a layer applies regardless of the level of
+Zoom. But at high zoom levels, at the neighborhood scale, it is
+more interesting to show individual stations than the map of
+heat. We will combine the 2 representations by creating 2 layers
+which use the same data, one displaying the stations
+Individual, the other in the form of Heatmap. The trick is then
+to activate or disable each layer according to the zoom level.
 
-Procédons par étapes :
+Proceedings in stages :
 
-1.  Dupliquons notre calque avec l’opération **Cloner** disponible dans
-    l’onglet **Opérations avancées** du panneau Propriétés du calque.
-2.  Le panneau Propriétés du nouveau calque est alors affiché :
-    renommons ce calque, par exemple « Heatmap stations Vélib’ ».
-3.  Changeons le type de calque pour **Heatmap**, l’onglet **Heatmap:
-    paramètres** apparaît.
-4.  Dans cet onglet, saisissons le nom de la propriété – `capacity` – et
-    ajustons le **rayon de heatmap** (une valeur autour de 30 fonctionne
-    bien pour ce jeu de données)
-5.  Dans l’onglet **Données distantes**, configurons le calque pour
-    qu’il s’affiche **jusqu’au zoom** 15.
-6.  De la même manière, configurons le calque initial pour qu’il
-    s’affiche **à partir du zoom** 15.
+1.  Let’s duplicate our layer with the operation **Cloner** available in
+    the **Advanced Operations** tab of the Layer Properties panel.
+2.  The Properties panel of the new layer is then displayed:
+    Let’s rename this layer, for example “Heatmap stations Vélib’”.
+3.  Let's change the layer type for **Heatmap**, the **Heatmap tab:
+    parameters** appears.
+4.  In this tab, let's enter the property name - `capacity` - and
+    Let's adjust the **ray of heatmap** (a value around 30 works
+    good for this dataset)
+5.  In the **Remote data** tab, let's configure the layer to
+    that it is displayed **until zoom** 15.
+6.  In the same way, let’s configure the initial layer so that it
+    is displayed **from zoom** 15.
 
-Nous faisons ici le choix de superposer, au zoom 15, la heatmap aux
-stations individuelles. Cela produit une transition entre les 2 modes de
-représentation, et permet de repérer les stations avec un grand nombre
-d’emplacements.
+Here we choose to overlay, at zoom 15, the heatmap to
+individual stations. This produces a transition between the 2 modes of
+representation, and allows to identify the stations with a large number
+of locations.
 
-Notez que nous n’avons pas eu besoin de préciser l’URL des données
-distantes et leur format : ces paramètres ont été conservés lors de la
-duplication du calque.
+Please note that we did not need to specify the URL of the data
+remote and their format: these parameters were kept during the
+Duplication of the layer.
 
-### 3. J’utilise des données dynamiques
+### 3. I use dynamic data
 
-Un autre jeu de données du portail open data s’intitule « Vélib - Vélos
-et bornes - Disponibilité temps réel » :
+Another dataset from the open data portal is entitled “Vélib - Vélos
+and terminals - Real-time availability » :
 <https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/>.
 
-Nous pouvons utiliser ces données *en temps réel* – en réalité avec un
-léger différé – pour alimenter notre carte uMap, et afficher le nombre
-de places et de vélos disponibles. La procédure est la même que
-ci-dessus, à une nuance près : l’option **Dynamique** de l’onglet
-**Données distantes** doit être activée. Elle indique à uMap de
-récupérer les données à chaque affichage de la carte, c’est-à-dire à
-chaque fois que la carte est déplacée, zoomée ou dézoomée. Pour autant,
-ces données ne seront pas automatiquement mises à jour par uMap à un
-intervalle de temps régulier : c’est à l’utilisateur de rafraîchir la
-page web ou de déplacer la carte.
+We may use this data *in real time* – in reality with a
+lightly delayed – to power our uMap card, and display the number
+of seats and bicycles available. The procedure is the same as
+above, at a nuance close: the **Dynamic** option of the tab
+**Remote data** must be enabled. It tells uMap of
+recover data at each display of the card, i.e.
+each time the map is moved, zoomed in, or zoomed in. However,
+this data will not be automatically updated by uMap to a
+Regular time interval: it is up to the user to refresh the
+web page or move the map.
 
 ![umap-api-properties.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-properties.png)
 
-Il reste à
-modifier notre gabarit de popup pour afficher les disponibilités en
-temps réel. Pour identifier le nom des propriétés, nous pouvons utiliser
-l’onglet **API** sur le portail open data : le panneau **Résultats**
-montre un extrait des données avec toutes leurs propriétés. Ces
-propriétés sont les mêmes que pour l’export GeoJSON. Voici un exemple
-possible de gabarit de popup :
+He's still at
+change our popup template to display availability in
+Real time. To identify the name of the properties, we can use
+the **API** tab on the open data portal: the **Results** panel
+shows an extract of the data with all their properties. These
+properties are the same as for the GeoJSON export. Here is an example
+possible popup template :
 
     # {name}
-    {capacity} emplacements dont {numdocksavailable} libres
-    {numbikesavailable} vélos disponibles dont {ebike} VAE
+    {capacity} locations including {numdocksavailable} free
+    {numbikesavailable} available bicycles including {ebike} VAE
 
 ![umap-api-parameters.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-parameters.png)
 
-#### Filtrer les données à la source
+### Filter data at the source
 
-Le panneau Résultats dans l’onglet **API** nous montre l’existence de la
-propriété `is_installed`. Celle-ci permet de détecter des stations qui
-ne sont pas en service, que nous ne souhaitons pas afficher sur notre
-carte.
+The Results panel in the **API** tab shows us the existence of the
+property `is_installed`. This makes it possible to detect stations that
+are not in service, which we do not wish to display on our
+map.
 
-Le panneau **Requête pour l’appel API** permet de générer une requête,
-affichée sous ce panneau (**URL de l’appel API**), et de visualiser les
-données produites par cette requête dans le panneau **Résultats**. Il
-permet également d’ajouter des paramètres à la requête, pour filtrer les
-données produites. Le paramètre **refine** permet de filtrer les données
-en fonction de la valeur d’une ou plusieurs propriétés. Si nous
-indiquons `is_installed` pour le nom de la propriété et `NON` pour la
-valeur, nous pouvons voir le nombre de stations qui ne sont pas en
-service, et que nous ne voulons pas intégrer à notre carte.
+The **Request panel for the API** call allows you to generate a request,
+displayed under this panel (**URL of the API** call), and view the
+data produced by this query in the **Results** panel. He
+also allows you to add parameters to the request, to filter the
+data produced. The **refine** parameter allows you to filter the data
+based on the value of one or more properties. If we
+let's indicate `is_installed` for the property name and `NON` for the
+value, we can see the number of stations that are not in
+service, and that we do not want to integrate into our map.
 
-Les données produites à l’aide cet onglet **API** sont au format GBFS,
-qui n’est pas connu de uMap. Les requêtes d’export au format GeoJSON
-acceptent les mêmes paramètres. Pour produire les données filtrées au
-format GeoJSON, nous devons donc éditer la requête *à la main*.
-Procédons par étapes *un peu geek* :
+The data produced using this **API** tab is in GBFS format,
+which is not known to uMap. Export requests in GeoJSON format
+accept the same parameters. To produce the filtered data at
+GeoJSON format, so we have to edit the request *by hand*.
+Process in stages *a little geek* :
 
-1.  Saisir `is_installed` et `OUI` dans le champ **refine**
-2.  Supprimer la valeur du champ `limit`, car nous ne voulons pas
-    *limiter* la réponse de la requête à 20 stations.
-3.  Observons la requête générée :
+1.  Enter `is_installed` and `OUI` in the field **refine**
+2.  Remove the value from the `limit` field, because we do not want
+    *limit* the response of the request to 20 stations.
+3.  Let’s look at the generated query:
     `/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/records?refine=is_installed%3AOUI`,
-    elle se compose de 3 sections :
-    -   l’URL de base, jusqu’au dernier caractère **`/`**
-    -   le **endpoint** `records` suivi du caractère **`?`**
-    -   le paramètre `refine=is_installed%3AOUI` (`%3A` est l’*encodage*
-        du caractère **`:`**)
-4.  Prenons la requête générée pour l’export GeoJSON :
+    It consists of 3 sections:
+    -   the basic URL, up to the last character **`/`**
+    -   the **endpoint** `records` followed by character **`? `**
+    -   the parameter `refine=is_installed%3AOUI` (`%3A` is the *encoding*
+        character **`:`**)
+4.  Let’s take the request generated for the GeoJSON export:
     `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/exports/geojson?lang=fr&timezone=Europe%2FBerlin`,
-    elle se compose des mêmes sections :
-    -   l’URL de base :
+    It consists of the same sections:
+    -   the basic URL :
         `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/exports/`
     -   le endpoint `geojson?`
-    -   la liste de paramètres `lang=fr&timezone=Europe%2FBerlin` (`%2F`
-        est l’encodage du caractère **`&`** qui permet de séparer
-        plusieurs paramètres)
-5.  Nous pouvons combiner l’URL et le endpoint de la requête GeoJSON,
-    suivi du paramètre `refine=is_installed%3AOUI` (les paramètres
-    `lang` et `timezone` ne sont ici pas utiles) :
+    -   the list of parameters `lang=fr&timezone=Europe%2FBerlin` (`%2F`
+        is the character **`&`** encoding that allows to separate
+        several parameters)
+5.  We can combine the URL and endpoint of the GeoJSON request,
+    followed by the parameter `refine=is_installed%3AOUI` (the parameters
+    `lang` and `timezone` are not useful here) :
 
 
     `https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/exports/geojson?refine=is_installed%3AOUI`
 
-Utiliser cette requête comme URL des données distantes de notre calque
-**Stations Vélib’** permet de n’afficher que les stations en service.
+Use this query as a URL of the remote data of our layer
+**Stations Vélib’** allows only stations to be displayed in service.
 
-Notez que pouvons aussi utiliser le paramètre `exclude` pour exclure les
-stations dont la propriété `is_installed` a la valeur `NON`. Nous
-pouvons utiliser ce même mécanisme pour exclure les stations qui n’ont
-aucun vélo disponible :
+Note that the `exclude` parameter can also be used to exclude
+stations whose `is_installed` property has the value `NON`. We
+can use the same mechanism to exclude stations that do not
+No bike available :
 
     https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/exports/geojson?exclude=is_installed%3ANON&exclude=numbikesavailable%3A0
 
-### 4. J’injecte des paramètres dans la requête
+### 4. I inject parameters into the request
 
-uMap permet d’injecter dans une requête des paramètres, avec la syntaxe
-`{paramX}`. Ces paramètres dépendent de l’état de la carte au moment de
-l’envoi de la requête :
+uMap allows you to inject parameters into a request, with syntax
+`{paramX}`. These parameters depend on the status of the map at the time of
+the sending of the request:
 
--   les coordonnées du centre de la carte : {lat} et {lng}
--   la *bounding_box* de la carte : {bbox} ou {west}, {south}, {east} et
+-   the coordinates of the center of the map : {lat} and {lng}
+-   the *bounding_box* of the card : {bbox} or {west}, {south}, {east} and
     {north}
--   le niveau de zoom : {zoom}
+-   zoom level : {zoom}
 
-Le portail open data peut prendre en compte certains de ces paramètres
-pour affiner la requête. Notre objectif est ici de récupérer la
-disponibilité des stations se trouvant **dans la partie visible de la
-carte**, c’est-à-dire dans la *bounding_box*. Cela permet de réduire le
-volume de données transférées, et de les afficher plus rapidement.
+The open data portal can take into account some of these parameters
+to refine the request. Our goal here is to recover the
+availability of stations **in the visible part of the
+card**, that is, in the *bounding_box*. This helps to reduce the
+volume of data transferred, and display it faster.
 
-#### J’utilise la console d’API de la plateforme open data
+### I use the API console of the open data platform
 
-L’onglet API du jeu de données permet d’accéder à la **console d’API
-complète**. Nous choisissons, dans la section Dataset, le *endpoint*
+The API tab of the dataset allows you to access the **API console
+complete**. In the Dataset section, we choose the *endpoint*
 **Export a dataset**.
 ![umap-api-console.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console.png)
 
-Apparaît alors un formulaire où nous pouvons renseigner les différents
-paramètres :
+Then appears a form where we can fill in the different
+parameters :
 
--   **dataset_id** est l’identifiant du jeu de données :
-    `velib-disponibilite-en-temps-reel`
--   pour le **format** nous sélectionnons `geojson`
--   nous pouvons à nouveau filtrer les stations en service avec le
-    paramètre **refine** : `is_installed:OUI`
+-   **dataset_id** is the identifier of the dataset:
+    `velib-disponitite-in-time-reel`
+-   for **format** we select `geojson`
+-   we can filter the stations in service again with the
+    **refine** parameter : `is_installed:OUI`
 
 ![umap-api-console-dataset.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-dataset.png)
 
-Définissons le paramètre **where** avec la fonction `in_bbox()` (voir la
+Set the **where** parameter with the `in_bbox()` function (see the
 [documentation
 OpenDataSoft](https://help.opendatasoft.com/apis/ods-explore-v2/#section/ODSQL-predicates/in_bbox()))
-et – pour l’instant – des latitudes et longitudes fixes (quelque part à
+and – for the moment – fixed latitudes and longitudes (somewhere to
 Paris) :
 
 ![umap-api-console-bbox.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-bbox.png)
 
-**coordonnees_geo** est le nom du champ contenant la géométrie dans les
-données d’origine, que l’on peut trouver en les exportant dans un format
-autre que GeoJSON.
+**coordinates_geo** is the name of the field containing the geometry in the
+original data, which can be found by exporting them in a format
+Other than GeoJSON.
 
-Testons maintenant que la requête fonctionne en cliquant sur **Execute**
-: le code de réponse 200 indique que la requête a fonctionné, et il est
-possible de télécharger le fichier résultant.
+Let's test now that the query works by clicking **Execute**
+: the response code 200 indicates that the request worked, and it is
+possible to download the resulting file.
 
 ![umap-api-console-execute.png](../../static/tutoriels/10-jintegre-des-donnees-distantes/umap-api-console-execute.png)
 
-#### Je dynamise la requête
+### I boost the request
 
-Modifions maintenant notre requête *statique* (tous les paramètres sont
-fixes) pour la rendre *dynamique*, en remplaçant les coordonnées de la
-bounding_box par les paramètres qui seront injectés par uMap. Nous
-n’utilisons pas ici le paramètre `{bbox}`, car l’ordre des valeurs ne
-correspond pas à celui attendu par l’API open data. La fonction s’écrit
-alors :
+Now let's change our *static* request (all parameters are
+fixed) to make it *dynamic*, replacing the coordinates of the
+bounding_box by the parameters that will be injected by uMap. We
+do not use the `{bbox}` parameter here, because the order of the values does not
+not the one expected by the open data API. The function is written
+then :
 
     in_bbox(coordonnees_geo,{south},{west},{north},{east})
 
-ce qui donne avec l’encodage :
+Which gives with encoding:
 
     in_bbox%28coordonnees_geo%2C{south}%2C{west}%2C{north}9%2C{east}%29
 
-La requête encodée complète est donc :
+The complete encoded request is therefore:
 
     https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/exports/geojson?where=in_bbox%28coordonnees_geo%2C{south}%2C{west}%2C{north}9%2C{east}%29&limit=-1&refine=is_installed%3AOUI
 
-Il ne reste plus qu’à utiliser cette requête comme URL pour nos données
-distantes.
+All that remains is to use this query as a URL for our data
+distant.
 
-Notez qu’il n’est pas nécessaire d’utiliser la forme encodée, car uMap
-procédera à l’encodage. L’URL peut donc être plus lisible :
+Note that it is not necessary to use the encoded shape, because uMap
+proceed to encoding. The URL can therefore be more readable:
 
     https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/exports/geojson?where=in_bbox(coordonnees_geo,{south},{west},{north},{east})&limit=-1&refine=is_installed:OUI
 
-## Faisons le point
+## Let's take stock
 
-La carte produite pour ce tuto est visible ici :
+The card produced for this tutorial can be seen here:
 <http://u.osmfr.org/m/1051915/>
 
-Nous avons vu comment **exploiter des données open data** sans les
-télécharger, ce qui permet que notre carte reste à jour (à condition
-bien sûr que les données soient actualisées par leur producteur). Nous
-avons également vu comment **optimiser la requête** en injectant la
-*bounding box* de la partie visible de la carte.
+We have seen how **to exploit open data** without the
+download, which allows our map to stay up to date (provided
+of course the data are updated by their producer). We
+have also seen how **optimize the request** by injecting the
+*bounding box* of the visible part of the card.
 
-D’autres sites mettent à disposition des données via une API, l’enjeu
-est alors de s’approprier la syntaxe des requêtes en lisant la
-documentation et testant les requêtes.
+Other sites make data available through an API, the stakes
+is then to appropriate the syntax of the requests by reading the
+documentation and testing the requests.
 
 
-??? info "Licence"
+??? info "License"
 
-    Travail initié par Antoine Riche sur [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) sous licence [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.fr).
+    Work initiated by Antoine Riche on [Carto’Cité](https://wiki.cartocite.fr/doku.php?id=umap:10_-_j_integre_des_donnees_distantes) under license [CC-BY-SA 4](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
