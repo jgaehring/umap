@@ -44,21 +44,22 @@ easier and obtain good results:
     another field
 
 Here are some well-structured addresses, from the
-file [Seats of inter-municipal school transport unions in
-Loire-Atlantique](https://data.nantesmetropole.fr/explore/dataset/23440034_031-001_sits_shp/export/):
+file [NYC OpenData Queens Library Branches](https://data.cityofnewyork.us/api/v3/views/kh3d-xhq7/query.csv):
 
-<!-- TODO: Translate the table headers only after the file URL is updated to an English data source -->
-
-| NOM                    | ADRESSE               | COMPL_ADR                   | CP    | VILLE                    |
-| ---------------------- | --------------------- | --------------------------- | ----- | ------------------------ |
-| C. C. LOIRE et SILLON  | 2 bd de la Loire      |                             | 44260 | SAVENAY                  |
-| C. C. COEUR d’ESTUAIRE | 1 Cours d’Armor       | Route de Savenay            | 44360 | SAINT ETIENNE DE MONTLUC |
-| RESEAU CAP ATLANTIC’   | 4 rue Alphonse Daudet | Zone Tertiaire de Kerbiniou | 44350 | GUERANDE                 |
-| SITS SUD LOIRE LAC     | ZI de la Seiglerie    |                             | 44270 | MACHECOUL                |
+| NAME             | ADDRESS_1                      | ADDRESS_2         | CITY             | ZIP   |
+| ---------------- | ------------------------------ | ----------------- | ---------------- | ----- |
+| South Jamaica    | 108-41 Guy R. Brewer Boulevard |                   | Jamaica          | 11433 |
+| Long Island City | 37-44 21 Street                |                   | Long Island City | 11101 |
+| Elmhurst         | 86-01 Broadway                 |                   | Elmhurst         | 11373 |
+| McGoldrick       | 155-06 Roosevelt Avenue        | off Northern Blvd | Flushing         | 11354 |
+| Bellerose        | 250-06 Hillside Avenue         |                   | Bellerose        | 11426 |
+| Far Rockaway     | 1637 Central Avenue            |                   | Far Rockaway     | 11691 |
+| Windsor Park     | 79-50 Bell Boulevard           |                   | Bayside          | 11364 |
+| Ozone Park       | 92-24 Rockaway Boulevard       |                   | Ozone Park       | 11417 |
 
 The use of uppercase or lowercase letters does not usually matter.
 The table may of course contain additional columns, as in this instance
-the columns NOM and COMPL_ADR.
+the columns NAME and ADDRESS_2.
 
 !!! note
 
