@@ -44,7 +44,7 @@ capacity (number of locations), as well as a geographical position.
 
 The **Export** tab offers several formats, including formats
 **GeoJSON**, **KML** and **GPX**, all three included by uMap. We
-Let's choose the [GeoJSON format](https://fr.wikipedia.org/wiki/GeoJSON),
+Let's choose the [GeoJSON format](https://en.wikipedia.org/wiki/GeoJSON),
 which allows to exploit all the attributes present in the data.
 
 One option would be to download the file and then import it into
@@ -88,7 +88,7 @@ from a third party service.
 
     This is the CORS mechanism, described in the article
     Wikipedia [Cross-origin resource
-    sharing](https://fr.wikipedia.org/wiki/Cross-origin_resource_sharing).
+    sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
 uMap allows you to bypass this constraint by transiting the
 file by the uMap server, thanks to the **With proxy** option it

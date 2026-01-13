@@ -152,7 +152,7 @@ Follow these steps :
     successively the different levels : country - region - department
     etc.
 3.  select the JSON export format: the format
-    [GeoJSON](https://fr.wikipedia.org/wiki/GeoJSON) was then used
+    [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON) was then used
 4.  click Export
 
 You retrieve a file from the downloads folder, including

@@ -77,6 +77,10 @@ wind. We decide to document this visit on the map. We
 Let's add a marker on the map, and then discover with interest
 the Wikipedia article on Morgat : <https://fr.wikipedia.org/wiki/Morgat>.
 
+!!! note Translation Note
+
+    English Wikipedia redirects Morgat to Crozon.
+
 
 For
 add to our tooltip **a link to the article**, just
